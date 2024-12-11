@@ -19,7 +19,7 @@ import DemoLayout from "./components/Layouts/DemoLayout.jsx";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="recruit-demos">
         <ErrorBoundary>
        
         <Routes>
