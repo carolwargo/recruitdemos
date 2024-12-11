@@ -1,13 +1,18 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 import HomePage from "./pages/HomePage";
 import DemoPage1 from "./pages/DemoPage1";
+import DemoPage3 from "./pages/DemoPage3.jsx";
+import DemoSocialPage from "./pages/DemoSocialPage";
+import DemoOverviewPage from "./pages/DemoOverviewPage";
 
 
 import ErrorBoundary from "./ErrorBoundary.jsx";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import DemoLayout from "./components/Layouts/DemoLayout.jsx";
 
 
 
@@ -19,17 +24,30 @@ function App() {
        
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/demo" element={<DemoPage1 />} />
+          <Route path="/overview" element={<DemoOverviewPage />} />
           <Route path="*" element={<NotFound />} />
+       
+       
+       <Route element={<DemoLayout />}>
+       <Route path="/demo1" element={<DemoPage1 />} />
+        <Route path="/demo3" element={<DemoPage3 />} />
+        <Route path="/social" element={<DemoSocialPage />} />
+       </Route>
         </Routes>
         </ErrorBoundary>
       </BrowserRouter>
     </div>
   );
 }
-// Create a component for handling not found routes
 function NotFound() {
-  console.error("Page not found!"); // Log error to console
-  return <h1>404 - Not Found</h1>;
+  return (
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h1>404 - Page Not Found</h1>
+      <p>Oops! The page you are looking for does not exist.</p>
+      <a href="/" style={{ color: "#007BFF", textDecoration: "underline" }}>
+        Return to Home
+      </a>
+    </div>
+  );
 }
 export default App;

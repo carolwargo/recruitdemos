@@ -16,7 +16,9 @@ const PlayerDownloads = () => {
     <div>
       <style>
         {`
-  
+  button-gradient {
+        backgroundImage: 'linear-gradient(to bottom right,#c6c5c5, #e4e2e2, #8d8d8d)'
+                }
         /*start ANIMATIONS*/
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -63,13 +65,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             >
               {/* Contact section */}
               <div
-                className="rounded w3-padding-32 w3-padding-large w3-theme-l1"
-              >
-             
-<h2>Downloads</h2>
-<hr />
-     <div className="row">
-      <div className="col">
+                className="rounded w3-padding-32 w3-padding-large" >
+                <h2>Downloads</h2>
+                <hr />
+
+     
+    <div className="row">
+      <div className="col-sm-12 col-md-3 col-lg-3">
                <button
                  onClick={() => myFunction("Demo1")}
                  className="w3-button w3-block w3-theme-l1 w3-left-align mt-2"
@@ -136,11 +138,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                    </li>
                  </ul>
                </div>
-             </div>
-             <div className="col">
+        
                <button
                  onClick={() => myFunction("Demo4")}
-                 className="w3-button w3-block w3-theme-l1 w3-left-align mt-2"
+                 className="w3-button w3-block w3-theme-l1 w3-left-align"
                >
                      <i className="fa fa-calendar-check-o fa-fw w3-margin-right"></i>
               Stats In Comparisson 
@@ -193,15 +194,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                  <li>
                     <Link className=" link-light">Player Resume</Link>
                    </li>
-               
                  </ul>
                </div>
              </div>
-        
              </div>
-
-              </div>
-            </div>
+             </div>
+      <div className="col-sm-12 col-md-9 col-lg-9"></div>
+    </div>
           )}
         </InView>
 

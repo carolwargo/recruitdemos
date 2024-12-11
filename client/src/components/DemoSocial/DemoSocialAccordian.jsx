@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Accordion = () => {
+const DemoSocialAccordion = () => {
   const [activeSection, setActiveSection] = useState(null);
 
   // Toggles a section open or closed
@@ -44,7 +44,7 @@ const Accordion = () => {
           onClick={() => toggleSection("Demo3")}
           className="w3-button w3-block w3-theme-l1 w3-left-align"
         >
-          <i className="fa fa-users fa-fw w3-margin-right"></i> My Photos
+          <i className="fa fa-film fa-fw w3-margin-right"></i> Media
         </button>
         <div
           id="Demo3"
@@ -107,4 +107,4 @@ const Accordion = () => {
   );
 };
 
-export default Accordion;
+export default DemoSocialAccordion;
