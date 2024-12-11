@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/recruit-demos/static/css/main.4e4a1f1f.css",
+    "main.js": "/recruit-demos/static/js/main.8bf04285.js",
+    "static/js/453.419a5d54.chunk.js": "/recruit-demos/static/js/453.419a5d54.chunk.js",
+    "static/media/PlayerResume.pdf": "/recruit-demos/static/media/PlayerResume.b1811025b19758f3c691.pdf",
+    "static/media/Stats1.png": "/recruit-demos/static/media/Stats1.628ec2a296fc07cec7cc.png",
+    "static/media/Big26.png": "/recruit-demos/static/media/Big26.4ec0c55618c8ff9f5451.png",
+    "static/media/SBC.png": "/recruit-demos/static/media/SBC.cb7fccd6844856c7b22f.png",
+    "static/media/AllState.png": "/recruit-demos/static/media/AllState.cf591b366ebb2eb56947.png",
+    "static/media/Stats2.png": "/recruit-demos/static/media/Stats2.d96945eaca5098957696.png",
+    "static/media/NCAA.png": "/recruit-demos/static/media/NCAA.32f875b02b17c215da6c.png",
+    "static/media/MVP.png": "/recruit-demos/static/media/MVP.185f2148a0651a9d9ebc.png",
+    "static/media/Signing.png": "/recruit-demos/static/media/Signing.1afc13f0487657c4bebd.png",
+    "static/media/Defense.png": "/recruit-demos/static/media/Defense.115d4b8af20b77639c30.png",
+    "static/media/MLB.png": "/recruit-demos/static/media/MLB.59c08c24736f172eab05.png",
+    "static/media/Offense.png": "/recruit-demos/static/media/Offense.97a111f56fd8a261de8e.png",
+    "static/media/Teacher.png": "/recruit-demos/static/media/Teacher.8632aa5db72547183817.png",
+    "static/media/Principal.png": "/recruit-demos/static/media/Principal.2e0d487e7d36db3cdd81.png",
+    "static/media/StatsBW.png": "/recruit-demos/static/media/StatsBW.12e34361cd4b4a8c4c0d.png",
+    "static/media/Wake.png": "/recruit-demos/static/media/Wake.adc9b75d5444e6d1598e.png",
+    "static/media/ClayCover3.png": "/recruit-demos/static/media/ClayCover3.37d0ebe0b845326c9aea.png",
+    "static/media/Virginia.png": "/recruit-demos/static/media/Virginia.17e1b41312247c10344d.png",
+    "static/media/ClaySmall.png": "/recruit-demos/static/media/ClaySmall.c37fd16b8c7da95d2d00.png",
+    "static/media/fa-solid-900.ttf": "/recruit-demos/static/media/fa-solid-900.ad1782c70927ebc5bc87.ttf",
+    "static/media/fa-brands-400.ttf": "/recruit-demos/static/media/fa-brands-400.26b80c8830bebf340211.ttf",
+    "static/media/fa-solid-900.woff2": "/recruit-demos/static/media/fa-solid-900.83a538a018a9e44b023a.woff2",
+    "static/media/fa-brands-400.woff2": "/recruit-demos/static/media/fa-brands-400.fdbb558523a380307689.woff2",
+    "static/media/fa-regular-400.ttf": "/recruit-demos/static/media/fa-regular-400.05fdd87be89f7f8f0a1e.ttf",
+    "static/media/fa-regular-400.woff2": "/recruit-demos/static/media/fa-regular-400.4f6a2dabee9c092d09b9.woff2",
+    "static/media/fa-v4compatibility.ttf": "/recruit-demos/static/media/fa-v4compatibility.fa86b3c85e77abbd2ebd.ttf",
+    "static/media/fa-v4compatibility.woff2": "/recruit-demos/static/media/fa-v4compatibility.c3ea317a0f10f201597f.woff2",
+    "index.html": "/recruit-demos/index.html",
+    "main.4e4a1f1f.css.map": "/recruit-demos/static/css/main.4e4a1f1f.css.map",
+    "main.8bf04285.js.map": "/recruit-demos/static/js/main.8bf04285.js.map",
+    "453.419a5d54.chunk.js.map": "/recruit-demos/static/js/453.419a5d54.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e4a1f1f.css",
+    "static/js/main.8bf04285.js"
+  ]
+}
