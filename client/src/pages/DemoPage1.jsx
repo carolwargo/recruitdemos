@@ -9,6 +9,7 @@ import PlayerFooter from "../components/Demo1/PlayerFooter";
 import PlayerPerformance from "../components/Demo1/PlayerPerformance";
 import PlayerIntro from "../components/Demo1/PlayerIntro";
 import PlayerCarousel from "../components/Demo1/PlayerCarousel";
+import MediaComponent from "../components/MediaComponent";
 import PlayerDownloads from "../components/Demo1/PlayerDownloads";  
 import ClaySmall from '../assets/images/Profiles/ClaySmall.png';
 import ClayCover3 from '../assets/images/Profiles/ClayCover3.png';
@@ -154,22 +155,31 @@ const DemoPage1 = () => {
 <Testimonials/>
         </div>
 
-
+        <div className="demo1-video-media" id="demo1-video-media">
+        <MediaComponent/>
+          </div>
 <div className="demo1-player-media" id="demo1-player-media">
            {/* Media Section */}
+        
 <PlayerMedia/>
     {/* Contact Section */}
     <PlayerCarousel/>
 </div>
+
 <PlayerDownloads/>
     <PlayerContact/>
-
+ 
    {/* Footer */}
 <PlayerFooter/>
 </div>
         {/* END PAGE CONTENT */}
       </div>
+   
     </div>
+
+
+
+    
     </div>
   
    
