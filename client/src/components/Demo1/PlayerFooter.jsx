@@ -47,6 +47,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
  
 <div className="text-center">
 
+
+
+
     <InView triggerOnce={true}>
           {({ inView, ref }) => (
           <div ref={ref} className={`w3-content w3-justify w3-text-grey w3-padding-16 

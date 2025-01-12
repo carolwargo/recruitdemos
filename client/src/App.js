@@ -11,6 +11,7 @@ import DemoSocialPage from "./pages/DemoSocialPage";
 import DemoOverviewPage from "./pages/DemoOverviewPage";
 import DemoComponents from "./pages/DemoComponents";
 import DemoMedia from "./pages/DemoMedia.jsx";
+import FaqsPage from './pages/FaqsPage';
 
 
 import ErrorBoundary from "./ErrorBoundary.jsx";
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/overview" element={<DemoOverviewPage />} />
+          <Route path="/faqs" element={<FaqsPage />} />
           <Route path="*" element={<NotFound />} />
        
        

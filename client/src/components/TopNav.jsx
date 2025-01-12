@@ -41,13 +41,13 @@ const TopNavbar = () => {
             <Link to="/" className="nav-link w3-text-black fw-bold" 
             onClick={handleNavLinkClick} style={{ fontFamily:"Raleway Dots"}}> Conscribe.</Link>
      <Link to="/demo1" className="nav-link" onClick={handleNavLinkClick} style={{fontSize:'14px'}}>DEMO SITE<TbScreenShare className='mx-2' style={{fontSize:'16px'}}/></Link>
-     <Link to="/media" className="nav-link" onClick={handleNavLinkClick} style={{fontSize:'14px'}}>DEMO SITE Social<TbScreenShare className='mx-2' style={{fontSize:'16px'}}/></Link>
-       
+     <Link to="/media" className="nav-link" onClick={handleNavLinkClick} style={{fontSize:'14px'}}>MEDIA DEMO<TbScreenShare className='mx-2' style={{fontSize:'16px'}}/></Link>
+       {/** 
           <Link to="/about" className="nav-link" style={{ color: "black" }}  onClick={handleNavLinkClick}>About</Link>
            <Link to="/resources" className="nav-link" style={{ color: "black" }}  onClick={handleNavLinkClick}>Resources</Link>
            <Link to="/services" className="nav-link" style={{ color: "black" }}  onClick={handleNavLinkClick}>Pricing</Link>
            <Link to="/web" className="nav-link" style={{ color: "black" }}  onClick={handleNavLinkClick}>Web Page</Link>
-            
+            */}
             <NavDropdown
               title="Services/LandingPages"
               id="basic-nav-dropdown"
@@ -73,10 +73,8 @@ const TopNavbar = () => {
             
           </Nav>
           <Nav className='ml-auto'>
-          <Link to="/demo" className="nav-link" onClick={handleNavLinkClick} style={{fontSize:'14px'}}>DEMO SITE<TbScreenShare className='mx-2' style={{fontSize:'16px'}}/></Link>
-       
             <Link to="/contact" className="nav-link" onClick={handleNavLinkClick}><AiTwotoneMail /></Link>
-            <Link to="/help" className="nav-link" onClick={handleNavLinkClick}><FaQuestionCircle/></Link>
+            <Link to="/faqs" className="nav-link" onClick={handleNavLinkClick}><FaQuestionCircle/></Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
