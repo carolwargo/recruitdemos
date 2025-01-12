@@ -10,7 +10,7 @@ import DemoPage3 from "./pages/DemoPage3.jsx";
 import DemoSocialPage from "./pages/DemoSocialPage";
 import DemoOverviewPage from "./pages/DemoOverviewPage";
 import DemoComponents from "./pages/DemoComponents";
-import DemoVideo from "./pages/DemoVideo";
+import DemoMedia from "./pages/DemoMedia.jsx";
 
 
 import ErrorBoundary from "./ErrorBoundary.jsx";
@@ -35,7 +35,7 @@ function App() {
         <Route path="/demo3" element={<DemoPage3 />} />
         <Route path="/social" element={<DemoSocialPage />} />
         <Route path="/components" element={<DemoComponents />} />
-        <Route path="/video" element={<DemoVideo />} />
+        <Route path="/media" element={<DemoMedia />} />
        </Route>
         </Routes>
         </ErrorBoundary>

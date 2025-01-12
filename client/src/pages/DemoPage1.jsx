@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PlayerProfile from "../components/Demo1/PlayerProfile";
 import Testimonials from "../components/Demo1/PlayerTestimonials";
-import PlayerMedia from "../components/Demo1/PlayerMedia";
+//import PlayerMedia from "../components/Demo1/PlayerMedia";
 import PlayerContact from "../components/Demo1/PlayerContact";
 import PlayerFooter from "../components/Demo1/PlayerFooter";
 import PlayerPerformance from "../components/Demo1/PlayerPerformance";
@@ -160,9 +160,9 @@ const DemoPage1 = () => {
           </div>
 <div className="demo1-player-media" id="demo1-player-media">
            {/* Media Section */}
-        
+         {/*
 <PlayerMedia/>
-    {/* Contact Section */}
+    Contact Section */}
     <PlayerCarousel/>
 </div>
 

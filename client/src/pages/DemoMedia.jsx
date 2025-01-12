@@ -119,7 +119,7 @@ export default function FloatingActionButtonZoom() {
 
 
 
-
+{/**CAGE WORK PANEL START */}
       <TabPanel value={value} index={0} dir={theme.direction}>
       <div className="hitting-container">
   <div className="row d-flex justify-content-between align-items-center">
@@ -142,7 +142,7 @@ export default function FloatingActionButtonZoom() {
   style={{
     paddingTop: '.5px',
     paddingBottom: '.5px',
-    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', // Customize as needed
+    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', 
   }}
 >
 </hr>
@@ -168,7 +168,7 @@ export default function FloatingActionButtonZoom() {
   style={{
     paddingTop: '.5px',
     paddingBottom: '.5px',
-    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', // Customize as needed
+    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', 
   }}
 >
 </hr>
@@ -188,7 +188,10 @@ export default function FloatingActionButtonZoom() {
   </div>
   </div>
 </TabPanel>
+{/**CAGE WORK PANEL START */}
 
+
+{/**BULLPEN PANEL START */}
       <TabPanel value={value} index={1} dir={theme.direction}>
       <div className="defense-container">
   <div className="row d-flex justify-content-between  align-items-center">
@@ -209,7 +212,7 @@ export default function FloatingActionButtonZoom() {
   style={{
     paddingTop: '.5px',
     paddingBottom: '.5px',
-    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', // Customize as needed
+    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', 
   }}
 >
 </hr>
@@ -234,7 +237,7 @@ export default function FloatingActionButtonZoom() {
   style={{
     paddingTop: '.5px',
     paddingBottom: '.5px',
-    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', // Customize as needed
+    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', 
   }}
 >
 </hr>
@@ -253,6 +256,10 @@ export default function FloatingActionButtonZoom() {
   </div>
   </div>
       </TabPanel>
+{/**BULLPEN PANEL END */}
+
+
+{/**IN-GAME PANEL START */}
       <TabPanel value={value} index={2} dir={theme.direction}>
       <div className="in-game-container">
 
@@ -275,7 +282,7 @@ export default function FloatingActionButtonZoom() {
   style={{
     paddingTop: '.5px',
     paddingBottom: '.5px',
-    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', // Customize as needed
+    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', 
   }}
 >
 </hr>
@@ -321,8 +328,7 @@ export default function FloatingActionButtonZoom() {
   </div>
   </div>
 </TabPanel>
-
-
+{/**IN-GAME PANEL END */}
     </Box>
             </div>
         </div>
@@ -346,7 +352,7 @@ export default function FloatingActionButtonZoom() {
             >
         <div className="container">
         <div className="row d-flex justify-content-center align-items-center w3-padding-large">
-            <div className="col-sm-12 col-md-8">
+            <div className="col-sm-12 col-md-8 col-lg-8">
               
       <video
         src={ClaySmall}
@@ -355,7 +361,7 @@ export default function FloatingActionButtonZoom() {
         style={{ width: "100%" }}
       ></video>
               </div>
-  <div className="col-sm-12 col-md-4">
+  <div className="col-sm-12 col-md-4 col-lg-4">
     <Box
       className=" w3-text-white"
       style={{backgroundColor:'#222'}}
@@ -383,7 +389,7 @@ export default function FloatingActionButtonZoom() {
     scrollButtons="auto"
     sx={{
       ".MuiTabs-flexContainer": {
-        justifyContent: "flex-start", // Align tabs to the left
+        justifyContent: "flex-center", // Align tabs to the left
       },
       ".MuiTab-root": {
         color: "white",
@@ -398,17 +404,16 @@ export default function FloatingActionButtonZoom() {
     <Tab label="Hitting" {...a11yProps(0)} />
     <Tab label="BullPens" {...a11yProps(1)} />
     <Tab label="In-Game" {...a11yProps(2)} />
-    <Tab label="social REELS" {...a11yProps(3)} />
   </Tabs>
 </AppBar>
 
 
- {/**start HITTING */}
+ {/**CAGEWORK START */}
       <TabPanel value={value} index={0} dir={theme.direction}>
       <div className="">
       <div className="row d-flex align-items-center">
   <div className="col-6 col-sm-5 col-md-4">
-    <img src={Offense} alt="small" className="img-fluid shadow" />
+    <img src={Offense} alt="small" className="img-fluid shadow w3-grayscale-max" />
   </div>
   <div className="col-6 col-sm-7 col-md-8 text-start">
     <p className="py-0 mb-0 text-white" style={{ fontSize: "12px" }}>CAGE WORK</p>
@@ -465,6 +470,7 @@ export default function FloatingActionButtonZoom() {
   </div>
   </div>
 </TabPanel>
+{/**CAGEWORK END */}  
 
  {/**start BULLPENS */}
       <TabPanel value={value} index={1} dir={theme.direction}>
@@ -525,6 +531,7 @@ export default function FloatingActionButtonZoom() {
   </div>
   </div>
       </TabPanel>
+ {/**END BULLPENS */}
 
       {/**start in-game */}
       <TabPanel value={value} index={2} dir={theme.direction}>
@@ -585,13 +592,12 @@ export default function FloatingActionButtonZoom() {
   </div>
   </div>
 </TabPanel>
+ {/**END in-game */}
 
 
 
-    {/**start reels */}
+    {/**start reels
     <TabPanel value={value} index={3} dir={theme.direction}>
-      <div className="">
-      {/**1 of 6*/}
   <div className="row d-flex justify-content-between  align-items-center">
   <div className="col-6 col-sm-5 col-md-4">
       <img src={Offense} alt="small" className=' img-fluid shadow  w3-grayscale-max' />
@@ -600,7 +606,6 @@ export default function FloatingActionButtonZoom() {
     <p className="py-0 mb-0 text-white" style={{ fontSize: "12px" }}>VS. OPPONENT</p>
       <p className="py-0 mb-0" style={{fontSize:'12px'}}><i>January 1st, 2025</i></p>
     </div>
-  </div>
  
 
   <hr
@@ -608,12 +613,11 @@ export default function FloatingActionButtonZoom() {
   style={{
     paddingTop: '.5px',
     paddingBottom: '.5px',
-    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', // Customize as needed
+    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)',
   }}
 >
 </hr>
 
- {/**2 of 6*/}
 <div className="row d-flex justify-content-between  align-items-center">
   <div className="col-6 col-sm-5 col-md-4">
       <img src={Offense} alt="small" className=' img-fluid shadow  w3-grayscale-max' />
@@ -630,13 +634,13 @@ export default function FloatingActionButtonZoom() {
   style={{
     paddingTop: '.5px',
     paddingBottom: '.5px',
-    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', // Customize as needed
+    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', 
   }}
 >
 </hr>
 
 
- {/**3 of 6*/}
+
 <div className="row d-flex justify-content-between  align-items-center">
   <div className="col-6 col-sm-5 col-md-4">
       <img src={Offense} alt="small" className=' img-fluid shadow  w3-grayscale-max' />
@@ -652,12 +656,12 @@ export default function FloatingActionButtonZoom() {
   style={{
     paddingTop: '.5px',
     paddingBottom: '.5px',
-    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', // Customize as needed
+    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', 
   }}
 >
 </hr>
 
- {/**4 of 6*/}
+
 <div className="row d-flex justify-content-between align-items-center ">
   <div className="col-6 col-sm-5 col-md-4">
       <img src={Defense} alt="small" className=' img-fluid shadow  w3-grayscale-max' />
@@ -673,12 +677,12 @@ export default function FloatingActionButtonZoom() {
   style={{
     paddingTop: '.5px',
     paddingBottom: '.5px',
-    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', // Customize as needed
+    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', 
   }}
 >
 </hr>
 
- {/**5 of 6*/}
+
     <div className="row d-flex align-items-center">
   <div className="col-6 col-sm-5 col-md-4">
       <img src={MLB} alt="small" className=' img-fluid shadow-lg w3-grayscale-max' />
@@ -694,12 +698,12 @@ export default function FloatingActionButtonZoom() {
   style={{
     paddingTop: '.5px',
     paddingBottom: '.5px',
-    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', // Customize as needed
+    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', 
   }}
 >
 </hr>
 
- {/**6 of 6*/}
+
     <div className="row d-flex align-items-center">
   <div className="col-6 col-sm-5 col-md-4">
       <img src={MLB} alt="small" className=' img-fluid shadow-lg w3-grayscale-max' />
@@ -711,6 +715,7 @@ export default function FloatingActionButtonZoom() {
   </div>
   </div>
 </TabPanel>
+ */}
     </Box>
             </div>
         </div>

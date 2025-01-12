@@ -50,11 +50,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
       <div className="page-container">
         {/* Page Content */}
-
-        {/* Contact Section */}
-
-        <hr />
-
         <InView triggerOnce={true}>
           {({ inView, ref }) => (
             <div
@@ -63,20 +58,20 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             ${inView ? "animate-fade-in" : ""}`}
               id="downloads"
             >
-              {/* Contact section */}
-              <div
-                className="rounded w3-padding-32 w3-padding-large" >
-                <h2>Downloads</h2>
-                <hr />
-
-     
+                           <hr className="w3-opacity w3-text-white w3-padding-16 w3-margin-top" />
+                           <h1 className="w3-text-light-grey w3-margin-bottom">Downloads</h1>
+   
     <div className="row">
       <div className="col-sm-12 col-md-3 col-lg-3">
+      <div
+                className="rounded w3-theme-l1" >
+             
+             
                <button
                  onClick={() => myFunction("Demo1")}
-                 className="w3-button w3-block w3-theme-l1 w3-left-align mt-2"
+                 className="w3-button w3-block w3-theme-l1 w3-left-align"
                >
-                     <i className="fa fa-calendar-check-o fa-fw w3-margin-right"></i>
+                     <i className="fas fa-calendar-check fa-fw w3-margin-right mt-2"></i>
               Schedule     
                </button>
 
@@ -119,7 +114,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                  onClick={() => myFunction("Demo3")}
                  className="w3-button w3-block w3-theme-l1 w3-left-align"
                >
-                 <i className="fa fa-pencil fa-fw w3-margin-right"></i>
+                 <i className="fas fa-user fa-fw w3-margin-right"></i>
                  References
                </button>
                <div id="Demo3" className="w3-hide w3-container">
@@ -143,7 +138,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                  onClick={() => myFunction("Demo4")}
                  className="w3-button w3-block w3-theme-l1 w3-left-align"
                >
-                     <i className="fa fa-calendar-check-o fa-fw w3-margin-right"></i>
+                     <i className="fas fa-chart-line fa-fw w3-margin-right"></i>
               Stats In Comparisson 
                </button>
 
@@ -165,7 +160,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                  onClick={() => myFunction("Demo5")}
                  className="w3-button w3-block w3-theme-l1 w3-left-align"
                >
-                 <i className="fa fa-book fa-fw w3-margin-right"></i>
+                 <i className="fas fa-person-running fa-fw w3-margin-right"></i>
               Performance Metrics
                </button>
                <div id="Demo5" className="w3-hide w3-container">
