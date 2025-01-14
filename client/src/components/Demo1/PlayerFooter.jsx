@@ -60,11 +60,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             <hr />
          
         
-          <div className="w3-container w3-padding-48">
+          <div className="w3-container w3-padding-48"
+          style={{fontFamily:'Roboto'}}>
             <div className="row w3-text-light-grey opacity-65">
-              <div className="col-sm-12 col-md-5 col-lg-5 justify-content-start align-content-end">
-              <h6 className="w3-text-light-grey">CONNECT WITH ME:</h6>
-              <p>Thank you for visiting. Feedback is welcome—feel free to reach out directly or connect with me on social media.</p> 
+              <div className="col-sm-12 col-md-5 col-lg-5 justify-content-start align-content-end w3-padding-small">
+              <h6 className="w3-text-light-grey fw-bold">THANK YOU FOR VISITING:</h6>
+              <p className=" fw-light" style={{fontFamily:'Roboto'}}>Feedback is welcome- Feel free to reach out to me directly, connect with me on social media, or communicate with <Link className=" link-light opacity-90">Coach Joe Doe</Link>.</p> 
               <p style={{}}>DOWNLOAD MY RESUME <span> <a 
                   id="download"
                   download
@@ -77,7 +78,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
               </div>
               <div className="col-sm-12 col-md-4 col-lg-4 justify-content-center align-content-end">
             <div className="w3-margin-left">
-              <h6 className="w3-text-light-grey w3-margin-left">CONTACT INFO</h6>
+              <h6 className="w3-text-light-grey w3-margin-left fw-bold">CONTACT INFO</h6>
               </div>
                 <ul>
              
@@ -118,7 +119,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
               </div>
               <div className="col-sm-12 col-md-3 col-lg-3 justify-content-end  align-content-end">
               <div className="w3-margin-left">
-              <h6 className="w3-text-light-grey w3-margin-left">SOCIALS</h6>
+              <h6 className="w3-text-light-grey w3-margin-left fw-bold">SOCIALS</h6>
               </div>
                   <ul className="w3-margin-bottom">
 

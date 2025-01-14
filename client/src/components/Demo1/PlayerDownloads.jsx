@@ -62,14 +62,14 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                            <h1 className="w3-text-light-grey w3-margin-bottom">Downloads</h1>
    
     <div className="row">
-      <div className="col-sm-12 col-md-3 col-lg-3">
+      <div className="col-sm-12 col-md-3 col-lg-3  rounded">
       <div
-                className="rounded w3-theme-l1" >
+                className="rounded " >
              
              
                <button
                  onClick={() => myFunction("Demo1")}
-                 className="w3-button w3-block w3-theme-l1 w3-left-align"
+                 className="w3-button w3-block  w3-left-align rounded mt-3"
                >
                      <i className="fas fa-calendar-check fa-fw w3-margin-right mt-2"></i>
               Schedule     
@@ -91,7 +91,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
                <button
                  onClick={() => myFunction("Demo2")}
-                 className="w3-button w3-block w3-theme-l1 w3-left-align"
+                 className="w3-button w3-block  w3-left-align rounded"
                >
                  <i className="fa fa-book fa-fw w3-margin-right"></i>
                  Unofficial Transcripts
@@ -112,7 +112,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
                <button
                  onClick={() => myFunction("Demo3")}
-                 className="w3-button w3-block w3-theme-l1 w3-left-align"
+                 className="w3-button w3-block  w3-left-align rounded"
                >
                  <i className="fas fa-user fa-fw w3-margin-right"></i>
                  References
@@ -136,7 +136,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         
                <button
                  onClick={() => myFunction("Demo4")}
-                 className="w3-button w3-block w3-theme-l1 w3-left-align"
+                 className="w3-button w3-block  w3-left-align rounded"
                >
                      <i className="fas fa-chart-line fa-fw w3-margin-right"></i>
               Stats In Comparisson 
@@ -158,7 +158,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
                <button
                  onClick={() => myFunction("Demo5")}
-                 className="w3-button w3-block w3-theme-l1 w3-left-align"
+                 className="w3-button w3-block  w3-left-align rounded"
                >
                  <i className="fas fa-person-running fa-fw w3-margin-right"></i>
               Performance Metrics
@@ -179,13 +179,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
                <button
                  onClick={() => myFunction("Demo6")}
-                 className="w3-button w3-block w3-theme-l1 w3-left-align"
+                 className="w3-button w3-block  w3-left-align rounded mb-3"
                >
                  <i className="fa fa-pencil fa-fw w3-margin-right"></i>
                  Player Resume
                </button>
                <div id="Demo6" className="w3-hide w3-container">
-                 <ul className="text-decoration-none mt-2">
+                 <ul className="text-decoration-none mt-2 ">
                  <li>
                     <Link className=" link-light">Player Resume</Link>
                    </li>
