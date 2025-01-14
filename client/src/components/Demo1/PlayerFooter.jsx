@@ -64,7 +64,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           style={{fontFamily:'Roboto'}}>
             <div className="row w3-text-light-grey opacity-65">
               <div className="col-sm-12 col-md-5 col-lg-5 justify-content-start align-content-end w3-padding-small">
-              <h6 className="w3-text-light-grey fw-bold">THANK YOU FOR VIEWING:</h6>
+              <h6 className="w3-text-light-grey fw-bold">THANK YOU FOR VIEWING: </h6>
               <p className=" fw-light" style={{fontFamily:'Roboto'}}>Feedback is welcome- Feel free to reach out to me directly, connect with me on social media, or communicate with <Link className=" link-light opacity-90">Coach Joe Doe</Link>.</p> 
               <p style={{}}>DOWNLOAD MY RESUME <span> <a 
                   id="download"
