@@ -1,6 +1,7 @@
 import React from "react";
 import { InView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
+import PlayerCarousel from "./PlayerCarousel";
 
 const myFunction = (id) => {
     var x = document.getElementById(id);
@@ -58,15 +59,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             ${inView ? "animate-fade-in" : ""}`}
               id="downloads"
             >
-                           <hr className="w3-opacity w3-text-white w3-padding-16 w3-margin-top" />
-                           <h1 className="w3-text-light-grey w3-margin-bottom">Downloads</h1>
-   
+         
     <div className="row">
-      <div className="col-sm-12 col-md-3 col-lg-3  rounded">
-      <div
-                className="rounded " >
-             
-             
+    <hr className="w3-opacity w3-text-white w3-padding-16 w3-margin-top" />      
+ <div className="col-sm-12 col-md-3 col-lg-3 rounded">
+ <h1 className="w3-text-light-grey w3-margin-bottom">Downloads</h1>
+     
+      <div className="rounded">
                <button
                  onClick={() => myFunction("Demo1")}
                  className="w3-button w3-block  w3-left-align rounded mt-3"
@@ -193,8 +192,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                </div>
              </div>
              </div>
+             <div className="col-sm-12 col-md-9 col-lg-9">
+        
+<PlayerCarousel />
+      </div>
              </div>
-      <div className="col-sm-12 col-md-9 col-lg-9"></div>
+    
     </div>
           )}
         </InView>

@@ -6,16 +6,12 @@ import { RiHome6Line } from "react-icons/ri";
 import { HiAcademicCap } from "react-icons/hi";
 import { GrScorecard } from "react-icons/gr";
 import { GiRotaryPhone } from "react-icons/gi";
-import { MdOutlineEmail} from "react-icons/md";
-import  {NavLink}  from "react-router-dom";
+import { MdOutlineEmail } from "react-icons/md";
 import PlayerResume from "../../assets/PlayerResume.pdf";
 
-
-
 const PlayerProfile = () => {
-
   return (
-    <div >
+    <div>
       <style>
         {`
   
@@ -39,241 +35,245 @@ const PlayerProfile = () => {
 }
  `}
       </style>
-      <div className="page-container" >
-      {/* Page Content */}
- 
-      {/* Performance Section */}
-      <InView triggerOnce={true}>
+      <div className="page-container">
+        {/* Page Content */}
+
+        {/* Performance Section */}
+        <InView triggerOnce={true}>
           {({ inView, ref }) => (
-            <div ref={ref} className={`w3-content w3-justify w3-text-grey w3-padding-16 
+            <div
+              ref={ref}
+              className={`w3-content w3-justify w3-text-grey w3-padding-16 
                ${inView ? "animate-fade-in" : ""}`}
-            id="profile"
-            
-        >
-          
-       {/**   style={{backgroundImage: `url(${ProfileBG})`,
+              id="profile"
+            >
+              {/**   style={{backgroundImage: `url(${ProfileBG})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
          
          }}
-          */} 
-         <div className="row d-flex justify-content-center align-items-center g-3 py-2">
-            
-     
+          */}
+          
+              <div className="row d-flex justify-content-center align-items-center g-3 py-2">
                 {/* Main row with column 4 and nested columns in column 8 */}
                 <div className="col-sm-12 col-md-4 col-lg-4 w3-hide-small w3-hide-medium">
                   <div>
-                    <img src={ClaySmall} alt="clay" style={{width:'80%'}} />
+                    <img src={ClaySmall} alt="clay" style={{ width: "80%" }} />
                   </div>
-                  </div>
+                </div>
                 <div className="col-sm-12 col-md-8 col-lg-8">
                   <div className="row d-flex justify-content-center align-items-center g-2">
-                  <div className="w3-text-white">
-                  <h1 className="w3-text-light-grey">Player Profile</h1>
-                 <hr  className="w3-opacity" />
-                </div>
+                    <div className="w3-text-white">
+                      <h1 className="w3-text-light-grey">Player Profile</h1>
+                      <hr className="w3-opacity" />
+                    </div>
 
-
-
-
-                
-                   <div className="col-sm-12 col-md-6 col-lg-6">
-           <div className="py-2">
-    
-    <p
-              className="my-0 py-0 text-white"
-              style={{ marginBottom: "4px" }}
-            >
-              <span
-                className="fa-fw"
-                style={{ marginRight: "4px" }}
-              >
-                <b
-                  className=" text-white-50"
-                  style={{ fontSize: "1.3rem" }}
-                >
-                  <RiHome6Line />
-                </b>{" "}
-              </span>
-              <span
-                className="text-white"
-                style={{ fontSize: "1rem" }}
-              >
-                {" "}
-                CATCHER
-              </span>
-              <br />
-            </p>
-
-            <p
-              className="my-0 py-0 text-white"
-              style={{ marginBottom: "4px" }}
-            >
-              <span
-                className="fa-fw"
-                style={{ marginRight: "4px" }}
-              >
-                <b
-                  className=" text-white-50"
-                  style={{ fontSize: "1.3rem" }}
-                >
-                  {" "}
-                  <HiAcademicCap />
-                </b>
-              </span>{" "}
-              <span
-                className="text-white"
-                style={{ fontSize: "1rem" }}
-              >
-                {" "}
-                2024
-              </span>
-              <br />
-            </p>
-
-            <p
-              className="my-0 py-0 text-white"
-              style={{ marginBottom: "4px" }}
-            >
-              <span
-                className="fa-fw"
-                style={{ marginRight: "4px" }}
-              >
-                <b
-                  className="text-white-50"
-                  style={{ fontSize: "1.2rem" }}
-                >
-                  {" "}
-                  <GrScorecard />
-                </b>
-              </span>{" "}
-              <span
-                className="text-white"
-                style={{ fontSize: "1rem" }}
-              >
-                {" "}
-                SAT-9000 | GPA- 5.0
-              </span>
-              <br />
-            </p>
-
-            <p
-              className="my-0 py-0 text-white"
-              style={{ marginBottom: "4px" }}
-            >
-              <span
-                className="fa-fw text-white"
-                style={{ marginRight: "4px" }}
-              >
-                <b
-                  className=" text-white-50"
-                  style={{ fontSize: "1.3rem" }}
-                >
-                  <GiRotaryPhone />
-                </b>{" "}
-              </span>{" "}
-              <Link
-                className="text-white"
-                style={{ fontSize: "1rem" }}
-              >
-                (123) 456-7890
-              </Link>
-              <br />
-            </p>
-
-            <p
-              className="my-0 py-0 text-white"
-              style={{ marginBottom: "4px" }}
-            >
-              <span
-                className="fa-fw text-white"
-                style={{ marginRight: "4px" }}
-              >
-                <b
-                  className=" text-white-50"
-                  style={{ fontSize: "1.3rem" }}
-                >
-                  <MdOutlineEmail />{" "}
-                </b>
-              </span>{" "}
-              <Link
-                className="text-white"
-                style={{ fontSize: "1rem" }}
-              >
-                EMAIL@MAIL.COM
-              </Link>
-              <br />
-            </p>
-            </div>
-            </div>  
-
-                      <div className="col-sm-12 col-md-6 col-lg-6">
-                        <div className="py-2">
-                      <p className="mt-0 py-0 text-white"
-                style={{ marginBottom: "4px", fontSize:'1.1rem' }}> Bats: <span 
-                className=" text-white-50"
-                style={{ marginRight: "4px" }}> R/L
+                    <div className="col-sm-12 col-md-6 col-lg-6">
+                      <div className="py-2">
+                        <p
+                          className="my-0 py-0 text-white"
+                          style={{ marginBottom: "4px" }}
+                        >
+                          <span
+                            className="fa-fw"
+                            style={{ marginRight: "4px" }}
+                          >
+                            <b
+                              className=" text-white-50"
+                              style={{ fontSize: "1.3rem" }}
+                            >
+                              <RiHome6Line />
+                            </b>{" "}
                           </span>
-                          Throws: 
-                          <span 
-                className=" text-white-50"
-                style={{ marginRight: "4px" }}> R
+                          <span
+                            className="text-white"
+                            style={{ fontSize: "1rem" }}
+                          >
+                            {" "}
+                            CATCHER
                           </span>
+                          <br />
                         </p>
 
-                        <p className="mt-0 py-0 text-white"
-                style={{ marginBottom: "4px", fontSize:'1.1rem' }}> Height: <span 
-                className=" text-white-50"
-                style={{ marginRight: "4px" }}> 6'0
-                          </span> Weight: 
-                          <span 
-                className=" text-white-50"
-                style={{ marginRight: "4px" }}> 335 lbs
+                        <p
+                          className="my-0 py-0 text-white"
+                          style={{ marginBottom: "4px" }}
+                        >
+                          <span
+                            className="fa-fw"
+                            style={{ marginRight: "4px" }}
+                          >
+                            <b
+                              className=" text-white-50"
+                              style={{ fontSize: "1.3rem" }}
+                            >
+                              {" "}
+                              <HiAcademicCap />
+                            </b>
+                          </span>{" "}
+                          <span
+                            className="text-white"
+                            style={{ fontSize: "1rem" }}
+                          >
+                            {" "}
+                            2024
                           </span>
-                        </p>
-                     
-                        <p className="mt-0 py-0 text-white"
-                style={{ marginBottom: "4px", fontSize:'1.1rem' }}> Born: <span 
-                className=" text-white-50"
-                style={{ marginRight: "4px" }}> 11-01-2006, <i>ST.</i>
-                          </span> 
+                          <br />
                         </p>
 
-                       
-                 <a 
-                  id="download"
-                  download
-                
-                 href={PlayerResume} >
-                   <button className="w3-button rounded text-decoration-none w3-white w3-padding mt-3">
-                   Download Metrics
-                   </button>
-    </a>
-                      <div >
-           
-                </div>
-                    
+                        <p
+                          className="my-0 py-0 text-white"
+                          style={{ marginBottom: "4px" }}
+                        >
+                          <span
+                            className="fa-fw"
+                            style={{ marginRight: "4px" }}
+                          >
+                            <b
+                              className="text-white-50"
+                              style={{ fontSize: "1.2rem" }}
+                            >
+                              {" "}
+                              <GrScorecard />
+                            </b>
+                          </span>{" "}
+                          <span
+                            className="text-white"
+                            style={{ fontSize: "1rem" }}
+                          >
+                            {" "}
+                            SAT-9000 | GPA- 5.0
+                          </span>
+                          <br />
+                        </p>
 
-                     
+                        <p
+                          className="my-0 py-0 text-white"
+                          style={{ marginBottom: "4px" }}
+                        >
+                          <span
+                            className="fa-fw text-white"
+                            style={{ marginRight: "4px" }}
+                          >
+                            <b
+                              className=" text-white-50"
+                              style={{ fontSize: "1.3rem" }}
+                            >
+                              <GiRotaryPhone />
+                            </b>{" "}
+                          </span>{" "}
+                          <Link
+                            className="text-white"
+                            style={{ fontSize: "1rem" }}
+                          >
+                            (123) 456-7890
+                          </Link>
+                          <br />
+                        </p>
+
+                        <p
+                          className="my-0 py-0 text-white"
+                          style={{ marginBottom: "4px" }}
+                        >
+                          <span
+                            className="fa-fw text-white"
+                            style={{ marginRight: "4px" }}
+                          >
+                            <b
+                              className=" text-white-50"
+                              style={{ fontSize: "1.3rem" }}
+                            >
+                              <MdOutlineEmail />{" "}
+                            </b>
+                          </span>{" "}
+                          <Link
+                            className="text-white"
+                            style={{ fontSize: "1rem" }}
+                          >
+                            EMAIL@MAIL.COM
+                          </Link>
+                          <br />
+                        </p>
                       </div>
                     </div>
-                    </div>  
+
+                    <div className="col-sm-12 col-md-6 col-lg-6">
+                      <div className="py-2">
+                        <p
+                          className="mt-0 py-0 text-white"
+                          style={{ marginBottom: "4px", fontSize: "1.1rem" }}
+                        >
+                          {" "}
+                          Bats:{" "}
+                          <span
+                            className=" text-white-50"
+                            style={{ marginRight: "4px" }}
+                          >
+                            {" "}
+                            R/L
+                          </span>
+                          Throws:
+                          <span
+                            className=" text-white-50"
+                            style={{ marginRight: "4px" }}
+                          >
+                            {" "}
+                            R
+                          </span>
+                        </p>
+
+                        <p
+                          className="mt-0 py-0 text-white"
+                          style={{ marginBottom: "4px", fontSize: "1.1rem" }}
+                        >
+                          {" "}
+                          Height:{" "}
+                          <span
+                            className=" text-white-50"
+                            style={{ marginRight: "4px" }}
+                          >
+                            {" "}
+                            6'0
+                          </span>{" "}
+                          Weight:
+                          <span
+                            className=" text-white-50"
+                            style={{ marginRight: "4px" }}
+                          >
+                            {" "}
+                            335 lbs
+                          </span>
+                        </p>
+
+                        <p
+                          className="mt-0 py-0 text-white"
+                          style={{ marginBottom: "4px", fontSize: "1.1rem" }}
+                        >
+                          {" "}
+                          Born:{" "}
+                          <span
+                            className=" text-white-50"
+                            style={{ marginRight: "4px" }}
+                          >
+                            {" "}
+                            11-01-2006, <i>ST.</i>
+                          </span>
+                        </p>
+
+                        <a id="download" download href={PlayerResume}>
+                          <button className="w3-button rounded text-decoration-none w3-white w3-padding mt-3">
+                            Download Metrics
+                          </button>
+                        </a>
+                        <div></div>
+                      </div>
                     </div>
                   </div>
-             
+                </div>
+              </div>
 
-
-
-
-
-
-
-
-
-
-
-{/**START TEAMS*/}
+              {/**START TEAMS
                 <div className="row w3-padding-16 d-flex justify-content-center align-items-center g-3">
                 <div className="w3-text-white">
                 <h3 className="w3-text-light-grey">Team Affiliations</h3>
@@ -356,8 +356,8 @@ const PlayerProfile = () => {
                          
                       
                         </p>
-
                       </div>
+
                   <div className="col-sm-12 col-md-4 col-lg-4">
                   <div className="w3-text-white">
               <h5 className="fw-bold text-white mt-2">SPECIAL TEAMS</h5>
@@ -383,14 +383,13 @@ const PlayerProfile = () => {
                       </span>
                     </p>
                   </div>
-
             </div>
+*/}
+            </div>
+          )}
+        </InView>
 
-</div>
- )}
-    </InView>
-
-    <script>
+        <script>
           {`
 function myFunction(id) {
   var x = document.getElementById(id);
@@ -415,24 +414,12 @@ function openNav() {
 }
   `}
         </script>
-
-                
-</div>
-
-
-
-
-
-
-
-
-                </div>            
-  
+      </div>
+    </div>
   );
 };
 
 export default PlayerProfile;
-
 
 /**
                 <p className="mt-0 py-0 text-white"

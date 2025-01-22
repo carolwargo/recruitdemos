@@ -11,13 +11,11 @@ const PlayerCarousel = () => {
 
         <InView triggerOnce={true}>
           {({ inView, ref }) => (
-          <div ref={ref} className={`w3-content w3-justify w3-text-grey w3-padding-16 
+          <div ref={ref} className={`w3-content w3-justify w3-text-grey
             ${inView ? "animate-fade-in" : ""}`} 
           id="carousel">
-             <hr className="w3-opacity w3-text-white w3-padding-16 w3-margin-top" />
-          <h1 className="w3-text-light-grey w3-margin-bottom">PROGRESS & UPDATES</h1>
-          <div className="row w3-padding-large w3-padding-16" style={{ margin: "0 -16px" }}>
-       
+ <div className="row w3-padding-large w3-padding-16">
+        
           <div className="col-sm-12 col-md-12 col-lg-12">  
           <Carousel data-bs-theme="light red-glow">
                     <Carousel.Item>
