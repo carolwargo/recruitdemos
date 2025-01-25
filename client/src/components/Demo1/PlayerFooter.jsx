@@ -66,10 +66,10 @@ const PlayerFooter = () => {
 }
 
 .fa-facebook,
-.fa-globe,
+.fas fa-globe,
 .fa-instagram,
 .fa-twitter {
-    text-decoration: none;
+    text-decoration: none !important;
     cursor: pointer;
     background-color: #918E9B;
     margin: 8px;

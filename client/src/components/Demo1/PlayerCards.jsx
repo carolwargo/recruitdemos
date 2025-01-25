@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import { InView } from "react-intersection-observer";
 import DBWhite from "../../assets/images/Demo1/DBWhite.png";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import USALogo from '../../assets/images/Round/USALogo.jpg'
+import USA from "../../assets/images/Round/Demo1/USA.png";
+import UA from "../../assets/images/Round/UA.png";
+import TX from "../../assets/images/Round/TX.png";
 
 const PlayerCards = () => {
   return (
@@ -409,7 +411,7 @@ a:hover {
         <div className="row d-flex justify-center align-items-center">
           <div className="col-sm-12 col-md-6 col-lg-6">
           <img 
-        src={USALogo} 
+        src={USA} 
         alt="usa-logo" 
         className=""
         style={{
@@ -460,59 +462,7 @@ a:hover {
        
           <div className="col-sm-12 col-md-6 col-lg-6">
           <img 
-        src={USALogo} 
-        alt="usa-logo" 
-        className=""
-        style={{
-       width:'35px',
-       height:'auto'
-        }}
-        />
-        <p
-            className="small my-1"
-          style={{
-            color: '#8ecdf8',
-            textShadow: '1px 1px 2px black',
-          }}
-        >
-          <i className="fas fa-video-camera"></i>{' '}
-          <Link
-            className="mt-2"
-            style={{
-              color: '#8ecdf8',
-              textShadow: '1px 1px 2px black',
-              marginLeft: '5px',
-            }}
-          >
-          Highlights
-          </Link>
-        </p>
-       
-        <p
-           className="small mb-3"
-          style={{
-            color: '#8ecdf8',
-            textShadow: '1px 1px 2px black',
-          }}
-        >
-          <i className="fas fa-globe mr-2"></i>{' '}
-          <Link
-            className="mt-2"
-            style={{
-              color: '#8ecdf8',
-              textShadow: '1px 1px 2px black',
-              marginLeft: '5px',
-            }}
-          >
-            Player Profile
-          </Link>
-        </p>
-          </div>
-
-
-          <div className="col-sm-12 col-md-6 col-lg-6">
-          <img 
-        src={USALogo} 
+        src={26} 
         alt="usa-logo" 
         className=""
         style={{
@@ -564,7 +514,59 @@ a:hover {
 
           <div className="col-sm-12 col-md-6 col-lg-6">
           <img 
-        src={USALogo} 
+        src={UA} 
+        alt="usa-logo" 
+        className=""
+        style={{
+       width:'35px',
+       height:'auto'
+        }}
+        />
+        <p
+            className="small my-1"
+          style={{
+            color: '#8ecdf8',
+            textShadow: '1px 1px 2px black',
+          }}
+        >
+          <i className="fas fa-video-camera"></i>{' '}
+          <Link
+            className="mt-2"
+            style={{
+              color: '#8ecdf8',
+              textShadow: '1px 1px 2px black',
+              marginLeft: '5px',
+            }}
+          >
+          Highlights
+          </Link>
+        </p>
+       
+        <p
+           className="small mb-3"
+          style={{
+            color: '#8ecdf8',
+            textShadow: '1px 1px 2px black',
+          }}
+        >
+          <i className="fas fa-globe mr-2"></i>{' '}
+          <Link
+            className="mt-2"
+            style={{
+              color: '#8ecdf8',
+              textShadow: '1px 1px 2px black',
+              marginLeft: '5px',
+            }}
+          >
+            Player Profile
+          </Link>
+        </p>
+          </div>
+
+
+          <div className="col-sm-12 col-md-6 col-lg-6">
+          <img 
+        src={TX} 
         alt="usa-logo" 
         className=""
         style={{
