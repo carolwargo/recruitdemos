@@ -7,6 +7,8 @@ import { HiAcademicCap } from "react-icons/hi";
 import { GrScorecard } from "react-icons/gr";
 import { GiRotaryPhone } from "react-icons/gi";
 import { MdOutlineEmail } from "react-icons/md";
+import {  GiTiedScroll } from "react-icons/gi";
+import { FaRegEye } from "react-icons/fa";
 import PlayerResume from "../../assets/PlayerResume.pdf";
 
 const PlayerProfile = () => {
@@ -72,7 +74,7 @@ const PlayerProfile = () => {
                     <div className="col-sm-12 col-md-6 col-lg-6">
                       <div className="py-2">
                         <p
-                          className="my-0 py-0 text-white"
+                           className="mt-0 mb-1 py-0 text-white"
                           style={{ marginBottom: "4px" }}
                         >
                           <span
@@ -97,7 +99,7 @@ const PlayerProfile = () => {
                         </p>
 
                         <p
-                          className="my-0 py-0 text-white"
+                          className="mt-0 mb-1 py-0 text-white"
                           style={{ marginBottom: "4px" }}
                         >
                           <span
@@ -123,7 +125,7 @@ const PlayerProfile = () => {
                         </p>
 
                         <p
-                          className="my-0 py-0 text-white"
+                           className="mt-0 mb-1 py-0 text-white"
                           style={{ marginBottom: "4px" }}
                         >
                           <span
@@ -143,13 +145,40 @@ const PlayerProfile = () => {
                             style={{ fontSize: "1rem" }}
                           >
                             {" "}
-                            SAT-9000 | GPA- 5.0
+                            SAT-9000 
+                          </span>
+                          <br />
+                        </p>
+
+                        
+                        <p
+                           className="mt-0 mb-1 py-0 text-white"
+                          style={{ marginBottom: "4px" }}
+                        >
+                          <span
+                            className="fa-fw"
+                            style={{ marginRight: "4px" }}
+                          >
+                            <b
+                              className="text-white-50"
+                              style={{ fontSize: "1.2rem" }}
+                            >
+                              {" "}
+                              < GiTiedScroll />
+                            </b>
+                          </span>{" "}
+                          <span
+                            className="text-white"
+                            style={{ fontSize: "1rem" }}
+                          >
+                            {" "}
+                            GPA- 5.0
                           </span>
                           <br />
                         </p>
 
                         <p
-                          className="my-0 py-0 text-white"
+                           className="mt-0 mb-1 py-0 text-white"
                           style={{ marginBottom: "4px" }}
                         >
                           <span
@@ -173,7 +202,7 @@ const PlayerProfile = () => {
                         </p>
 
                         <p
-                          className="my-0 py-0 text-white"
+                           className="mt-0 mb-1 py-0 text-white"
                           style={{ marginBottom: "4px" }}
                         >
                           <span
@@ -260,13 +289,37 @@ const PlayerProfile = () => {
                             11-01-2006, <i>ST.</i>
                           </span>
                         </p>
-
+                        <p
+                          className="mt-0 py-0 text-white"
+                          style={{ marginBottom: "4px", fontSize: "1.1rem" }}
+                        >
+                          {" "} < FaRegEye style={{fontSize:'1.4rem', marginRight:'5px'}} /><Link
+                            className=" text-white-50"
+                            style={{ marginRight: "4px" }}
+                          >
+                            
+                          Perfect Game Profile{" "}
+                          </Link>
+                        </p>
+                        
+                        <p
+                          className="mt-0 py-0 text-white"
+                          style={{ marginBottom: "4px", fontSize: "1.1rem" }}
+                        >
+                          {" "} < FaRegEye style={{fontSize:'1.4rem', marginRight:'5px'}} /><Link
+                            className=" text-white-50"
+                            style={{ marginRight: "4px" }}
+                          >
+                            
+                         Max Preps Profile{" "}
+                          </Link>
+                        </p>
                         <a id="download" download href={PlayerResume}>
-                          <button className="w3-button rounded text-decoration-none w3-white w3-padding mt-3">
+                          <button className="w3-button px-5 rounded text-decoration-none w3-white w3-padding mt-2">
                             Download Metrics
                           </button>
                         </a>
-                        <div></div>
+                       
                       </div>
                     </div>
                   </div>

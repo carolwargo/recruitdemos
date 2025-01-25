@@ -122,7 +122,7 @@ export default function FloatingActionButtonZoom() {
 {/**CAGE WORK PANEL START */}
       <TabPanel value={value} index={0} dir={theme.direction}>
       <div className="hitting-container">
-      <div className="row d-flex justify-content-between  align-items-center">
+      <div className="row d-flex justify-content-between align-items-center">
   <div className="col-12 col-sm-5">
       <img src={Offense} alt="small" className=' img-fluid shadow w3-grayscale-max' />
     </div>
@@ -351,7 +351,7 @@ export default function FloatingActionButtonZoom() {
               id="Media"
             >
         <div className="container">
-        <div className="row d-flex justify-content-center align-items-center w3-padding-large">
+        <div className="row d-flex justify-content-center align-items-center">
             <div className="col-sm-12 col-md-8 col-lg-8">
               
       <video

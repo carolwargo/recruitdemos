@@ -1,7 +1,10 @@
 import React from "react";
 import { InView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
-import PlayerCarousel from "./PlayerCarousel";
+import { BsFacebook, BsTwitterX } from "react-icons/bs";
+import {FaSnapchatSquare } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+
 
 const myFunction = (id) => {
     var x = document.getElementById(id);
@@ -60,7 +63,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
               id="downloads"
             >
          
-    <div className="row">
+    <div className="row d-flex justify-content-center">
     <hr className="w3-opacity w3-text-white w3-padding-16 w3-margin-top" />      
  <div className="col-sm-12 col-md-3 col-lg-3 rounded">
  <h1 className="w3-text-light-grey w3-margin-bottom">Downloads</h1>
@@ -193,11 +196,116 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
              </div>
              </div>
              <div className="col-sm-12 col-md-9 col-lg-9">
-        
-<PlayerCarousel />
+             <div
+                className="w3-container w3-light-grey rounded w3-padding-32 w3-padding-small"
+                id="contact"
+                style={{ maxWidth: "700px" }}
+              >
+     <div className="w3-container" >
+                  <div className="row d-flex justify-content-end align-items-center">
+                  <div className="col-sm-4 col-md-4 col-lg-4">
+                          <div className="container-fluid text-center w3-text-black">
+                          <h4 className="w3-center">
+                  Contact Me
+                  </h4>
+                          <hr className=" my-2" />
+                          <p className="text-body-emphasis fw-bold small mb-2"> 
+                            <span>PHONE: <Link className="link-secondary fw-light"> (123)456-7890</Link></span> 
+               </p>  
+                     <p className="text-body-emphasis fw-bold small mb-2">      
+                     <span>EMAIL: <Link className="link-secondary fw-light"> mail@gmail.com</Link></span>
+                     </p>  
+                            <Link
+                              className="text-decoration-none link-dark w3-opacity"
+                              style={{ fontSize: "1.2rem" }}
+                            >
+                              <strong>
+                                <BsTwitterX className="" />
+                              </strong>{" "}
+                            </Link>
+                            <Link
+                              className="text-decoration-none link-dark w3-opacity"
+                              style={{ fontSize: "1.3rem" }}
+                            >
+                              <strong>
+                                <BsFacebook className="" />
+                              </strong>{" "}
+                            </Link>
+                            <Link
+                              className="text-decoration-none link-dark w3-opacity"
+                              style={{ fontSize: "1.5rem" }}
+                            >
+                              <strong>
+                            < FaInstagram/>
+                              </strong>{" "}
+                            </Link>
+                            <Link
+                              className="text-decoration-none w3-opacity link-dark"
+                              style={{ fontSize: "1.4rem" }}
+                            >
+                              <strong>
+                                <FaSnapchatSquare />
+                              </strong>
+                            </Link>
+                          </div>
+                        </div>
+
+                        <div className="col-sm-8 col-md-8 col-lg-8">
+                         
+                  {/** 
+                  <p className="w3-center">
+                    Get in touch direct- message me on social media,{" "}
+                    <Link>call</Link>, <Link>email</Link> or fill out the form
+                    to send me a message through the site.
+                  </p>
+                  */}
+                  <form action="/action_page.php" target="_blank">
+
+                  <div className="row">
+                    <div className="col-sm-12 col-md-6 col-lg-6">
+                    <input
+                        className="w3-input w3-border"
+                        type="text"
+                        name="Name"
+                        placeholder="Name"
+                        required
+                      />
+                    </div>
+                    <div className="col-sm-12 col-md-6 col-lg-6">
+                    <input
+                        className="w3-input w3-border"
+                        type="email"
+                        placeholder="Email"
+                        name="Email"
+                        required
+                      />
+                    </div>
+                  </div>
+               
+                  <div className="my-3">
+                      <textarea
+                        className="w3-input w3-border"
+                        type="text"
+                        name="Message"
+                        rows="4"
+                        placeholder="Message"
+                        required
+                      />
+                    </div>
+                
+                    <button
+                      type="submit"
+                      className="w3-button w3-block w3-black w3-margin-top"
+                    >
+                      Send Message
+                    </button>
+                  </form>
+                  </div>
+                  </div>
+                </div>
       </div>
              </div>
-    
+             </div>
     </div>
           )}
         </InView>

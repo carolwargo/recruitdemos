@@ -14,7 +14,7 @@ const PlayerCarousel = () => {
           <div ref={ref} className={`w3-content w3-justify w3-text-grey
             ${inView ? "animate-fade-in" : ""}`} 
           id="carousel">
- <div className="row w3-padding-large w3-padding-16">
+ <div className="row w3-padding-16 d-flex justify-content-center">
         
           <div className="col-sm-12 col-md-12 col-lg-12">  
           <Carousel data-bs-theme="light red-glow">

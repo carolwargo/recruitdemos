@@ -157,7 +157,7 @@ const DemoPage1 = () => {
             <div className="demo1-player-media" id="demo1-player-downloads">
               <PlayerDownloads />
             </div>
-            <PlayerContact />
+         
 
             {/* Footer */}
             <PlayerFooter />

@@ -351,7 +351,7 @@ export default function FloatingActionButtonZoom() {
               id="Media"
             >
         <div className="container">
-        <div className="row d-flex justify-content-center align-items-center w3-padding-large">
+        <div className="row d-flex justify-content-center align-items-center">
             <div className="col-sm-12 col-md-8 col-lg-8">
               
       <video
