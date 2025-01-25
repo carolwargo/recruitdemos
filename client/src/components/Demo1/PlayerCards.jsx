@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { InView } from "react-intersection-observer";
 import DBWhite from "../../assets/images/Demo1/DBWhite.png";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import USALogo from '../../assets/images/Round/USALogo.jpg'
 
 const PlayerCards = () => {
   return (
@@ -12,7 +12,7 @@ const PlayerCards = () => {
    <style>
       {`
       .tags {
-    background-color: #161619;
+    background-color: #8ecdf8;
     border-radius: 0px 0px 10px 10px;
     display: flex;
     justify-content: space-around;
@@ -61,9 +61,14 @@ a:hover {
           <h1 className="w3-text-light-grey w3-margin-bottom">Team Affiliations</h1>
           
            <div className="row d-flex justify-content-center align-items-center">
+  
+  
+  
+  
+  
   {/* High School Card */}
-  <div className="col-sm-12 col-md-4 col-lg-4 text-center w3-padding-small">
-  <div>
+   <div className="col-sm-12 col-md-4 col-lg-4 text-center w3-padding-small">
+   <div>
       <div 
   className="card"
   style={{
@@ -102,48 +107,47 @@ a:hover {
     <div className="card-body w3-padding-24">
       <h4
         style={{
-          color: '#58b7ff',
+          color: '#8ecdf8',
           textShadow: '1px 1px 2px black',
           lineHeight: '1',
-          fontSize: '30px',
+          fontSize: '32px',
         }}
       >
         <b>ST. MARYS</b> <br />{' '}
         <span style={{fontSize:'24px', marginTop:'0px'}}>High School</span>
       </h4>
-      <h6 className="fw-bold mt-4"
+      <h6 className="fw-bold my-4"
         style={{
-          color: '#58b7ff',
+          color: '#8ecdf8',
           textShadow: '1px 1px 2px black',
         }}
-      >
-       SMAACC <br />
-        State Ranking #1
-      </h6>
-      <span>
-        <span
-          className="small"
+        >
+        SMAACC <br />
+         State Ranking #1
+       </h6>
+       <div>
+        <p
+          className="small mb-2"
           style={{
-            color: '#58b7ff',
+            color: '#8ecdf8',
             textShadow: '1px 1px 2px black',
           }}
         >
           <i className="fas fa-location-pin"></i>{' '}
           <Link
-            className="mt-2"
             style={{
-              color: '#58b7ff',
+              color: '#8ecdf8',
               textShadow: '1px 1px 2px black',
+              marginLeft: '5px',
             }}
           >
-            Annapolis, Maryland
+            Annapolis, MD.
           </Link>
-        </span>
-        <br />
-        <span
-          className="small"
+        </p>
+        <p
+            className="small mb-2"
           style={{
-            color: '#58b7ff',
+            color: '#8ecdf8',
             textShadow: '1px 1px 2px black',
           }}
         >
@@ -151,18 +155,19 @@ a:hover {
           <Link
             className="mt-2"
             style={{
-              color: '#58b7ff',
+              color: '#8ecdf8',
               textShadow: '1px 1px 2px black',
+              marginLeft: '5px',
             }}
           >
             Watch Games Live
           </Link>
-        </span>
-        <br />
-        <span
-          className="small"
+        </p>
+       
+        <p
+           className="small mb-1"
           style={{
-            color: '#58b7ff',
+            color: '#8ecdf8',
             textShadow: '1px 1px 2px black',
           }}
         >
@@ -170,16 +175,161 @@ a:hover {
           <Link
             className="mt-2"
             style={{
-              color: '#58b7ff',
+              color: '#8ecdf8',
               textShadow: '1px 1px 2px black',
+              marginLeft: '5px',
             }}
           >
             Program Highlights
           </Link>
-        </span>
-      </span>
+        </p>
+      </div>
     </div>
-    <div className="tags mt-3">
+    <div className="tags mt-0 mb-2">
+      <footer>
+        <Link to="https://www.facebook.com/S.Zain.Asif/">
+          <i className="fab fa-facebook" style={{color:'black'}}></i>
+        </Link>
+        <Link
+          to="https://www.instagram.com/zain._.asif/"
+          className="fab fa-instagram"
+          style={{color:'black'}}
+          aria-label="Instagram"
+        ></Link>
+        <Link
+          to="https://twitter.com/comeflywithme92"
+          className="fab fa-twitter"
+          style={{color:'black'}}
+          aria-label="Twitter"
+        ></Link>
+      </footer>
+    </div>
+  </div>
+</div>
+      </div>
+   </div>
+
+
+{/**Summer Team */}
+   <div className="col-sm-12 col-md-4 col-lg-4 text-center w3-padding-small">
+   <div>
+      <div 
+  className="card"
+  style={{
+   
+    backgroundImage: `url(${DBWhite})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    color: 'black',
+    border: '1px solid black',
+    filter: 'grayscale(100%)', // Apply grayscale to the background
+    position: 'relative', // Ensure text layers properly
+  }}
+>
+  {/* Dark Mask */}
+  <div
+    className="mask"
+    style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      backgroundColor: 'rgba(0, 0, 0, 0.6)',
+      zIndex: 1, // Ensure mask is above background but below text
+    }}
+  ></div>
+
+  {/* Text Content */}
+  <div
+    className="container w3-padding-large text-white"
+    style={{
+      position: 'relative', // Ensure this content isn't affected by grayscale
+      zIndex: 2,
+    }}
+  >
+    <div className="card-body w3-padding-24">
+      <h4
+        style={{
+          color: '#8ecdf8',
+          textShadow: '1px 1px 2px black',
+          lineHeight: '1',
+          fontSize: '32px',
+        }}
+      >
+        <b>DIRTBAGS</b> <br />{' '}
+        <span style={{fontSize:'24px', marginTop:'0px'}}>Baseball</span>
+      </h4>
+      <h6 className="fw-bold my-4"
+        style={{
+          color: '#8ecdf8',
+          textShadow: '1px 1px 2px black',
+        }}
+      >
+         All-Blacks <br />
+         National Ranking #1
+      </h6>
+      <div>
+        <p
+          className="small mb-2"
+          style={{
+            color: '#8ecdf8',
+            textShadow: '1px 1px 2px black',
+          }}
+        >
+          <i className="fas fa-location-pin"></i>{' '}
+          <Link
+            style={{
+              color: '#8ecdf8',
+              textShadow: '1px 1px 2px black',
+              marginLeft: '5px',
+            }}
+          >
+            Burlington, N.C.
+          </Link>
+        </p>
+        <p
+            className="small mb-2"
+          style={{
+            color: '#8ecdf8',
+            textShadow: '1px 1px 2px black',
+          }}
+        >
+          <i className="fas fa-video-camera"></i>{' '}
+          <Link
+            className="mt-2"
+            style={{
+              color: '#8ecdf8',
+              textShadow: '1px 1px 2px black',
+              marginLeft: '5px',
+            }}
+          >
+            Watch Games Live
+          </Link>
+        </p>
+       
+        <p
+           className="small mb-1"
+          style={{
+            color: '#8ecdf8',
+            textShadow: '1px 1px 2px black',
+          }}
+        >
+          <i className="fas fa-globe mr-2"></i>{' '}
+          <Link
+            className="mt-2"
+            style={{
+              color: '#8ecdf8',
+              textShadow: '1px 1px 2px black',
+              marginLeft: '5px',
+            }}
+          >
+            Program Highlights
+          </Link>
+        </p>
+      </div>
+    </div>
+    <div className="tags mt-0 mb-2">
       <footer>
         <Link to="https://www.facebook.com/S.Zain.Asif/">
           <i className="fab fa-facebook" style={{color:'black'}}></i>
@@ -203,6 +353,9 @@ a:hover {
 
       </div>
    </div>
+
+
+{/*Select Team */}  
    <div className="col-sm-12 col-md-4 col-lg-4 text-center w3-padding-small">
    <div>
       <div 
@@ -243,148 +396,7 @@ a:hover {
     <div className="card-body w3-padding-24">
       <h4
         style={{
-          color: '#58b7ff',
-          textShadow: '1px 1px 2px black',
-          lineHeight: '1',
-          fontSize: '32px',
-        }}
-      >
-        <b>DIRTBAGS</b> <br />{' '}
-        <span style={{fontSize:'24px', marginTop:'0px'}}>Baseball</span>
-      </h4>
-      <h6 className="fw-bold mt-4"
-        style={{
-          color: '#58b7ff',
-          textShadow: '1px 1px 2px black',
-        }}
-      >
-         All-Blacks <br />
-         National Ranking #1
-      </h6>
-      <span>
-        <span
-          className="small"
-          style={{
-            color: '#58b7ff',
-            textShadow: '1px 1px 2px black',
-          }}
-        >
-          <i className="fas fa-location-pin"></i>{' '}
-          <Link
-            className="mt-2 ms-1"
-            style={{
-              color: '#58b7ff',
-              textShadow: '1px 1px 2px black',
-            }}
-          >
-            Burlington, North Carolina
-          </Link>
-        </span>
-        <br />
-        <span
-          className="small"
-          style={{
-            color: '#58b7ff',
-            textShadow: '1px 1px 2px black',
-          }}
-        >
-          <i className="fas fa-video-camera"></i>{' '}
-          <Link
-            className="mt-2 ms-1"
-            style={{
-              color: '#58b7ff',
-              textShadow: '1px 1px 2px black',
-            }}
-          >
-            Watch Games Live
-          </Link>
-        </span>
-        <br />
-        <span
-          className="small"
-          style={{
-            color: '#58b7ff',
-            textShadow: '1px 1px 2px black',
-          }}
-        >
-          <i className="fas fa-globe mr-2"></i>{' '}
-          <Link
-            className="mt-2 ms-1"
-            style={{
-              color: '#58b7ff',
-              textShadow: '1px 1px 2px black',
-            }}
-          >
-            Program Highlights
-          </Link>
-        </span>
-      </span>
-    </div>
-    <div className="tags mt-3">
-        <footer>
-        <Link to="https://www.facebook.com/S.Zain.Asif/">
-          <i className="fab fa-facebook" style={{color:'black'}}></i>
-        </Link>
-        <Link
-          to="https://www.instagram.com/zain._.asif/"
-          className="fab fa-instagram"
-          style={{color:'black'}}
-          aria-label="Instagram"
-        ></Link>
-        <Link
-          to="https://twitter.com/comeflywithme92"
-          className="fab fa-twitter"
-          style={{color:'black'}}
-          aria-label="Twitter"
-        ></Link>
-      </footer>
-    </div>
-  </div>
-</div>
-
-      </div>
-   </div>
-   <div className="col-sm-12 col-md-4 col-lg-4 text-center w3-padding-small">
-   <div>
-      <div 
-  className="card"
-  style={{
-   
-    backgroundImage: `url(${DBWhite})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    color: 'black',
-    border: '1px solid black',
-    filter: 'grayscale(100%)', // Apply grayscale to the background
-    position: 'relative', // Ensure text layers properly
-  }}
->
-  {/* Dark Mask */}
-  <div
-    className="mask"
-    style={{
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      backgroundColor: 'rgba(0, 0, 0, 0.6)',
-      zIndex: 1, // Ensure mask is above background but below text
-    }}
-  ></div>
-
-  {/* Text Content */}
-  <div
-    className="container w3-padding-large text-white"
-    style={{
-      position: 'relative', // Ensure this content isn't affected by grayscale
-      zIndex: 2,
-    }}
-  >
-    <div className="card-body w3-padding-24">
-      <h4
-        style={{
-          color: '#58b7ff',
+          color: '#8ecdf8',
           textShadow: '1px 1px 2px black',
           lineHeight: '1',
           fontSize: '32px',
@@ -393,96 +405,217 @@ a:hover {
         <b>SELECT</b> <br />{' '}
         <span style={{fontSize:'24px', marginTop:'0px'}}>Teams</span>
       </h4>
-      <h6 className="fw-bold mt-4"
+    
+        <div className="row d-flex justify-center align-items-center">
+          <div className="col-sm-12 col-md-6 col-lg-6">
+          <img 
+        src={USALogo} 
+        alt="usa-logo" 
+        className=""
         style={{
-          color: '#58b7ff',
-          textShadow: '1px 1px 2px black',
+       width:'35px',
+       height:'auto'
         }}
-      >
-         All-Blacks <br />
-         National Ranking #1
-      </h6>
-      <span>
-        <span
-          className="small"
+        />
+        <p
+            className="small my-1"
           style={{
-            color: '#58b7ff',
-            textShadow: '1px 1px 2px black',
-          }}
-        >
-          <i className="fas fa-location-pin"></i>{' '}
-          <Link
-            className="mt-2 ms-1"
-            style={{
-              color: '#58b7ff',
-              textShadow: '1px 1px 2px black',
-            }}
-          >
-            Burlington, North Carolina
-          </Link>
-        </span>
-        <br />
-        <span
-          className="small"
-          style={{
-            color: '#58b7ff',
+            color: '#8ecdf8',
             textShadow: '1px 1px 2px black',
           }}
         >
           <i className="fas fa-video-camera"></i>{' '}
           <Link
-            className="mt-2 ms-1"
+            className="mt-2"
             style={{
-              color: '#58b7ff',
+              color: '#8ecdf8',
               textShadow: '1px 1px 2px black',
+              marginLeft: '5px',
             }}
           >
-            Watch Games Live
+          Highlights
           </Link>
-        </span>
-        <br />
-        <span
-          className="small"
+        </p>
+       
+        <p
+           className="small mb-3"
           style={{
-            color: '#58b7ff',
+            color: '#8ecdf8',
             textShadow: '1px 1px 2px black',
           }}
         >
           <i className="fas fa-globe mr-2"></i>{' '}
           <Link
-            className="mt-2 ms-1"
+            className="mt-2"
             style={{
-              color: '#58b7ff',
+              color: '#8ecdf8',
               textShadow: '1px 1px 2px black',
+              marginLeft: '5px',
             }}
           >
-            Program Highlights
+            Player Profile
           </Link>
-        </span>
-      </span>
-    </div>
-    <div className="tags mt-3">
-        <footer>
-        <Link to="https://www.facebook.com/S.Zain.Asif/">
-          <i className="fab fa-facebook" style={{color:'black'}}></i>
-        </Link>
-        <Link
-          to="https://www.instagram.com/zain._.asif/"
-          className="fab fa-instagram"
-          style={{color:'black'}}
-          aria-label="Instagram"
-        ></Link>
-        <Link
-          to="https://twitter.com/comeflywithme92"
-          className="fab fa-twitter"
-          style={{color:'black'}}
-          aria-label="Twitter"
-        ></Link>
-      </footer>
-    </div>
+        </p>
+          </div>
+       
+          <div className="col-sm-12 col-md-6 col-lg-6">
+          <img 
+        src={USALogo} 
+        alt="usa-logo" 
+        className=""
+        style={{
+       width:'35px',
+       height:'auto'
+        }}
+        />
+        <p
+            className="small my-1"
+          style={{
+            color: '#8ecdf8',
+            textShadow: '1px 1px 2px black',
+          }}
+        >
+          <i className="fas fa-video-camera"></i>{' '}
+          <Link
+            className="mt-2"
+            style={{
+              color: '#8ecdf8',
+              textShadow: '1px 1px 2px black',
+              marginLeft: '5px',
+            }}
+          >
+          Highlights
+          </Link>
+        </p>
+       
+        <p
+           className="small mb-3"
+          style={{
+            color: '#8ecdf8',
+            textShadow: '1px 1px 2px black',
+          }}
+        >
+          <i className="fas fa-globe mr-2"></i>{' '}
+          <Link
+            className="mt-2"
+            style={{
+              color: '#8ecdf8',
+              textShadow: '1px 1px 2px black',
+              marginLeft: '5px',
+            }}
+          >
+            Player Profile
+          </Link>
+        </p>
+          </div>
+
+
+          <div className="col-sm-12 col-md-6 col-lg-6">
+          <img 
+        src={USALogo} 
+        alt="usa-logo" 
+        className=""
+        style={{
+       width:'35px',
+       height:'auto'
+        }}
+        />
+        <p
+            className="small my-1"
+          style={{
+            color: '#8ecdf8',
+            textShadow: '1px 1px 2px black',
+          }}
+        >
+          <i className="fas fa-video-camera"></i>{' '}
+          <Link
+            className="mt-2"
+            style={{
+              color: '#8ecdf8',
+              textShadow: '1px 1px 2px black',
+              marginLeft: '5px',
+            }}
+          >
+          Highlights
+          </Link>
+        </p>
+       
+        <p
+           className="small mb-3"
+          style={{
+            color: '#8ecdf8',
+            textShadow: '1px 1px 2px black',
+          }}
+        >
+          <i className="fas fa-globe mr-2"></i>{' '}
+          <Link
+            className="mt-2"
+            style={{
+              color: '#8ecdf8',
+              textShadow: '1px 1px 2px black',
+              marginLeft: '5px',
+            }}
+          >
+            Player Profile
+          </Link>
+        </p>
+          </div>
+
+
+          <div className="col-sm-12 col-md-6 col-lg-6">
+          <img 
+        src={USALogo} 
+        alt="usa-logo" 
+        className=""
+        style={{
+       width:'35px',
+       height:'auto'
+        }}
+        />
+        <p
+            className="small my-1"
+          style={{
+            color: '#8ecdf8',
+            textShadow: '1px 1px 2px black',
+          }}
+        >
+          <i className="fas fa-video-camera"></i>{' '}
+          <Link
+            className="mt-2"
+            style={{
+              color: '#8ecdf8',
+              textShadow: '1px 1px 2px black',
+              marginLeft: '5px',
+            }}
+          >
+          Highlights
+          </Link>
+        </p>
+       
+        <p
+           className="small mb-3"
+          style={{
+            color: '#8ecdf8',
+            textShadow: '1px 1px 2px black',
+          }}
+        >
+          <i className="fas fa-globe mr-2"></i>{' '}
+          <Link
+            className="mt-2"
+            style={{
+              color: '#8ecdf8',
+              textShadow: '1px 1px 2px black',
+              marginLeft: '5px',
+            }}
+          >
+            Player Profile
+          </Link>
+        </p>
+          </div>
+        </div>    
+      </div>
   </div>
 </div>
-
       </div>
    </div>
   </div>
