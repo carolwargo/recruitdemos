@@ -2,8 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { InView } from "react-intersection-observer";
 import DBWhite from "../../assets/images/Demo1/DBWhite.png";
+import UA from "../../assets/images/Round/UA.png";
+import Gatorade from "../../assets/images/Round/Gadorade.png";
+import Big26 from "../../assets/images/Round/Big26.png";
+import USALogo from "../../assets/images/Round/USALogo.jpeg";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import USALogo from '../../assets/images/Round/USALogo.jpg'
 
 const PlayerCards = () => {
   return (
@@ -357,6 +360,7 @@ a:hover {
 
 {/*Select Team */}  
    <div className="col-sm-12 col-md-4 col-lg-4 text-center w3-padding-small">
+   
    <div>
       <div 
   className="card"
@@ -413,10 +417,11 @@ a:hover {
         alt="usa-logo" 
         className=""
         style={{
-       width:'35px',
+       width:'40px',
        height:'auto'
         }}
         />
+     
         <p
             className="small my-1"
           style={{
@@ -460,66 +465,15 @@ a:hover {
        
           <div className="col-sm-12 col-md-6 col-lg-6">
           <img 
-        src={USALogo} 
-        alt="usa-logo" 
+        src={Big26} 
+        alt="26-logo" 
         className=""
         style={{
-       width:'35px',
+       width:'40px',
        height:'auto'
         }}
         />
-        <p
-            className="small my-1"
-          style={{
-            color: '#8ecdf8',
-            textShadow: '1px 1px 2px black',
-          }}
-        >
-          <i className="fas fa-video-camera"></i>{' '}
-          <Link
-            className="mt-2"
-            style={{
-              color: '#8ecdf8',
-              textShadow: '1px 1px 2px black',
-              marginLeft: '5px',
-            }}
-          >
-          Highlights
-          </Link>
-        </p>
-       
-        <p
-           className="small mb-3"
-          style={{
-            color: '#8ecdf8',
-            textShadow: '1px 1px 2px black',
-          }}
-        >
-          <i className="fas fa-globe mr-2"></i>{' '}
-          <Link
-            className="mt-2"
-            style={{
-              color: '#8ecdf8',
-              textShadow: '1px 1px 2px black',
-              marginLeft: '5px',
-            }}
-          >
-            Player Profile
-          </Link>
-        </p>
-          </div>
-
-
-          <div className="col-sm-12 col-md-6 col-lg-6">
-          <img 
-        src={USALogo} 
-        alt="usa-logo" 
-        className=""
-        style={{
-       width:'35px',
-       height:'auto'
-        }}
-        />
+     
         <p
             className="small my-1"
           style={{
@@ -564,11 +518,64 @@ a:hover {
 
           <div className="col-sm-12 col-md-6 col-lg-6">
           <img 
-        src={USALogo} 
+        src={Gatorade} 
+        alt="tx-logo" 
+        className=""
+        style={{
+       width:'40px',
+       height:'auto'
+        }}
+        />
+     
+        <p
+            className="small my-1"
+          style={{
+            color: '#8ecdf8',
+            textShadow: '1px 1px 2px black',
+          }}
+        >
+          <i className="fas fa-video-camera"></i>{' '}
+          <Link
+            className="mt-2"
+            style={{
+              color: '#8ecdf8',
+              textShadow: '1px 1px 2px black',
+              marginLeft: '5px',
+            }}
+          >
+          Highlights
+          </Link>
+        </p>
+       
+        <p
+           className="small mb-3"
+          style={{
+            color: '#8ecdf8',
+            textShadow: '1px 1px 2px black',
+          }}
+        >
+          <i className="fas fa-globe mr-2"></i>{' '}
+          <Link
+            className="mt-2"
+            style={{
+              color: '#8ecdf8',
+              textShadow: '1px 1px 2px black',
+              marginLeft: '5px',
+            }}
+          >
+            Player Profile
+          </Link>
+        </p>
+          </div>
+
+
+          <div className="col-sm-12 col-md-6 col-lg-6">
+          <img 
+        src={UA} 
         alt="usa-logo" 
         className=""
         style={{
-       width:'35px',
+       width:'40px',
        height:'auto'
         }}
         />

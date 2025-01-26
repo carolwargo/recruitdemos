@@ -1,10 +1,12 @@
 import React from "react";
 import { InView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
-import { BsFacebook, BsTwitterX } from "react-icons/bs";
-import {FaSnapchatSquare } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-
+import { FaRegCalendar } from "react-icons/fa";
+import { FaRegFilePdf } from "react-icons/fa";
+import { GrDocumentText } from "react-icons/gr";
+import { RiBarChartBoxLine } from "react-icons/ri";
+import StatsBW from "../../assets/images/Metrics/StatsBW.png";
+import Resume1  from "../../assets/images/Metrics/Resume1.png";
 
 const myFunction = (id) => {
     var x = document.getElementById(id);
@@ -71,194 +73,292 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <div className="rounded">
                <button
                  onClick={() => myFunction("Demo1")}
-                 className="w3-button w3-block  w3-left-align rounded mt-3"
+                     className="w3-button w3-block mt-2 w3-left-align rounded
+                  btn-outline-secondary-light"
                >
                      <i className="fas fa-calendar-check fa-fw w3-margin-right mt-2"></i>
-              Schedule     
+              Game Schedules     
                </button>
 
                <div id="Demo1" className="w3-hide w3-container">
-                 <ul className="text-decoration-none mt-2">
-                   <li>
-                    <Link className=" link-light">2022 Summer</Link>
-                   </li>
-                   <li>
-                    <Link className=" link-light">2022 Fall</Link>
-                   </li>
-                   <li>
-                    <Link className=" link-light">2023 Spring</Link>
-                   </li>
-                 </ul>
+               <div className="row mt-2">
+                   <div className="col-sm-12 col-md-6 col-lg-6">
+                   <div className="m-1 small text-center">
+                   <Link className=" link-light text-decoration-none"> 
+                    <FaRegCalendar style={{fontSize:'3rem'}}/></Link>
+                    <br/>2022 Fall
+                   </div>
+                   </div>
+
+                   <div className="col-sm-12 col-md-6 col-lg-6">
+                   <div className="m-1 small text-center">
+                   <Link className=" link-light text-decoration-none"> 
+                    <FaRegCalendar style={{fontSize:'3rem'}}/></Link>
+                    <br/>2022 Winter
+                   </div>
+                   </div>
+
+                   <div className="col-sm-12 col-md-6 col-lg-6">
+                   <div className="m-1 small text-center">
+                   <Link className=" link-light text-decoration-none"> 
+                    <FaRegCalendar style={{fontSize:'3rem'}}/></Link>
+                    <br/>2023 Spring
+                   </div>
+                   </div>
+
+                   <div className="col-sm-12 col-md-6 col-lg-6">
+                   <div className="m-1 small text-center">
+                   <Link className=" link-light text-decoration-none"> 
+                    <FaRegCalendar style={{fontSize:'3rem'}}/></Link>
+                    <br/>Summer
+                   </div>
+                   </div>
+                 </div>
                </div>
 
                <button
                  onClick={() => myFunction("Demo2")}
-                 className="w3-button w3-block  w3-left-align rounded"
+                  className="w3-button w3-block mt-2 w3-left-align rounded
+                  btn-outline-secondary-light"
                >
                  <i className="fa fa-book fa-fw w3-margin-right"></i>
                  Unofficial Transcripts
                </button>
                <div id="Demo2" className="w3-hide w3-container">
-                 <ul className="text-decoration-none mt-2">
-                   <li>
-                    <Link className=" link-light">2020 Freshman</Link>
-                   </li>
-                   <li>
-                    <Link className=" link-light">2021 Sophomore</Link>
-                   </li>
-                   <li>
-                    <Link className=" link-light">2022 Junior</Link>
-                   </li>
-                 </ul>
+                 <div className="row mt-2">
+                   <div className="col-sm-12 col-md-6 col-lg-6">
+                   <div className="m-1 small text-center">
+                   <Link className=" link-light text-decoration-none"> 
+                    <FaRegFilePdf style={{fontSize:'3rem'}}/></Link>
+                    <br/>Freshman
+                   </div>
+                   </div>
+
+
+                   <div className="col-sm-12 col-md-6 col-lg-6">
+                   <div className="m-1 small text-center">
+                   <Link className=" link-light text-decoration-none"> 
+                    <FaRegFilePdf style={{fontSize:'3rem'}}/></Link>
+                    <br/>Sophomore
+                   </div>
+                   </div>
+                   <div className="col-sm-12 col-md-6 col-lg-6">
+                   <div className="m-1 small text-center">
+                   <Link className=" link-light text-decoration-none"> 
+                    <FaRegFilePdf style={{fontSize:'3rem'}}/></Link>
+                    <br/>Junior
+                    </div>
+                   </div>
+                   <div className="col-sm-12 col-md-6 col-lg-6">
+                   <div className="m-1 small text-center">
+                   <Link className=" link-light text-decoration-none"> 
+                    <FaRegFilePdf style={{fontSize:'3rem'}}/></Link>
+                    <br/>Work Sheet
+                   </div>
+                   </ div>
+                 </div>
                </div>
 
                <button
                  onClick={() => myFunction("Demo3")}
-                 className="w3-button w3-block  w3-left-align rounded"
+                 className="w3-button w3-block mt-2 w3-left-align rounded
+                  btn-outline-secondary-light"
                >
                  <i className="fas fa-user fa-fw w3-margin-right"></i>
                  References
                </button>
                <div id="Demo3" className="w3-hide w3-container">
-                 <ul className="text-decoration-none mt-2">
-                   <li>
-                     <Link className=" link-light">Coach Joe</Link>
-                   </li>
-                   <li>
-                    <Link className=" link-light">Coach Jack</Link>
-                   </li>
-                   <li>
-                    <Link className=" link-light">Principal Jock</Link>
-                   </li>
-                   <li>
-                    <Link className=" link-light">Teacher Jane</Link>
-                   </li>
-                 </ul>
+                 <div className="row mt-2">
+                   <div className="col-sm-12 col-md-6 col-lg-6">
+                   <div className="m-1 small text-center">
+                     <Link className=" link-light text-decoration-none">
+                     < GrDocumentText style={{fontSize:'3rem'}}/>
+                     </Link> <br />Coach Joe
+                   </div>
+                   </div>
+
+
+                   <div className="col-sm-12 col-md-6 col-lg-6">
+                   <div className="m-1 small text-center">
+                    <Link className=" link-light text-decoration-none">
+                    < GrDocumentText style={{fontSize:'3rem'}}/></Link>
+                    <br />
+                    Coach Jack
+                   </div>
+                   </div>
+                   <div className="col-sm-12 col-md-6 col-lg-6">
+                   <div className="m-1 small text-center">
+                    <Link className=" link-light text-decoration-none">
+                    < GrDocumentText style={{fontSize:'3rem'}}/></Link>
+                    <br />
+                    Principal Joe
+                    </div>
+                   </div>
+                   <div className="col-sm-12 col-md-6 col-lg-6">
+                   <div className="m-1 small text-center">
+                    <Link className=" link-light text-decoration-none">
+                    < GrDocumentText style={{fontSize:'3rem'}}/></Link>
+                    <br />
+                    Teacher Jane
+                   </div>
+                   </ div>
+                 </div>
                </div>
         
                <button
                  onClick={() => myFunction("Demo4")}
-                 className="w3-button w3-block  w3-left-align rounded"
+                    className="w3-button w3-block mt-2 w3-left-align rounded
+                  btn-outline-secondary-light"
                >
                      <i className="fas fa-chart-line fa-fw w3-margin-right"></i>
               Stats In Comparisson 
                </button>
 
                <div id="Demo4" className="w3-hide w3-container">
-                 <ul className="text-decoration-none mt-2">
-                   <li>
-                    <Link className=" link-light">2022 Summer</Link>
-                   </li>
-                   <li>
-                    <Link className=" link-light">2022 Fall</Link>
-                   </li>
-                   <li>
-                    <Link className=" link-light">2023 Spring</Link>
-                   </li>
-                 </ul>
+               <div className="row mt-2">
+                   <div className="col-sm-12 col-md-6 col-lg-6">
+                   <div className="m-1 small text-center">
+                     <Link className=" link-light text-decoration-none">
+                     <RiBarChartBoxLine style={{fontSize:'3rem'}}/>
+                     </Link> <br />Fall
+                   </div>
+                   </div>
+
+
+                   <div className="col-sm-12 col-md-6 col-lg-6">
+                   <div className="m-1 small text-center">
+                    <Link className=" link-light text-decoration-none">
+                    <RiBarChartBoxLine style={{fontSize:'3rem'}}/></Link>
+                    <br />
+                    High School
+                   </div>
+                   </div>
+                   <div className="col-sm-12 col-md-6 col-lg-6">
+                   <div className="m-1 small text-center">
+                    <Link className=" link-light text-decoration-none">
+                    <RiBarChartBoxLine style={{fontSize:'3rem'}}/></Link>
+                    <br />
+                    Summer
+                    </div>
+                   </div>
+                   <div className="col-sm-12 col-md-6 col-lg-6">
+                   <div className="m-1 small text-center">
+                    <Link className=" link-light text-decoration-none">
+                    <RiBarChartBoxLine style={{fontSize:'3rem'}}/></Link>
+                    <br />
+                    Overall
+                   </div>
+                   </ div>
+                 </div>
                </div>
 
                <button
                  onClick={() => myFunction("Demo5")}
-                 className="w3-button w3-block  w3-left-align rounded"
+                    className="w3-button w3-block mt-2 w3-left-align rounded
+                  btn-outline-secondary-light"
                >
                  <i className="fas fa-person-running fa-fw w3-margin-right"></i>
               Performance Metrics
                </button>
                <div id="Demo5" className="w3-hide w3-container">
-                 <ul className="text-decoration-none mt-2">
-                   <li>
-                    <Link className=" link-light">2020 Freshman</Link>
-                   </li>
-                   <li>
-                    <Link className=" link-light">2021 Sophomore</Link>
-                   </li>
-                   <li>
-                    <Link className=" link-light">2022 Junior</Link>
-                   </li>
-                 </ul>
+               <div className="row">
+                   <div className="col-sm-12 col-md-12 col-lg-12">
+                   <div className="small text-center my-2">
+                     <Link className=" link-light text-decoration-none">
+                   <img src={StatsBW} alt="metric" className="w-100"/>
+                     </Link> <br /> <span className="mt-2">Metrics</span>
+                   </div>
+                   </div>
+                 </div>
                </div>
 
                <button
                  onClick={() => myFunction("Demo6")}
-                 className="w3-button w3-block  w3-left-align rounded mb-3"
+                   className="w3-button w3-block mt-2 w3-left-align rounded
+                  btn-outline-secondary-light"
                >
                  <i className="fa fa-pencil fa-fw w3-margin-right"></i>
                  Player Resume
                </button>
                <div id="Demo6" className="w3-hide w3-container">
-                 <ul className="text-decoration-none mt-2 ">
-                 <li>
-                    <Link className=" link-light">Player Resume</Link>
-                   </li>
-                 </ul>
+               <div className="row">
+                   <div className="col-sm-12 col-md-12 col-lg-12">
+                   <div className="small text-center my-2">
+                     <Link className=" link-light text-decoration-none">
+                   <img src={Resume1} alt="metric" className="w-100"/>
+                     </Link> <br /> <span className="mt-2">Resume</span>
+                   </div>
+                   </div>
+                 </div>
                </div>
              </div>
              </div>
              <div className="col-sm-12 col-md-9 col-lg-9">
+           
+                </div>
+      </div>
+             </div>
+   
+          )}
+        </InView>
+
+        {/* END PAGE CONTENT */}
+
+        <script>
+          {`
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-theme-d1";
+  } else { 
+    x.className = x.className.replace("w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+  }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+  `}
+        </script>
+      </div>
+    </div>
+  );
+};
+
+export default PlayerDownloads;
+
+/**import { BsEnvelopePaper, BsFacebook, BsPhone, BsTwitterX } from "react-icons/bs";
+import {FaSnapchatSquare } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa"; */
+
+/**    <div className="col-sm-12 col-md-9 col-lg-9">
              <div
                 className="w3-container w3-light-grey rounded w3-padding-32 w3-padding-small"
                 id="contact"
                 style={{ maxWidth: "700px" }}
               >
-     <div className="w3-container" >
-                  <div className="row d-flex justify-content-end align-items-center">
-                  <div className="col-sm-4 col-md-4 col-lg-4">
-                          <div className="container-fluid text-center w3-text-black">
+     <div className="w3-container w3-content" >
+                     <div className="container-fluid text-center w3-text-black">
                           <h4 className="w3-center">
                   Contact Me
                   </h4>
                           <hr className=" my-2" />
-                          <p className="text-body-emphasis fw-bold small mb-2"> 
-                            <span>PHONE: <Link className="link-secondary fw-light"> (123)456-7890</Link></span> 
-               </p>  
-                     <p className="text-body-emphasis fw-bold small mb-2">      
-                     <span>EMAIL: <Link className="link-secondary fw-light"> mail@gmail.com</Link></span>
-                     </p>  
-                            <Link
-                              className="text-decoration-none link-dark w3-opacity"
-                              style={{ fontSize: "1.2rem" }}
-                            >
-                              <strong>
-                                <BsTwitterX className="" />
-                              </strong>{" "}
-                            </Link>
-                            <Link
-                              className="text-decoration-none link-dark w3-opacity"
-                              style={{ fontSize: "1.3rem" }}
-                            >
-                              <strong>
-                                <BsFacebook className="" />
-                              </strong>{" "}
-                            </Link>
-                            <Link
-                              className="text-decoration-none link-dark w3-opacity"
-                              style={{ fontSize: "1.5rem" }}
-                            >
-                              <strong>
-                            < FaInstagram/>
-                              </strong>{" "}
-                            </Link>
-                            <Link
-                              className="text-decoration-none w3-opacity link-dark"
-                              style={{ fontSize: "1.4rem" }}
-                            >
-                              <strong>
-                                <FaSnapchatSquare />
-                              </strong>
-                            </Link>
-                          </div>
-                        </div>
-
-                        <div className="col-sm-8 col-md-8 col-lg-8">
-                         
-                  {/** 
-                  <p className="w3-center">
+                          <p className="w3-center fw-light small px-5">
                     Get in touch direct- message me on social media,{" "}
                     <Link>call</Link>, <Link>email</Link> or fill out the form
                     to send me a message through the site.
                   </p>
-                  */}
+                          </div>
+                         < br/>  
                   <form action="/action_page.php" target="_blank">
 
                   <div className="row">
@@ -302,44 +402,4 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                   </form>
                   </div>
                   </div>
-                </div>
-      </div>
-             </div>
-             </div>
-    </div>
-          )}
-        </InView>
-
-        {/* END PAGE CONTENT */}
-
-        <script>
-          {`
-function myFunction(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-    x.previousElementSibling.className += " w3-theme-d1";
-  } else { 
-    x.className = x.className.replace("w3-show", "");
-    x.previousElementSibling.className = 
-    x.previousElementSibling.className.replace(" w3-theme-d1", "");
-  }
-}
-
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-  `}
-        </script>
-      </div>
-    </div>
-  );
-};
-
-export default PlayerDownloads;
+                </div> */
