@@ -1,12 +1,15 @@
 import React from "react";
 import { InView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
-import { FaRegCalendar } from "react-icons/fa";
 import { FaRegFilePdf } from "react-icons/fa";
 import { GrDocumentText } from "react-icons/gr";
 import { RiBarChartBoxLine } from "react-icons/ri";
 import StatsBW from "../../assets/images/Metrics/StatsBW.png";
 import Resume1  from "../../assets/images/Metrics/Resume1.png";
+import Calendar1 from '../../assets/images/Calendars/Calendar1.png';
+import Calendar2 from '../../assets/images/Calendars/Calendar2.png';
+import Calendar3 from '../../assets/images/Calendars/Calendar3.png';
+import Calendar4 from '../../assets/images/Calendars/Calendar4.png';
 
 const myFunction = (id) => {
     var x = document.getElementById(id);
@@ -85,32 +88,33 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                    <div className="col-sm-12 col-md-6 col-lg-6">
                    <div className="m-1 small text-center">
                    <Link className=" link-light text-decoration-none"> 
-                    <FaRegCalendar style={{fontSize:'3rem'}}/></Link>
-                    <br/>2022 Fall
+                   <img src={Calendar1} alt="sample" className="w-100" />
+                 </Link>
+                    <br/>Sample 1
                    </div>
                    </div>
 
                    <div className="col-sm-12 col-md-6 col-lg-6">
                    <div className="m-1 small text-center">
                    <Link className=" link-light text-decoration-none"> 
-                    <FaRegCalendar style={{fontSize:'3rem'}}/></Link>
-                    <br/>2022 Winter
+                   <img src={Calendar2} alt="sample" className="w-100" /></Link>
+                    <br/>Sample 2
                    </div>
                    </div>
 
                    <div className="col-sm-12 col-md-6 col-lg-6">
                    <div className="m-1 small text-center">
                    <Link className=" link-light text-decoration-none"> 
-                    <FaRegCalendar style={{fontSize:'3rem'}}/></Link>
-                    <br/>2023 Spring
+                   <img src={Calendar3} alt="sample" className="w-100" /></Link>
+                    <br/>Sample 3
                    </div>
                    </div>
 
                    <div className="col-sm-12 col-md-6 col-lg-6">
                    <div className="m-1 small text-center">
                    <Link className=" link-light text-decoration-none"> 
-                    <FaRegCalendar style={{fontSize:'3rem'}}/></Link>
-                    <br/>Summer
+                   <img src={Calendar4} alt="sample" className="w-100" /></Link>
+                    <br/>Sample 4
                    </div>
                    </div>
                  </div>
@@ -294,7 +298,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
              </div>
              </div>
              <div className="col-sm-12 col-md-9 col-lg-9">
-           
+             <iframe
+  width="100%"
+  height="500px"
+  title="PDF Viewer"
+/>
+
                 </div>
       </div>
              </div>
