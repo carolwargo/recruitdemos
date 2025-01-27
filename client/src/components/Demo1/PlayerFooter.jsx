@@ -5,7 +5,7 @@ import {BsTwitterX } from "react-icons/bs";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaFileDownload, FaHome, FaPhoneSquare, FaSnapchatSquare } from "react-icons/fa";
 import { PiPaperPlane } from "react-icons/pi";
-import PlayerResume from "../../assets/PlayerResume.pdf";
+import PlayerResume from "../../assets/PDF/PlayerResume.pdf";
 
 const PlayerFooter = () => {
   const [showModal, setShowModal] = useState(false);

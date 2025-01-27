@@ -9,7 +9,7 @@ import { GiRotaryPhone } from "react-icons/gi";
 import { MdOutlineEmail } from "react-icons/md";
 import {  GiTiedScroll } from "react-icons/gi";
 import { FaRegEye } from "react-icons/fa";
-import PlayerResume from "../../assets/PlayerResume.pdf";
+import PlayerResume from "../../assets/PDF/PlayerResume.pdf";
 
 const PlayerProfile = () => {
   return (

@@ -81,6 +81,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
  <h1 className="w3-text-light-grey w3-margin-bottom">Downloads</h1>
      
       <div className="rounded">
+        {/** Game Schedules */}
                <button
                  onClick={() => myFunction("Demo1")}
                      className="w3-button w3-block mt-2 w3-left-align rounded
@@ -157,7 +158,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
               
                  </div>
                </div>
-
+{/**  References*/}
                <button
                  onClick={() => myFunction("Demo3")}
                  className="w3-button w3-block mt-2 w3-left-align rounded
