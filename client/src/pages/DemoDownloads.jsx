@@ -1,21 +1,228 @@
-import React from "react";
+import React, { useState } from "react";
+import { InView } from "react-intersection-observer";
+import { Document, Page } from "react-pdf";
+
+const PlayerDownloads = () => {
+  const [activeDropdown, setActiveDropdown] = useState(""); // Tracks which dropdown is open
+  const [selectedOption, setSelectedOption] = useState(""); // Tracks the selected option
+
+  const toggleDropdown = (id) => {
+    setActiveDropdown(activeDropdown === id ? "" : id); // Toggle dropdown
+  };
+
+  const handleOptionSelect = (option) => {
+    setSelectedOption(option); // Set the selected option
+    setActiveDropdown(""); // Close the dropdown
+  };
+
+  const handleDownload = () => {
+    if (selectedOption) {
+      // Trigger a download (replace with actual file or data)
+      const blob = new Blob([`You selected: ${selectedOption}`], { type: "text/plain" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `${selectedOption}.txt`; // Example filename
+      link.click();
+      URL.revokeObjectURL(url);
+    }
+  };
+
+  const handlePrint = () => {
+    if (selectedOption) {
+      const printWindow = window.open("", "_blank");
+      printWindow.document.write(`
+        <html>
+          <head><title>Print</title></head>
+          <body>
+            <h1>Selected Option</h1>
+            <p>${selectedOption}</p>
+          </body>
+        </html>
+      `);
+      printWindow.document.close();
+      printWindow.print();
+    }
+  };
+
+  return (
+    <div>
+      <style>
+        {`
+          @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+
+          .animate-fade-in {
+            animation: fadeIn 2s ease-in-out;
+          }
+
+          .dropdown-menu {
+            display: block;
+            padding-left: 15px;
+            margin-top: 5px;
+            border-left: 2px solid #ccc;
+          }
+
+          .dropdown-item {
+            cursor: pointer;
+            color: #007bff;
+            text-decoration: underline;
+          }
+
+          .dropdown-item:hover {
+            text-decoration: none;
+            color: #0056b3;
+          }
+
+          .actions-container {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+          }
+
+          .actions-container button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+
+          .btn-download {
+            background-color: #28a745;
+            color: white;
+          }
+
+          .btn-print {
+            background-color: #007bff;
+            color: white;
+          }
+        `}
+      </style>
+
+      <div className="page-container">
+        <InView triggerOnce={true}>
+          {({ inView, ref }) => (
+            <div
+              ref={ref}
+              className={`w3-content w3-justify w3-text-grey w3-padding-16 ${
+                inView ? "animate-fade-in" : ""
+              }`}
+              id="downloads"
+            >
+
+<div className="row d-flex justify-content-center">
+                 <div className="col-sm-12 col-md-12 col-lg-12">   
+                 <iframe
+  src={require("../assets/PlayerResume.pdf")}
+  width="100%"
+  height="500px"
+  title="PDF Viewer"
+/>
+         
+                    <Document file={require("../assets/PlayerResume.pdf")}>
+        <Page pageNumber={1} />
+      </Document></div>
+                </div>
+                                  <h1 className="w3-text-light-grey w3-margin-bottom">Downloads</h1>
+              <div className="row d-flex justify-content-center">
+                <hr className="w3-opacity w3-text-white w3-padding-16 w3-margin-top" />
+                <div className="col-sm-12 col-md-3 col-lg-3 rounded">
+                  <div className="rounded">
+                    {[
+                      {
+                        id: "Demo1",
+                        label: "Schedule",
+                        links: ["2022 Summer", "2022 Fall", "2023 Spring"],
+                      },
+                      {
+                        id: "Demo2",
+                        label: "Unofficial Transcripts",
+                        links: ["2020 Freshman", "2021 Sophomore", "2022 Junior"],
+                      },
+                      {
+                        id: "Demo3",
+                        label: "References",
+                        links: ["Coach Joe", "Coach Jack", "Principal Jock", "Teacher Jane"],
+                      },
+                    ].map((dropdown) => (
+                      <div key={dropdown.id} className="mt-3">
+                        <button
+                          onClick={() => toggleDropdown(dropdown.id)}
+                          className="w3-button w3-block w3-left-align rounded"
+                        >
+                          {dropdown.label}
+                        </button>
+                        {activeDropdown === dropdown.id && (
+                          <div className="dropdown-menu">
+                            {dropdown.links.map((link, index) => (
+                              <div
+                                key={index}
+                                onClick={() => handleOptionSelect(link)}
+                                className="dropdown-item"
+                              >
+                                {link}
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="col-sm-12 col-md-9 col-lg-9">
+                  {selectedOption ? (
+                    <div className="w3-container mt-3">
+                      <h2>Selected Option</h2>
+                      <p>{selectedOption}</p>
+                      <div className="actions-container">
+                        <button className="btn-download" onClick={handleDownload}>
+                          Download
+                        </button>
+                        <button className="btn-print" onClick={handlePrint}>
+                          Print
+                        </button>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="w3-container mt-3">
+                      <h2>Welcome</h2>
+                      <p>Select an item from the dropdown menu to see details here.</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+        </InView>
+      </div>
+    </div>
+  );
+};
+
+export default PlayerDownloads;
+
+
+/*import React from "react";
 import { InView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import { RiBarChartBoxLine } from "react-icons/ri";
-import Resume1  from "../../assets/images/Metrics/Resume1.png";
-import Calendar1 from '../../assets/images/Calendars/Calendar1.png';
-import Calendar2 from '../../assets/images/Calendars/Calendar2.png';
-import Calendar3 from '../../assets/images/Calendars/Calendar3.png';
-import Calendar4 from '../../assets/images/Calendars/Calendar4.png';
-import Letter1 from '../../assets/images/Letters/Letter1.png';
-import Letter2 from '../../assets/images/Letters/Letter2.png';
-import Letter3 from '../../assets/images/Letters/Letter3.png';
-import Letter4 from '../../assets/images/Letters/Letter4.png';
-import Transcript1 from '../../assets/images/Letters/Transcript1.png';
-import Transcript2 from '../../assets/images/Letters/Transcript2.png';
-import Metrics1 from '../../assets/images/Metrics/Metrics1.png';
-import Metrics2 from '../../assets/images/Metrics/Metrics2.png';
-import MetricsAll from '../../assets/images/Metrics/MetricsAll.png';
+import Resume1  from "../assets/images/Metrics/Resume1.png";
+import Calendar1 from '../assets/images/Calendars/Calendar1.png';
+import Calendar2 from '../assets/images/Calendars/Calendar2.png';
+import Calendar3 from '../assets/images/Calendars/Calendar3.png';
+import Calendar4 from '../assets/images/Calendars/Calendar4.png';
+import Letter1 from '../assets/images/Letters/Letter1.png';
+import Letter2 from '../assets/images/Letters/Letter2.png';
+import Letter3 from '../assets/images/Letters/Letter3.png';
+import Letter4 from '../assets/images/Letters/Letter4.png';
+import Transcript1 from '../assets/images/Letters/Transcript1.png';
+import Transcript2 from '../assets/images/Letters/Transcript2.png';
+import Metrics1 from '../assets/images/Metrics/Metrics1.png';
+import Metrics2 from '../assets/images/Metrics/Metrics2.png';
+import MetricsAll from '../assets/images/Metrics/MetricsAll.png';
 
 
 const myFunction = (id) => {
@@ -35,7 +242,7 @@ const PlayerDownloads = () => {
   button-gradient {
         backgroundImage: 'linear-gradient(to bottom right,#c6c5c5, #e4e2e2, #8d8d8d)'
                 }
-        /*start ANIMATIONS*/
+     
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -54,7 +261,7 @@ const PlayerDownloads = () => {
   animation: slideLeft 2s ease-in-out;
 }
 
-/*end ANIMATIONS*/
+
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
 .w3-sidebar {width: 120px;background: #222;}
@@ -65,7 +272,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       </style>
 
       <div className="page-container">
-        {/* Page Content */}
         <InView triggerOnce={true}>
           {({ inView, ref }) => (
             <div
@@ -312,12 +518,19 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
                 </div>
       </div>
+
+
+
+               
+    <div className="row d-flex justify-content-center">
+    <hr className="w3-opacity w3-text-white w3-padding-16 w3-margin-top" />      
+ <div className="col-sm-12 col-md-12 col-lg-12 rounded">
+    </div>
+ </div>
              </div>
    
           )}
         </InView>
-
-        {/* END PAGE CONTENT */}
 
         <script>
           {`

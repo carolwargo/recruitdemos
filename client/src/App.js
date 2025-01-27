@@ -6,11 +6,15 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import HomePage from "./pages/HomePage";
 import DemoPage1 from "./pages/DemoPage1";
+import DemoDownloads from "./pages/DemoDownloads";
+import DemoMedia from "./pages/DemoMedia.jsx";
+
+
+
 import DemoPage3 from "./pages/DemoPage3.jsx";
 import DemoSocialPage from "./pages/DemoSocialPage";
 import DemoOverviewPage from "./pages/DemoOverviewPage";
 import DemoComponents from "./pages/DemoComponents";
-import DemoMedia from "./pages/DemoMedia.jsx";
 import FaqsPage from './pages/FaqsPage';
 
 
@@ -34,6 +38,7 @@ function App() {
        
        <Route element={<DemoLayout />}>
        <Route path="/demo1" element={<DemoPage1 />} />
+        <Route path="/downloads" element={<DemoDownloads />} />
         <Route path="/demo3" element={<DemoPage3 />} />
         <Route path="/social" element={<DemoSocialPage />} />
         <Route path="/components" element={<DemoComponents />} />
