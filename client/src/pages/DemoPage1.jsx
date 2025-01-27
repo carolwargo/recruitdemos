@@ -5,7 +5,7 @@ import PlayerProfile from "../components/Demo1/PlayerProfile";
 import Testimonials from "../components/Demo1/PlayerTestimonials";
 import PlayerCards from "../components/Demo1/PlayerCards";
 //import PlayerMedia from "../components/Demo1/PlayerMedia";
-import PlayerContact from "../components/Demo1/PlayerContact";
+//import PlayerContact from "../components/Demo1/PlayerContact";
 import PlayerFooter from "../components/Demo1/PlayerFooter";
 import PlayerPerformance from "../components/Demo1/PlayerPerformance";
 import PlayerIntro from "../components/Demo1/PlayerIntro";
