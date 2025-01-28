@@ -1,10 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { InView } from "react-intersection-observer";
 import ClaySmall from "../../assets/images/Profiles/ClaySmall.png";
 import { RiHome6Line } from "react-icons/ri";
 import { HiAcademicCap } from "react-icons/hi";
-import { GrScorecard } from "react-icons/gr";
 import { GiRotaryPhone } from "react-icons/gi";
 import { MdOutlineEmail } from "react-icons/md";
 import {  GiTiedScroll } from "react-icons/gi";
@@ -124,32 +122,6 @@ const PlayerProfile = () => {
                           <br />
                         </p>
 
-                        <p
-                           className="mt-0 mb-1 py-0 text-white"
-                          style={{ marginBottom: "4px" }}
-                        >
-                          <span
-                            className="fa-fw"
-                            style={{ marginRight: "4px" }}
-                          >
-                            <b
-                              className="text-white-50"
-                              style={{ fontSize: "1.2rem" }}
-                            >
-                              {" "}
-                              <GrScorecard />
-                            </b>
-                          </span>{" "}
-                          <span
-                            className="text-white"
-                            style={{ fontSize: "1rem" }}
-                          >
-                            {" "}
-                            SAT-9000 
-                          </span>
-                          <br />
-                        </p>
-
                         
                         <p
                            className="mt-0 mb-1 py-0 text-white"
@@ -172,10 +144,12 @@ const PlayerProfile = () => {
                             style={{ fontSize: "1rem" }}
                           >
                             {" "}
-                            GPA- 5.0
+                            SAT-9000 | GPA- 5.0
                           </span>
                           <br />
                         </p>
+
+
 
                         <p
                            className="mt-0 mb-1 py-0 text-white"
@@ -192,12 +166,12 @@ const PlayerProfile = () => {
                               <GiRotaryPhone />
                             </b>{" "}
                           </span>{" "}
-                          <Link
+                          <a href="tel:1234567890"
                             className="text-white"
                             style={{ fontSize: "1rem" }}
                           >
                             (123) 456-7890
-                          </Link>
+                          </a>
                           <br />
                         </p>
 
@@ -216,14 +190,49 @@ const PlayerProfile = () => {
                               <MdOutlineEmail />{" "}
                             </b>
                           </span>{" "}
-                          <Link
+                          <a href="mailto:mail@gmail.com"
                             className="text-white"
                             style={{ fontSize: "1rem" }}
                           >
                             EMAIL@MAIL.COM
-                          </Link>
+                          </a>
                           <br />
                         </p>
+
+                        <p
+                          className="mt-0 mb-1 py-0 text-white"
+                          style={{ marginBottom: "4px" }}
+                        >
+                          <span
+                            className="fa-fw"
+                            style={{ marginRight: "4px" }}
+                          >
+                            <b
+                              className=" text-white-50"
+                              style={{ fontSize: "1.3rem" }}
+                            >
+                              {" "}
+                              < FaRegEye />
+                            </b>
+                          </span>{" "}
+                          <span
+                            className="text-white"
+                            style={{ fontSize: "1rem" }}
+                          >
+                           <a href="https://www.prepbaseballreport.com/"
+                            className=" text-white"
+                            style={{ marginRight: "4px" }}
+                          >
+                            
+                         PBR PROFILE{" "}
+                          </a>
+                          </span>
+                          <br />
+                        </p>
+                     
+
+          
+                   
                       </div>
                     </div>
 
@@ -231,7 +240,7 @@ const PlayerProfile = () => {
                       <div className="py-2">
                         <p
                           className="mt-0 py-0 text-white"
-                          style={{ marginBottom: "4px", fontSize: "1.1rem" }}
+                          style={{ marginBottom: "4px", fontSize: "1rem" }}
                         >
                           {" "}
                           Bats:{" "}
@@ -254,7 +263,7 @@ const PlayerProfile = () => {
 
                         <p
                           className="mt-0 py-0 text-white"
-                          style={{ marginBottom: "4px", fontSize: "1.1rem" }}
+                          style={{ marginBottom: "4px", fontSize: "1rem" }}
                         >
                           {" "}
                           Height:{" "}
@@ -277,7 +286,7 @@ const PlayerProfile = () => {
 
                         <p
                           className="mt-0 py-0 text-white"
-                          style={{ marginBottom: "4px", fontSize: "1.1rem" }}
+                          style={{ marginBottom: "4px", fontSize: "1rem" }}
                         >
                           {" "}
                           Born:{" "}
@@ -289,37 +298,25 @@ const PlayerProfile = () => {
                             11-01-2006, <i>ST.</i>
                           </span>
                         </p>
-                        <p
-                          className="mt-0 py-0 text-white"
-                          style={{ marginBottom: "4px", fontSize: "1.1rem" }}
-                        >
-                          {" "} < FaRegEye style={{fontSize:'1.4rem', marginRight:'5px'}} /><Link
-                            className=" text-white-50"
-                            style={{ marginRight: "4px" }}
-                          >
-                            
-                          Perfect Game Profile{" "}
-                          </Link>
-                        </p>
+                   
                         
                         <p
                           className="mt-0 py-0 text-white"
-                          style={{ marginBottom: "4px", fontSize: "1.1rem" }}
-                        >
-                          {" "} < FaRegEye style={{fontSize:'1.4rem', marginRight:'5px'}} /><Link
-                            className=" text-white-50"
-                            style={{ marginRight: "4px" }}
-                          >
-                            
-                         Max Preps Profile{" "}
-                          </Link>
+                          style={{ marginBottom: "4px", fontSize: ".9rem" }}
+                        > <span style={{ color:'#9ad7ff'}}>NCAA STATUS:</span>
+                          {" "} Registered <i className="fas fa-check-circle" style={{ color:'#9ad7ff'}}></i> 
+                        </p>
+                        <p  
+                          className="mt-0 py-0 text-white"
+                          style={{ marginBottom: "4px", fontSize: ".9rem" }}
+                        > <span style={{ color:'#9ad7ff'}}>NCAA ID: </span>
+                          {" "} #81238765 
                         </p>
                         <a id="download" download href={PlayerResume}>
-                          <button className="w3-button px-5 rounded text-decoration-none w3-white w3-padding mt-2">
-                            Download Metrics
+                          <button className="w3-button px-5 rounded text-decoration-none small w3-white w3-padding mt-1">
+                            Download Resume
                           </button>
                         </a>
-                       
                       </div>
                     </div>
                   </div>

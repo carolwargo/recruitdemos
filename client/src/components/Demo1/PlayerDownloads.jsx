@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import { InView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
-import { RiBarChartBoxLine } from "react-icons/ri";
+import Stats2 from "../../assets/images/Video/Stats2.png";
 import Resume1  from "../../assets/images/Metrics/Resume1.png";
 import Calendar1 from '../../assets/images/Calendars/Calendar1.png';
 import Calendar2 from '../../assets/images/Calendars/Calendar2.png';
@@ -28,6 +28,13 @@ const myFunction = (id) => {
   };
   
 const PlayerDownloads = () => {
+
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  const handleFileSelect = (file) => {
+    setSelectedFile(file);
+  };
+
   return (
     <div>
       <style>
@@ -64,7 +71,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
  `}
       </style>
 
-      <div className="page-container">
+      <div className="page-container ">
         {/* Page Content */}
         <InView triggerOnce={true}>
           {({ inView, ref }) => (
@@ -74,141 +81,166 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             ${inView ? "animate-fade-in" : ""}`}
               id="downloads"
             >
-         
-    <div className="row d-flex justify-content-center">
-    <hr className="w3-opacity w3-text-white w3-padding-16 w3-margin-top" />      
- <div className="col-sm-12 col-md-3 col-lg-3 rounded">
- <h1 className="w3-text-light-grey w3-margin-bottom">Downloads</h1>
-     
-      <div className="rounded">
+                  <hr className="w3-opacity w3-text-white w3-padding-16 w3-margin-top" /> 
+          <h1 className="w3-text-light-grey w3-margin-bottom">Downloads</h1>
+    <div className="row justify-content-center d-flex shadow rounded" style={{ border: "2px solid #545454" }}>
+ <div className="col-sm-12 col-md-4 col-lg-4 bg-dark  pt-2 px-0" style={{ borderRight: "2px solid #545454" }}>
+      <div className="rounded container my-2 w3-padding-large">
+        <div className="container w3-padding">
+        <h4 className="w3-text-light-grey">Download Menu</h4>
+        <p>Select a document to view. PDF versions with clickable links are an option.</p>
+        </div>
+
+
         {/** Game Schedules */}
-               <button
-                 onClick={() => myFunction("Demo1")}
-                     className="w3-button w3-block mt-2 w3-left-align rounded
-                  btn-outline-secondary-light"
-               >
-                     <i className="fas fa-calendar-check fa-fw w3-margin-right mt-2"></i>
-              Game Schedules     
-               </button>
+        <button
+                onClick={() => myFunction("Demo1")}
+                className="w3-button w3-block mt-2 w3-left-align rounded"
+              >
+                <i className="fas fa-calendar-check fa-fw w3-margin-right mt-2"></i>
+                Game Schedules
+              </button>
 
-               <div id="Demo1" className="w3-hide w3-container">
-               <div className="row mt-2">
-                   <div className="col-sm-12 col-md-6 col-lg-6">
-                   <div className="m-1 small text-center">
-                   <Link className=" link-light text-decoration-none"> 
-                   <img src={Calendar1} alt="sample" className="w-100" />
-                 </Link>
-                    <br/>Sample 1
-                   </div>
-                   </div>
+              <div id="Demo1" className="w3-hide w3-container">
+                <div className="row mt-2">
+                  <div className="col-6 text-center">
+                    <Link
+                      className="link-light text-decoration-none"
+                      onClick={() => handleFileSelect(Calendar1)}
+                    >
+                      <img src={Calendar1} alt="Calendar 1" className="w-100" />
+                      <br />
+                      Sample 1
+                    </Link>
+                  </div>
+                  <div className="col-6 text-center">
+                    <Link
+                      className="link-light text-decoration-none"
+                      onClick={() => handleFileSelect(Calendar2)}
+                    >
+                      <img src={Calendar2} alt="Calendar 2" className="w-100" />
+                      <br />
+                      Sample 2
+                    </Link>
+                  </div>
 
-                   <div className="col-sm-12 col-md-6 col-lg-6">
-                   <div className="m-1 small text-center">
-                   <Link className=" link-light text-decoration-none"> 
-                   <img src={Calendar2} alt="sample" className="w-100" /></Link>
-                    <br/>Sample 2
-                   </div>
-                   </div>
-
-                   <div className="col-sm-12 col-md-6 col-lg-6">
-                   <div className="m-1 small text-center">
-                   <Link className=" link-light text-decoration-none"> 
-                   <img src={Calendar3} alt="sample" className="w-100" /></Link>
-                    <br/>Sample 3
-                   </div>
-                   </div>
-
-                   <div className="col-sm-12 col-md-6 col-lg-6">
-                   <div className="m-1 small text-center">
-                   <Link className=" link-light text-decoration-none"> 
-                   <img src={Calendar4} alt="sample" className="w-100" /></Link>
-                    <br/>Sample 4
-                   </div>
-                   </div>
+                  <div className="col-6 text-center">
+                    <Link
+                      className="link-light text-decoration-none"
+                      onClick={() => handleFileSelect(Calendar3)}
+                    >
+                      <img src={Calendar3} alt="Calendar 3" className="w-100" />
+                      <br />
+                      Sample 3
+                    </Link>
+                  </div>
+                  <div className="col-6 text-center">
+                    <Link
+                      className="link-light text-decoration-none"
+                      onClick={() => handleFileSelect(Calendar4)}
+                    >
+                      <img src={Calendar4} alt="Calendar 4" className="w-100" />
+                      <br />
+                      Sample 4
+                    </Link>
+                  </div>
                  </div>
                </div>
 
                <button
                  onClick={() => myFunction("Demo2")}
-                  className="w3-button w3-block mt-2 w3-left-align rounded
-                  btn-outline-secondary-light"
+                  className="w3-button w3-block mt-2 w3-left-align rounded"
                >
                  <i className="fa fa-book fa-fw w3-margin-right"></i>
                  Unofficial Transcripts
                </button>
                <div id="Demo2" className="w3-hide w3-container">
                  <div className="row mt-2">
-                   <div className="col-sm-12 col-md-6 col-lg-6">
-                   <div className="m-1 small text-center">
-                   <Link className=" link-light text-decoration-none"> 
-                   <img src={Transcript1} alt="sample" className="w-100" />
-               </Link>
-                    <br/>Freshman
-                   </div>
-                   </div>
-
-
-                   <div className="col-sm-12 col-md-6 col-lg-6">
-                   <div className="m-1 small text-center">
-                   <Link className=" link-light text-decoration-none"> 
-                   <img src={Transcript2} alt="sample" className="w-100" /></Link>
-                    <br/>Sophomore
-                   </div>
-                   </div>
+                   <div className="col-6 text-center">
+                    <Link
+                      className="link-light text-decoration-none"
+                      onClick={() => handleFileSelect(Transcript1)}
+                    >
+                      <img src={Transcript1} alt="Transcript 1" className="w-100" />
+                      <br />
+                      Sample 1
+                    </Link>
+                  </div>
+                  <div className="col-6 text-center">
+                    <Link
+                      className="link-light text-decoration-none"
+                      onClick={() => handleFileSelect(Transcript2)}
+                    >
+                      <img src={Transcript2} alt="Transcript 2" className="w-100" />
+                      <br />
+                      Sample 2
+                    </Link>
+                  </div>
               
                  </div>
                </div>
-{/**  References*/}
+{/**  References (Letters)*/}
                <button
                  onClick={() => myFunction("Demo3")}
-                 className="w3-button w3-block mt-2 w3-left-align rounded
-                  btn-outline-secondary-light"
+                 className="w3-button w3-block mt-2 w3-left-align rounded"
                >
                  <i className="fas fa-user fa-fw w3-margin-right"></i>
                  References
                </button>
                <div id="Demo3" className="w3-hide w3-container">
                  <div className="row mt-2">
-                   <div className="col-sm-12 col-md-6 col-lg-6">
-                   <div className="m-1 small text-center">
-                     <Link className=" link-light text-decoration-none">
-                     <img src={Letter1} alt="sample" className="w-100" />
-                     </Link> <br />Coach Joe
-                   </div>
-                   </div>
+                 <div className="col-6 text-center">
+                    <Link
+                      className="link-light text-decoration-none"
+                      onClick={() => handleFileSelect(Letter1)}
+                    >
+                      <img src={Letter1} alt="Letter 1" className="w-100" />
+                      <br />
+                      Coach Joe
+                    </Link>
+                  </div>
+               
+                  <div className="col-6 text-center">
+                    <Link
+                      className="link-light text-decoration-none"
+                      onClick={() => handleFileSelect(Letter2)}
+                    >
+                      <img src={Letter2} alt="Letter 2" className="w-100" />
+                      <br />
+                      Coach Jack
+                    </Link>
+                  </div>
+                
+                  <div className="col-6 text-center">
+                    <Link
+                      className="link-light text-decoration-none"
+                      onClick={() => handleFileSelect(Letter3)}
+                    >
+                      <img src={Letter3} alt="Letter 3" className="w-100" />
+                      <br />
+                      Principal Joe
+                    </Link>
+                  </div>
 
-
-                   <div className="col-sm-12 col-md-6 col-lg-6">
-                   <div className="m-1 small text-center">
-                    <Link className=" link-light text-decoration-none">
-                    <img src={Letter2} alt="sample" className="w-100" /></Link>
-                    <br />
-                    Coach Jack
-                   </div>
-                   </div>
-                   <div className="col-sm-12 col-md-6 col-lg-6">
-                   <div className="m-1 small text-center">
-                    <Link className=" link-light text-decoration-none">
-                    <img src={Letter4} alt="sample" className="w-100" /></Link>
-                    <br />
-                    Principal Joe
-                    </div>
-                   </div>
-                   <div className="col-sm-12 col-md-6 col-lg-6">
-                   <div className="m-1 small text-center">
-                    <Link className=" link-light text-decoration-none">
-                  <img src={Letter3} alt="sample" className="w-100" /></Link>
-                    <br />
-                    Teacher Jane
-                   </div>
-                   </ div>
+                    
+                  <div className="col-6 text-center">
+                    <Link
+                      className="link-light text-decoration-none"
+                      onClick={() => handleFileSelect(Letter4)}
+                    >
+                      <img src={Letter4} alt="Letter 4" className="w-100" />
+                      <br />
+                      Teacher Jane
+                    </Link>
+                  </div>
                  </div>
                </div>
         
+
+        {/**  Stats*/}
                <button
                  onClick={() => myFunction("Demo4")}
-                    className="w3-button w3-block mt-2 w3-left-align rounded
-                  btn-outline-secondary-light"
+                    className="w3-button w3-block mt-2 w3-left-align rounded"
                >
                      <i className="fas fa-chart-line fa-fw w3-margin-right"></i>
               Stats In Comparisson 
@@ -216,105 +248,124 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
                <div id="Demo4" className="w3-hide w3-container">
                <div className="row mt-2">
-                   <div className="col-sm-12 col-md-6 col-lg-6">
-                   <div className="m-1 small text-center">
-                     <Link className=" link-light text-decoration-none">
-                     <RiBarChartBoxLine style={{fontSize:'3rem'}}/>
-                     </Link> <br />Fall
-                   </div>
-                   </div>
-
-
-                   <div className="col-sm-12 col-md-6 col-lg-6">
-                   <div className="m-1 small text-center">
-                    <Link className=" link-light text-decoration-none">
-                    <RiBarChartBoxLine style={{fontSize:'3rem'}}/></Link>
-                    <br />
-                    High School
-                   </div>
-                   </div>
-                   <div className="col-sm-12 col-md-6 col-lg-6">
-                   <div className="m-1 small text-center">
-                    <Link className=" link-light text-decoration-none">
-                    <RiBarChartBoxLine style={{fontSize:'3rem'}}/></Link>
-                    <br />
-                    Summer
-                    </div>
-                   </div>
-                   <div className="col-sm-12 col-md-6 col-lg-6">
-                   <div className="m-1 small text-center">
-                    <Link className=" link-light text-decoration-none">
-                    <RiBarChartBoxLine style={{fontSize:'3rem'}}/></Link>
-                    <br />
-                    Overall
-                   </div>
-                   </ div>
+               <div className="col-12 text-center">
+                    <Link
+                      className="link-light text-decoration-none"
+                      onClick={() => handleFileSelect(Stats2)}
+                    >
+                      <img src={Stats2} alt="Stats 2" className=" w3-grayscale-max w-100" />
+                      <br />
+                      Summer 2023 - Fall 2023
+                    </Link>
+                  </div>
                  </div>
                </div>
 
+
+  {/** Performance Metrics*/}
                <button
                  onClick={() => myFunction("Demo5")}
-                    className="w3-button w3-block mt-2 w3-left-align rounded
-                  btn-outline-secondary-light"
+                    className="w3-button w3-block mt-2 w3-left-align rounded"
                >
                  <i className="fas fa-person-running fa-fw w3-margin-right"></i>
               Performance Metrics
                </button>
                <div id="Demo5" className="w3-hide w3-container">
                <div className="row">
-                   <div className="col-sm-12 col-md-12 col-lg-12">
-                   <div className="small text-center my-2">
-                     <Link className=" link-light text-decoration-none">
-                   <img src={Metrics1} alt="metric" className="w-100"/>
-                     </Link> <br /> <span className="mt-2">Metrics</span>
-                   </div>
-                   <div className="small text-center my-2">
-                     <Link className=" link-light text-decoration-none">
-                   <img src={Metrics2} alt="metric" className="w-100"/>
-                     </Link> <br /> <span className="mt-2">Metrics</span>
-                   </div>
-                 
-                   <div className="small text-center my-2">
-                     <Link className=" link-light text-decoration-none">
-                   <img src={MetricsAll} alt="metric" className="w-100"/>
-                     </Link> <br /> <span className="mt-2">Metrics</span>
-                   </div>
-                   </div>
+               <div className="col-12 text-center">
+                    <Link
+                      className="link-light text-decoration-none"
+                      onClick={() => handleFileSelect(Metrics1)}
+                    >
+                      <img src={Metrics1} alt="Metrics 1" className=" w3-grayscale-max w-100" />
+                      <br />
+                      Metrics
+                    </Link>
+                  </div>
+
+                  <div className="col-12 text-center">
+                    <Link
+                      className="link-light text-decoration-none"
+                      onClick={() => handleFileSelect(Metrics2)}
+                    >
+                      <img src={Metrics2} alt="Metrics 2" className=" w3-grayscale-max w-100" />
+                      <br />
+                      Metrics
+                    </Link>
+                  </div>
+
+                  <div className="col-12 text-center">
+                    <Link
+                      className="link-light text-decoration-none"
+                      onClick={() => handleFileSelect(MetricsAll)}
+                    >
+                      <img src={MetricsAll} alt="Metrics All" className=" w3-grayscale-max w-100" />
+                      <br />
+                      Metrics
+                    </Link>
+                  </div>
                  </div>
                </div>
 
+
+ {/** Resume*/}
                <button
                  onClick={() => myFunction("Demo6")}
-                   className="w3-button w3-block mt-2 w3-left-align rounded
-                  btn-outline-secondary-light"
+                   className="w3-button w3-block mt-2 w3-left-align rounded"
                >
                  <i className="fa fa-pencil fa-fw w3-margin-right"></i>
                  Player Resume
                </button>
                <div id="Demo6" className="w3-hide w3-container">
                <div className="row">
-                   <div className="col-sm-12 col-md-12 col-lg-12">
-                   <div className="small text-center my-2">
-                     <Link className=" link-light text-decoration-none">
-                   <img src={Resume1} alt="metric" className="w-100"/>
-                     </Link> <br /> <span className="mt-2">Resume</span>
-                   </div>
-                   </div>
+
+               <div className="col-12 text-center">
+                    <Link
+                      className="link-light text-decoration-none"
+                      onClick={() => handleFileSelect(Resume1)}
+                    >
+                      <img src={Resume1} alt="Resume 1" className=" w3-grayscale-max w-100" />
+                      <br />
+                    Resume
+                    </Link>
+                  </div>
                  </div>
                </div>
-             </div>
-             </div>
-             <div className="col-sm-12 col-md-9 col-lg-9">
-             <iframe
-  width="100%"
-  height="500px"
-  title="PDF Viewer"
-/>
 
-                </div>
+               <div className="container text-center px-3 mt-4 mb-4">
+        <Link to="/" className=" link-light small" >Check Out the Impact of Clickable Links Inbedded in Your Graphics!</Link>
+        </div>
+             </div>
+             </div>
+                {/* Display the selected file */}
+        <div className="col-sm-12 col-md-8 col-lg-8">
+          <div
+            className="p-2"
+            style={{
+              height: "500px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            {selectedFile ? (
+              <img
+                src={selectedFile}
+                alt="Selected File"
+                style={{
+                  maxWidth: "100%",
+                  maxHeight: "100%",
+                  objectFit: "contain",
+                }}
+              />
+            ) : (
+              <p>No file selected. Click a link to preview a file.</p>
+            )}
+          </div>
+        </div>
       </div>
              </div>
-   
+           
           )}
         </InView>
 

@@ -359,7 +359,9 @@ export default function FloatingActionButtonZoom() {
         controls
         className=" border border-dark"
         style={{ width: "100%" }}
-      ></video>
+      >
+        
+      </video>
               </div>
   <div className="col-sm-12 col-md-4 col-lg-4">
     <Box
