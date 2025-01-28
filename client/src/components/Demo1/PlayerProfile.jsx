@@ -72,7 +72,7 @@ const PlayerProfile = () => {
                     <div className="col-sm-12 col-md-6 col-lg-6">
                       <div className="py-2">
                         <p
-                           className="mt-0 mb-1 py-0 text-white"
+                           className="mt-0 mb-1 py-0 text-white small"
                           style={{ marginBottom: "4px" }}
                         >
                           <span
@@ -81,7 +81,7 @@ const PlayerProfile = () => {
                           >
                             <b
                               className=" text-white-50"
-                              style={{ fontSize: "1.3rem" }}
+                              style={{ fontSize: "1.2rem" }}
                             >
                               <RiHome6Line />
                             </b>{" "}
@@ -97,7 +97,7 @@ const PlayerProfile = () => {
                         </p>
 
                         <p
-                          className="mt-0 mb-1 py-0 text-white"
+                           className="mt-0 mb-1 py-0 text-white small"
                           style={{ marginBottom: "4px" }}
                         >
                           <span
@@ -106,7 +106,7 @@ const PlayerProfile = () => {
                           >
                             <b
                               className=" text-white-50"
-                              style={{ fontSize: "1.3rem" }}
+                              style={{ fontSize: "1.2rem" }}
                             >
                               {" "}
                               <HiAcademicCap />
@@ -124,7 +124,7 @@ const PlayerProfile = () => {
 
                         
                         <p
-                           className="mt-0 mb-1 py-0 text-white"
+                           className="mt-0 mb-1 py-0 text-white small"
                           style={{ marginBottom: "4px" }}
                         >
                           <span
@@ -150,21 +150,20 @@ const PlayerProfile = () => {
                         </p>
 
 
-
                         <p
-                           className="mt-0 mb-1 py-0 text-white"
+                           className="mt-0 mb-1 py-0 text-white small"
                           style={{ marginBottom: "4px" }}
                         >
                           <span
-                            className="fa-fw text-white"
+                            className="fa-fw"
                             style={{ marginRight: "4px" }}
                           >
                             <b
                               className=" text-white-50"
-                              style={{ fontSize: "1.3rem" }}
+                              style={{ fontSize: "1.2rem" }}
                             >
-                              <GiRotaryPhone />
-                            </b>{" "}
+                                 <GiRotaryPhone />{" "}
+                            </b>
                           </span>{" "}
                           <a href="tel:1234567890"
                             className="text-white"
@@ -175,64 +174,63 @@ const PlayerProfile = () => {
                           <br />
                         </p>
 
+
                         <p
-                           className="mt-0 mb-1 py-0 text-white"
+                           className="mt-0 mb-1 py-0 text-white small"
                           style={{ marginBottom: "4px" }}
                         >
-                          <span
-                            className="fa-fw text-white"
+    <span
+                            className="fa-fw"
                             style={{ marginRight: "4px" }}
                           >
                             <b
                               className=" text-white-50"
-                              style={{ fontSize: "1.3rem" }}
+                              style={{ fontSize: "1.2rem" }}
                             >
                               <MdOutlineEmail />{" "}
                             </b>
                           </span>{" "}
+                     
                           <a href="mailto:mail@gmail.com"
                             className="text-white"
-                            style={{ fontSize: "1rem" }}
+                            style={{ marginRight:'4px' }}
                           >
                             EMAIL@MAIL.COM
                           </a>
                           <br />
                         </p>
 
+
+
+
                         <p
-                          className="mt-0 mb-1 py-0 text-white"
+                           className="mt-0 mb-1 py-0 text-white small"
                           style={{ marginBottom: "4px" }}
                         >
-                          <span
+    <span
                             className="fa-fw"
                             style={{ marginRight: "4px" }}
                           >
                             <b
                               className=" text-white-50"
-                              style={{ fontSize: "1.3rem" }}
+                              style={{ fontSize: "1.2rem" }}
                             >
-                              {" "}
-                              < FaRegEye />
+                              < FaRegEye />{" "}
                             </b>
                           </span>{" "}
-                          <span
-                            className="text-white"
-                            style={{ fontSize: "1rem" }}
-                          >
-                           <a href="https://www.prepbaseballreport.com/"
+                     
+                        
+                          <a href="https://www.prepbaseballreport.com/"
                             className=" text-white"
                             style={{ marginRight: "4px" }}
                           >
                             
                          PBR PROFILE{" "}
                           </a>
-                          </span>
                           <br />
                         </p>
-                     
 
-          
-                   
+                 
                       </div>
                     </div>
 
@@ -299,7 +297,7 @@ const PlayerProfile = () => {
                           </span>
                         </p>
                    
-                        
+                        <div className="py-2">
                         <p
                           className="mt-0 py-0 text-white"
                           style={{ marginBottom: "4px", fontSize: ".9rem" }}
@@ -312,6 +310,7 @@ const PlayerProfile = () => {
                         > <span style={{ color:'#9ad7ff'}}>NCAA ID: </span>
                           {" "} #81238765 
                         </p>
+                        </div>
                         <a id="download" download href={PlayerResume}>
                           <button className="w3-button px-5 rounded text-decoration-none small w3-white w3-padding mt-1">
                             Download Resume
