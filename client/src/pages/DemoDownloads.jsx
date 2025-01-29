@@ -2,13 +2,9 @@ import React from "react";
 import { InView } from "react-intersection-observer";
 import PDFViewer from "../components/DemoDownloads/PDFViewer";
 
-  
-const PlayerDownloads = () => {
-
-
+const DownloadsPage = () => {
   return (
     <div>
-
       <div className="page-container ">
         {/* Page Content */}
         <InView triggerOnce={true}>
@@ -19,11 +15,22 @@ const PlayerDownloads = () => {
             ${inView ? "animate-fade-in" : ""}`}
               id="downloads-page"
             >
-                <div className="container">
+              <PDFViewer />
+            </div>
+          )}
+        </InView>
+        {/* END PAGE CONTENT */}
+      </div>
+    </div>
+  );
+};
+
+export default DownloadsPage;
+
+/**
+ *    <div className="container">
 
                 <div className="w3-padding-32" id="overview">
-  
-
         <h1 className="w3-text-light-grey">Joe Baseball</h1>
           <hr style={{ width: "235px" }} className="w3-opacity" />
           <p className="">
@@ -37,19 +44,7 @@ const PlayerDownloads = () => {
            
 
                 </div>
-      
-          <PDFViewer  />
-             </div>
-           
-          )}
-        </InView>
-        {/* END PAGE CONTENT */}
-      </div>
-    </div>
-  );
-};
-
-export default PlayerDownloads;
+ */
 
 /**import { BsEnvelopePaper, BsFacebook, BsPhone, BsTwitterX } from "react-icons/bs";
 import {FaSnapchatSquare } from "react-icons/fa";
