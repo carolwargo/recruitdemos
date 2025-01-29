@@ -18,7 +18,19 @@ const PDFViewer = () => {
     <div className=""
     style={{ backgroundColor: "#f1f1f1", minHeight: "100vh" }}>
 <div className="w3-container">
+  <div className="w3-container w3-padding-large">
+<h1 className="">Joe Baseball</h1>
+          <hr style={{ width: "235px" }} className="w3-opacity" />
+          <p className="">
+          Starting of the 2024 Season with Pre-Season Honors, Ranked #1 overall in SMAC Conference, #2 overall in state, and #4 Ranked Catcher Nationally.  Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum consectetur adipiscing. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+          </p>
+          </div>
       <div className="row d-flex justify-content-center">
+
         {/** Left Menu */}
         <div className="col-sm-12 col-md-3 col-lg-3">
             <div className="container w3-padding-large w3-padding-24">

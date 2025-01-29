@@ -19,6 +19,24 @@ const PlayerDownloads = () => {
             ${inView ? "animate-fade-in" : ""}`}
               id="downloads-page"
             >
+                <div className="container">
+
+                <div className="w3-padding-32" id="overview">
+  
+
+        <h1 className="w3-text-light-grey">Joe Baseball</h1>
+          <hr style={{ width: "235px" }} className="w3-opacity" />
+          <p className="">
+          Starting of the 2024 Season with Pre-Season Honors, Ranked #1 overall in SMAC Conference, #2 overall in state, and #4 Ranked Catcher Nationally.  Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum consectetur adipiscing. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+          </p>
+        </div>
+           
+
+                </div>
       
           <PDFViewer  />
              </div>
