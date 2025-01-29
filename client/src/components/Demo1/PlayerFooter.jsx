@@ -95,18 +95,16 @@ a:hover {
 
 
  
-<div className="text-center">
+<div className="text-center ">
     <InView triggerOnce={true}>
           {({ inView, ref }) => (
-          <div ref={ref} className={`w3-content w3-justify w3-text-grey w3-padding-16 
+          <div ref={ref} className={`w3-content w3-container w3-justify w3-text-grey w3-padding-16 
             ${inView ? "animate-fade-in" : ""}`} 
         id="player-footer">
 
 
-            <hr />
-         
         
-          <div className="w3-container w3-padding-48"
+          <div className=" w3-padding-48"
           style={{fontFamily:'Roboto'}}>
             <div className="row w3-text-light-grey opacity-65">
               <div className="col-sm-12 col-md-5 col-lg-5 justify-content-start align-content-center">

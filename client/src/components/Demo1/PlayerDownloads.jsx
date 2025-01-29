@@ -83,8 +83,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             >
                   <hr className="w3-opacity w3-text-white w3-padding-16 w3-margin-top" /> 
           <h1 className="w3-text-light-grey w3-margin-bottom">Downloads</h1>
-    <div className="row justify-content-center d-flex shadow rounded" style={{ border: "2px solid #545454" }}>
- <div className="col-sm-12 col-md-4 col-lg-4 bg-dark  pt-2 px-0" style={{ borderRight: "2px solid #545454" }}>
+    <div className="row justify-content-center align-items-center d-flex shadow rounded" style={{ border: "2px solid #232323" }}>
+ <div className="col-sm-12 col-md-4 col-lg-4 bg-dark  pt-2 px-0" style={{ borderRight: "2px solid #232323" }}>
       <div className="rounded container my-2 w3-padding-large">
         <div className="container w3-padding">
         <h4 className="w3-text-light-grey">Download Menu</h4>
@@ -100,9 +100,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                 <i className="fas fa-calendar-check fa-fw w3-margin-right mt-2"></i>
                 Game Schedules
               </button>
-
               <div id="Demo1" className="w3-hide w3-container">
-                <div className="row mt-2">
+              <div className="row justify-content-center mt-2">
                   <div className="col-6 text-center">
                     <Link
                       className="link-light text-decoration-none"
@@ -155,7 +154,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                  Unofficial Transcripts
                </button>
                <div id="Demo2" className="w3-hide w3-container">
-                 <div className="row mt-2">
+               <div className="row justify-content-center mt-2">
                    <div className="col-6 text-center">
                     <Link
                       className="link-light text-decoration-none"
@@ -188,7 +187,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                  References
                </button>
                <div id="Demo3" className="w3-hide w3-container">
-                 <div className="row mt-2">
+               <div className="row justify-content-center mt-2">
                  <div className="col-6 text-center">
                     <Link
                       className="link-light text-decoration-none"
@@ -247,7 +246,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                </button>
 
                <div id="Demo4" className="w3-hide w3-container">
-               <div className="row mt-2">
+               <div className="row justify-content-center mt-2">
                <div className="col-12 text-center">
                     <Link
                       className="link-light text-decoration-none"
@@ -271,7 +270,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
               Performance Metrics
                </button>
                <div id="Demo5" className="w3-hide w3-container">
-               <div className="row">
+               <div className="row justify-content-center mt-2">
                <div className="col-12 text-center">
                     <Link
                       className="link-light text-decoration-none"
@@ -317,9 +316,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                  Player Resume
                </button>
                <div id="Demo6" className="w3-hide w3-container">
-               <div className="row">
+               <div className="row  justify-content-center mt-2">
 
-               <div className="col-12 text-center">
+               <div className="col-6 text-center">
                     <Link
                       className="link-light text-decoration-none"
                       onClick={() => handleFileSelect(Resume1)}
@@ -338,17 +337,18 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
              </div>
              </div>
                 {/* Display the selected file */}
-        <div className="col-sm-12 col-md-8 col-lg-8">
+        <div className="col-sm-12 col-md-8 col-lg-8 ">
           <div
             className="p-2"
             style={{
-              height: "500px",
+              height: "500px",  
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
             }}
           >
             {selectedFile ? (
+              
               <img
                 src={selectedFile}
                 alt="Selected File"

@@ -36,7 +36,7 @@ const PlayerTestimonials = () => {
             <br /><i>Teacher- Htown High School</i>.
             <br />
     <span>
-            <i className='small'>"Joe Baseball is the best. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quibusdam totam pariatur accusamus, quam velit at ad enim animi aliquam, porro nulla molestias tempore fuga neque similique. Necessitatibus, iusto ex."
+            <i className='small'>"Joe Baseball is the best. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quibusdam totam pariatur accusamus, quam velit at ad enim animi aliquam, porro nulla molestias tempore fuga neque similique. Necessitatibus, iusto ex." 
           </i>
           </span>
           </p> 
