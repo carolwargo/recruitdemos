@@ -54,7 +54,7 @@ a:hover {
              {({ inView, ref }) => (
                <div
                  ref={ref}
-                 className={`w3-content w3-justify w3-text-grey w3-padding-16 
+                 className={`w3-content w3-justify w3-text-grey w3-padding-large w3-padding-16 
                ${inView ? "animate-fade-in" : ""}`}
                  id="cards"
                >

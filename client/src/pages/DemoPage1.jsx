@@ -145,22 +145,20 @@ const DemoPage1 = () => {
               <Testimonials />
             </div>
     {/* Media Section */}
-            <div className="demo1-video-media" id="demo1-video-media">
+            <div className="demo1-media-component" id="demo1-media-component">
               <MediaComponent />
             </div>
 
             {/* Cards Contact Section */}
-            <div className="demo1-video-media" id="demo1-player-cards">
+            <div className="demo1-player-cards" id="demo1-player-cards">
               <PlayerCards />
             </div>
  {/* Carousel & downloads Contact Section */}
-            <div className="demo1-player-media" id="demo1-player-downloads">
+            <div className="demo1-player-downloads" id="demo1-player-downloads">
               <PlayerDownloads />
-            </div>
-         
-
-            {/* Footer */}
+             {/* Footer */}
             <PlayerFooter />
+            </div>
           </div>
           {/* END PAGE CONTENT */}
         </div>

@@ -98,19 +98,15 @@ a:hover {
 <div className="text-center ">
     <InView triggerOnce={true}>
           {({ inView, ref }) => (
-          <div ref={ref} className={`w3-content w3-container w3-justify w3-text-grey w3-padding-16 
+          <div ref={ref} className={`w3-content w3-justify w3-text-grey w3-padding-16  
             ${inView ? "animate-fade-in" : ""}`} 
         id="player-footer">
 
-
-        
-          <div className=" w3-padding-48"
-          style={{fontFamily:'Roboto'}}>
-            <div className="row w3-text-light-grey opacity-65">
-              <div className="col-sm-12 col-md-5 col-lg-5 justify-content-start align-content-center">
-              <div className="container w3-padding-large">
-              <h6 className="w3-text-light-grey fw-bold">THANK YOU FOR VIEWING: </h6>
-              <p style={{ fontFamily: "Roboto" }}>
+            <div className="row d-flex justify-content-center align-content-center w3-padding-large w3-text-light-grey opacity-65">
+              <div className="col-sm-12 col-md-5 col-lg-5">
+                <div className=" w3-padding-large">
+            <h6 className="w3-text-light-grey fw-bold">THANK YOU FOR VIEWING: </h6>
+              <p style={{ fontFamily: "Roboto"}} className="fw-light">
               Feedback is welcome - Feel free to reach out to me directly, and 
               connect with me on social media. <br/>{" "} To communicate with a 3rd party when necessary, please contact {" "} <Link
                 className="link-light"
@@ -131,11 +127,12 @@ a:hover {
               
     </a></span></p>       
              </div>
-              </div>
+             </div>
+             </div>
 
-              <div className="col-sm-12 col-md-4 col-lg-4 justify-content-start align-content-center">
-                <div className="container w3-padding-large">
-              <h6 className="w3-text-light-grey fw-bold">CONTACT INFO </h6>
+              <div className="col-sm-12 col-md-4 col-lg-4 ">
+                <div className="w3-padding-large">
+           <h6 className="w3-text-light-grey fw-bold">CONTACT INFO </h6>
               <div className="w3-margin-bottom">
              
              <span className="icon-hover-zoom text-decoration-none">
@@ -173,10 +170,10 @@ a:hover {
                            </span>
                            </div>
               </div>  
-              </div>
-              <div className="col-sm-12 col-md-3 col-lg-3 justify-content-start align-content-center">
-                <div className="container  w3-padding-large">
-              <h6 className="w3-text-light-grey fw-bold">CONTACT INFO </h6>
+             
+              <div className="col-sm-12 col-md-3 col-lg-3">
+                <div className="w3-padding-large">
+            <h6 className="w3-text-light-grey fw-bold">CONTACT INFO </h6>
               <div className="w3-margin-bottom">
 
 <span className="icon-hover-zoom mt-1">
@@ -213,10 +210,9 @@ className="mx-1 link-light"
 </Link>
 </span>
 </div>
-              </  div>
               </div>
                 </div>
-            </div>
+         </div>
                 
           {/* End Contact Section */}
         </div>

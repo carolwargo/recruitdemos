@@ -25,6 +25,99 @@ const myFunction = (id) => {
 const PlayerProfile = () => {
   return (
     <div>
+
+<div className="row d-flex justify-content-center">
+              <div className="col-sm-12 col-md-4 col-lg-4 g-2 justify-content-center">
+                <div className="rounded-1 shadow-1-strong">
+         
+           
+    <div>
+                      <img
+                        src={Catch}
+                        style={{ width: "100%" }}
+                        alt="Avatar"
+                        className=" rounded-circle"
+                      />
+                    </div>
+    
+       
+              <div className="rounded-0 py-2 w3-theme-l3">
+                <div className="w3-padding-small" style={{marginLeft:'7px'}}>
+              <h6 className="fw-bold text-light-emphasis mt-1">DOWNLOAD LINKS</h6>
+         </div>
+                  <button
+                    onClick={() => myFunction("Demo1")}
+                    className="w3-button w3-block w3-theme-l3 w3-left-align"
+                  >
+                        <i className="fa fa-calendar-check-o fa-fw w3-margin-right"></i>
+                 Schedule     
+                  </button>
+
+                  <div id="Demo1" className="w3-hide w3-container">
+                    <ul className="text-decoration-none mt-2">
+                      <li>
+                        <Link>2022 Summer</Link>
+                      </li>
+                      <li>
+                        <Link>2022 Fall</Link>
+                      </li>
+                      <li>
+                        <Link>2023 Spring</Link>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <button
+                    onClick={() => myFunction("Demo2")}
+                    className="w3-button w3-block w3-theme-l3 w3-left-align"
+                  >
+                    <i className="fa fa-book fa-fw w3-margin-right"></i>
+                    Unofficial Transcripts
+                  </button>
+                  <div id="Demo2" className="w3-hide w3-container">
+                    <ul className="text-decoration-none mt-2">
+                      <li>
+                        <Link>2020 Freshman</Link>
+                      </li>
+                      <li>
+                        <Link>2021 Sophomore</Link>
+                      </li>
+                      <li>
+                        <Link>2022 Junior</Link>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <button
+                    onClick={() => myFunction("Demo3")}
+                    className="w3-button w3-block w3-theme-l3 w3-left-align"
+                  >
+                    <i className="fa fa-pencil fa-fw w3-margin-right"></i>
+                    References
+                  </button>
+                  <div id="Demo3" className="w3-hide w3-container">
+                    <ul className="text-decoration-none mt-2">
+                      <li>
+                        <Link>Coach Joe</Link>
+                      </li>
+                      <li>
+                        <Link>Coach Jack</Link>
+                      </li>
+                      <li>
+                        <Link>Principal Jock</Link>
+                      </li>
+                      <li>
+                        <Link>Teacher Jane</Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+            </div>
+            </div>
+
+
+
       {/* Overview PROFILE Section */}
       <div>
         <InView triggerOnce={true}>
