@@ -8,7 +8,7 @@ import HomePage from "./pages/HomePage";
 import DemoPage1 from "./pages/DemoPage1";
 import DemoDownloads from "./pages/DemoDownloads";
 import DemoMedia from "./pages/DemoMedia.jsx";
-
+import DisplaysPage from "./pages/DisplaysPage";
 
 
 import DemoPage3 from "./pages/DemoPage3.jsx";
@@ -43,6 +43,7 @@ function App() {
         <Route path="/social" element={<DemoSocialPage />} />
         <Route path="/components" element={<DemoComponents />} />
         <Route path="/media" element={<DemoMedia />} />
+        <Route path="/displays" element={<DisplaysPage />} />
        </Route>
         </Routes>
         </ErrorBoundary>
