@@ -12,6 +12,7 @@ import Offense from '../assets/images/Video/Offense.png';
 import Defense from '../assets/images/Video/Defense.png';
 import MLB from '../assets/images/Video/MLB.png';
 import { Link } from 'react-router-dom';
+import MediaComponent from '../components/MediaComponent';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -64,11 +65,11 @@ export default function FloatingActionButtonZoom() {
           {({ inView, ref }) => (
             <div
               ref={ref}
-              className={`w3-hide-small w3-hide-medium w3-text-grey w3-padding-large w3-padding-16 
+              className={`w3-content w3-text-grey w3-padding-large w3-padding-16 
             ${inView ? "animate-fade-in" : ""}`}
               id="Media"
             >
-        
+        <MediaComponent/>
         <div className="w3-padding-32">
         <div className="row">
                    <hr className="w3-opacity w3-text-white w3-padding-16 w3-margin-top" />

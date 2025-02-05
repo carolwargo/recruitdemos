@@ -14,39 +14,47 @@ const PlayerCards = () => {
          <div className="page-container justify-content-center align-items-center">
    <style>
       {`
-      .tags {
-    background-color: #8ecdf8;
+     .tags {
     border-radius: 0px 0px 10px 10px;
     display: flex;
     justify-content: space-around;
-
+    padding: -10px;
 }
 
-.fa-facebook,
-.fa-github,
-.fa-instagram,
-.fa-twitter {
-    text-decoration: none;
-    cursor: pointer;
-    background-color: #918E9B;
-    margin: 10px;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    border-radius: 6px;
-    display: inline-grid;
-    align-items: center;
-}
-
-footer {
+/* Apply styles only to footer inside .tags */
+.tags-footer {
     padding-top: 2px;
     margin-top: 1px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
-a:hover {
+/* Apply styles only inside .tags-footer to prevent conflicts */
+.tags-footer a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tags-footer a i {
+    background-color: white;
+    color: black;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* Hover effect */
+.tags-footer a:hover i {
     opacity: 0.7;
     transition: 0.4s;
 }
+
 
 `}
    </style>
@@ -54,7 +62,7 @@ a:hover {
              {({ inView, ref }) => (
                <div
                  ref={ref}
-                 className={`w3-content w3-justify w3-text-grey w3-padding-large w3-padding-16 
+                 className={`w3-content w3-justify w3-text-light w3-padding-16 
                ${inView ? "animate-fade-in" : ""}`}
                  id="cards"
                >
@@ -80,6 +88,7 @@ a:hover {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     color: 'black',
+    height: '25rem',
     border: '1px solid black',
     filter: 'grayscale(100%)', // Apply grayscale to the background
     position: 'relative', // Ensure text layers properly
@@ -93,7 +102,7 @@ a:hover {
       top: 0,
       left: 0,
       width: '100%',
-      height: '100%',
+      height: '25rem',
       backgroundColor: 'rgba(0, 0, 0, 0.6)',
       zIndex: 1, // Ensure mask is above background but below text
     }}
@@ -188,25 +197,20 @@ a:hover {
         </p>
       </div>
     </div>
-    <div className="tags mt-0 mb-2">
-      <footer>
-        <Link to="https://www.facebook.com/S.Zain.Asif/">
-          <i className="fab fa-facebook" style={{color:'black'}}></i>
-        </Link>
-        <Link
-          to="https://www.instagram.com/zain._.asif/"
-          className="fab fa-instagram"
-          style={{color:'black'}}
-          aria-label="Instagram"
-        ></Link>
-        <Link
-          to="https://twitter.com/comeflywithme92"
-          className="fab fa-twitter"
-          style={{color:'black'}}
-          aria-label="Twitter"
-        ></Link>
-      </footer>
-    </div>
+<div className="tags mt-0 mb-2">
+  <footer className="tags-footer">
+    <Link to="https://www.facebook.com/S.Zain.Asif/">
+      <i className="fab fa-facebook"></i>
+    </Link>
+    <Link to="https://www.instagram.com/zain._.asif/">
+      <i className="fab fa-instagram"></i>
+    </Link>
+    <Link to="https://twitter.com/comeflywithme92">
+      <i className="fab fa-twitter"></i>
+    </Link>
+  </footer>
+</div>
+
   </div>
 </div>
       </div>
@@ -224,6 +228,7 @@ a:hover {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     color: 'black',
+    height: '25rem',
     border: '1px solid black',
     filter: 'grayscale(100%)', // Apply grayscale to the background
     position: 'relative', // Ensure text layers properly
@@ -237,7 +242,7 @@ a:hover {
       top: 0,
       left: 0,
       width: '100%',
-      height: '100%',
+      height: '25rem',
       backgroundColor: 'rgba(0, 0, 0, 0.6)',
       zIndex: 1, // Ensure mask is above background but below text
     }}
@@ -332,25 +337,20 @@ a:hover {
         </p>
       </div>
     </div>
-    <div className="tags mt-0 mb-2">
-      <footer>
-        <Link to="https://www.facebook.com/S.Zain.Asif/">
-          <i className="fab fa-facebook" style={{color:'black'}}></i>
-        </Link>
-        <Link
-          to="https://www.instagram.com/zain._.asif/"
-          className="fab fa-instagram"
-          style={{color:'black'}}
-          aria-label="Instagram"
-        ></Link>
-        <Link
-          to="https://twitter.com/comeflywithme92"
-          className="fab fa-twitter"
-          style={{color:'black'}}
-          aria-label="Twitter"
-        ></Link>
-      </footer>
-    </div>
+<div className="tags mt-0 mb-2">
+  <footer className="tags-footer">
+    <Link to="https://www.facebook.com/S.Zain.Asif/">
+      <i className="fab fa-facebook"></i>
+    </Link>
+    <Link to="https://www.instagram.com/zain._.asif/">
+      <i className="fab fa-instagram"></i>
+    </Link>
+    <Link to="https://twitter.com/comeflywithme92">
+      <i className="fab fa-twitter"></i>
+    </Link>
+  </footer>
+</div>
+
   </div>
 </div>
 
@@ -370,6 +370,7 @@ a:hover {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     color: 'black',
+    height: '25rem',
     border: '1px solid black',
     filter: 'grayscale(100%)', // Apply grayscale to the background
     position: 'relative', // Ensure text layers properly
@@ -383,7 +384,7 @@ a:hover {
       top: 0,
       left: 0,
       width: '100%',
-      height: '100%',
+      height: '25rem',
       backgroundColor: 'rgba(0, 0, 0, 0.6)',
       zIndex: 1, // Ensure mask is above background but below text
     }}
@@ -410,40 +411,19 @@ a:hover {
         <span style={{fontSize:'24px', marginTop:'0px'}}>Teams</span>
       </h4>
     
-        <div className="row d-flex justify-center align-items-center">
-          <div className="col-sm-12 col-md-6 col-lg-6">
-          <img 
-        src={USALogo} 
-        alt="usa-logo" 
-        className=""
-        style={{
-       width:'40px',
-       height:'auto'
-        }}
-        />
-     
-        <p
-            className="small my-1"
-          style={{
-            color: '#8ecdf8',
-            textShadow: '1px 1px 2px black',
-          }}
-        >
-          <i className="fas fa-video-camera"></i>{' '}
-          <Link
-            className="mt-2"
-            style={{
-              color: '#8ecdf8',
-              textShadow: '1px 1px 2px black',
-              marginLeft: '5px',
-            }}
-          >
+      <div className="container-fluid">
+  <div className="row row-cols-2 g-1 w3-margin-top">
+    
+    <div className="col">
+      <img src={USALogo} alt="usa-logo" style={{ width: '55px', height: 'auto' }} />
+      <p className="small my-1" style={{ color: '#8ecdf8', textShadow: '1px 1px 2px black' }}>
+        <i className="fas fa-video-camera"></i>{' '}
+        <Link className="mt-1" style={{ color: '#8ecdf8', textShadow: '1px 1px 2px black', marginLeft: '5px' }}>
           Highlights
-          </Link>
-        </p>
-       
-        <p
-           className="small mb-3"
+        </Link>
+      </p>
+      <p
+           className="small"
           style={{
             color: '#8ecdf8',
             textShadow: '1px 1px 2px black',
@@ -451,7 +431,7 @@ a:hover {
         >
           <i className="fas fa-globe mr-2"></i>{' '}
           <Link
-            className="mt-2"
+            className="mt-1"
             style={{
               color: '#8ecdf8',
               textShadow: '1px 1px 2px black',
@@ -461,41 +441,18 @@ a:hover {
             Player Profile
           </Link>
         </p>
-          </div>
-       
-          <div className="col-sm-12 col-md-6 col-lg-6">
-          <img 
-        src={Big26} 
-        alt="26-logo" 
-        className=""
-        style={{
-       width:'40px',
-       height:'auto'
-        }}
-        />
-     
-        <p
-            className="small my-1"
-          style={{
-            color: '#8ecdf8',
-            textShadow: '1px 1px 2px black',
-          }}
-        >
-          <i className="fas fa-video-camera"></i>{' '}
-          <Link
-            className="mt-2"
-            style={{
-              color: '#8ecdf8',
-              textShadow: '1px 1px 2px black',
-              marginLeft: '5px',
-            }}
-          >
+    </div>
+
+    <div className="col">
+      <img src={Big26} alt="26-logo" style={{ width: '55px', height: 'auto' }} />
+      <p className="small my-1" style={{ color: '#8ecdf8', textShadow: '1px 1px 2px black' }}>
+        <i className="fas fa-video-camera"></i>{' '}
+        <Link className="mt-1" style={{ color: '#8ecdf8', textShadow: '1px 1px 2px black', marginLeft: '5px' }}>
           Highlights
-          </Link>
-        </p>
-       
-        <p
-           className="small mb-3"
+        </Link>
+      </p>
+      <p
+           className="small"
           style={{
             color: '#8ecdf8',
             textShadow: '1px 1px 2px black',
@@ -503,7 +460,7 @@ a:hover {
         >
           <i className="fas fa-globe mr-2"></i>{' '}
           <Link
-            className="mt-2"
+            className="mt-1"
             style={{
               color: '#8ecdf8',
               textShadow: '1px 1px 2px black',
@@ -513,42 +470,18 @@ a:hover {
             Player Profile
           </Link>
         </p>
-          </div>
+    </div>
 
-
-          <div className="col-sm-12 col-md-6 col-lg-6">
-          <img 
-        src={Gatorade} 
-        alt="tx-logo" 
-        className=""
-        style={{
-       width:'40px',
-       height:'auto'
-        }}
-        />
-     
-        <p
-            className="small my-1"
-          style={{
-            color: '#8ecdf8',
-            textShadow: '1px 1px 2px black',
-          }}
-        >
-          <i className="fas fa-video-camera"></i>{' '}
-          <Link
-            className="mt-2"
-            style={{
-              color: '#8ecdf8',
-              textShadow: '1px 1px 2px black',
-              marginLeft: '5px',
-            }}
-          >
+    <div className="col">
+      <img src={Gatorade} alt="tx-logo" style={{ width: '55px', height: 'auto' }} />
+      <p className="small my-1" style={{ color: '#8ecdf8', textShadow: '1px 1px 2px black' }}>
+        <i className="fas fa-video-camera"></i>{' '}
+        <Link className="mt-1" style={{ color: '#8ecdf8', textShadow: '1px 1px 2px black', marginLeft: '5px' }}>
           Highlights
-          </Link>
-        </p>
-       
-        <p
-           className="small mb-3"
+        </Link>
+      </p>
+      <p
+           className="small"
           style={{
             color: '#8ecdf8',
             textShadow: '1px 1px 2px black',
@@ -556,7 +489,7 @@ a:hover {
         >
           <i className="fas fa-globe mr-2"></i>{' '}
           <Link
-            className="mt-2"
+            className="mt-1"
             style={{
               color: '#8ecdf8',
               textShadow: '1px 1px 2px black',
@@ -566,41 +499,19 @@ a:hover {
             Player Profile
           </Link>
         </p>
-          </div>
+    </div>
 
+    <div className="col">
+      <img src={UA} alt="ua" style={{ width: '55px', height: 'auto' }} />
 
-          <div className="col-sm-12 col-md-6 col-lg-6">
-          <img 
-        src={UA} 
-        alt="usa-logo" 
-        className=""
-        style={{
-       width:'40px',
-       height:'auto'
-        }}
-        />
-        <p
-            className="small my-1"
-          style={{
-            color: '#8ecdf8',
-            textShadow: '1px 1px 2px black',
-          }}
-        >
-          <i className="fas fa-video-camera"></i>{' '}
-          <Link
-            className="mt-2"
-            style={{
-              color: '#8ecdf8',
-              textShadow: '1px 1px 2px black',
-              marginLeft: '5px',
-            }}
-          >
+      <p className="small my-1" style={{ color: '#8ecdf8', textShadow: '1px 1px 2px black' }}>
+        <i className="fas fa-video-camera"></i>{' '}
+        <Link className="mt-1" style={{ color: '#8ecdf8', textShadow: '1px 1px 2px black', marginLeft: '5px' }}>
           Highlights
-          </Link>
-        </p>
-       
-        <p
-           className="small mb-3"
+        </Link>
+      </p>
+      <p
+           className="small"
           style={{
             color: '#8ecdf8',
             textShadow: '1px 1px 2px black',
@@ -608,7 +519,7 @@ a:hover {
         >
           <i className="fas fa-globe mr-2"></i>{' '}
           <Link
-            className="mt-2"
+            className="mt-1"
             style={{
               color: '#8ecdf8',
               textShadow: '1px 1px 2px black',
@@ -618,8 +529,12 @@ a:hover {
             Player Profile
           </Link>
         </p>
-          </div>
-        </div>    
+    </div>
+
+  </div>
+</div>
+
+
       </div>
   </div>
 </div>

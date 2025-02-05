@@ -10,6 +10,8 @@ import DemoDownloads from "./pages/DemoDownloads";
 import DemoMedia from "./pages/DemoMedia.jsx";
 import DisplaysPage from "./pages/DisplaysPage";
 
+import TestPage from "./pages/TestPage";  
+
 
 import DemoPage3 from "./pages/DemoPage3.jsx";
 import DemoSocialPage from "./pages/DemoSocialPage";
@@ -34,6 +36,7 @@ function App() {
           <Route path="/overview" element={<DemoOverviewPage />} />
           <Route path="/faqs" element={<FaqsPage />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/test" element={<TestPage />} />
        
        
        <Route element={<DemoLayout />}>

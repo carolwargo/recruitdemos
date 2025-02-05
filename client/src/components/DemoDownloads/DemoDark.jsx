@@ -1,59 +1,55 @@
 import React from "react";
-//import { InView } from "react-intersection-observer";
+import { InView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
-import Schedule1 from '../assets/PDF/Schedules/Schedule1.pdf';
-import Schedule2 from '../assets/PDF/Schedules/Schedule2.pdf';
-import Schedule3 from '../assets/PDF/Schedules/Schedule3.pdf';
-import Schedule4 from '../assets/PDF/Schedules/Schedule4.pdf';
-import Transcript1PDF from '../assets/PDF/Transcripts/Transcript1PDF.pdf';
-import Transcript2PDF from '../assets/PDF/Transcripts/Transcript2PDF.pdf';
-import References1 from '../assets/PDF/References/References1.pdf';
-import References2 from '../assets/PDF/References/References2.pdf';
-import References3 from '../assets/PDF/References/References3.pdf';
-import References4 from '../assets/PDF/References/References4.pdf';
-import Performance1 from '../assets/PDF/Performance/Performance1.pdf';
-import Performance3 from '../assets/PDF/Performance/Performance3.pdf';
-import PlayerResume from "../assets/PDF/PlayerResume.pdf";
-import ClaySmall from "../assets/images/Profiles/ClaySmall.png";
+import Schedule1 from '../../assets/PDF/Schedules/Schedule1.pdf';
+import Schedule2 from '../../assets/PDF/Schedules/Schedule2.pdf';
+import Schedule3 from '../../assets/PDF/Schedules/Schedule3.pdf';
+import Schedule4 from '../../assets/PDF/Schedules/Schedule4.pdf';
+import Transcript1PDF from '../../assets/PDF/Transcripts/Transcript1PDF.pdf';
+import Transcript2PDF from '../../assets/PDF/Transcripts/Transcript2PDF.pdf';
+import References1 from '../../assets/PDF/References/References1.pdf';
+import References2 from '../../assets/PDF/References/References2.pdf';
+import References3 from '../../assets/PDF/References/References3.pdf';
+import References4 from '../../assets/PDF/References/References4.pdf';
+import Performance1 from '../../assets/PDF/Performance/Performance1.pdf';
+import Performance3 from '../../assets/PDF/Performance/Performance3.pdf';
+import PlayerResume from "../../assets/PDF/PlayerResume.pdf";
+import Stats2 from "../../assets/images/Video/Stats2.png";
+import Resume1  from "../../assets/images/Metrics/Resume1.png";
+import Calendar1 from '../../assets/images/Calendars/Calendar1.png';
+import Calendar2 from '../../assets/images/Calendars/Calendar2.png';
+import Calendar3 from '../../assets/images/Calendars/Calendar3.png';
+import Calendar4 from '../../assets/images/Calendars/Calendar4.png';
+import Letter1 from '../../assets/images/Letters/Letter1.png';
+import Letter2 from '../../assets/images/Letters/Letter2.png';
+import Letter3 from '../../assets/images/Letters/Letter3.png';
+import Letter4 from '../../assets/images/Letters/Letter4.png';
+import Transcript1 from '../../assets/images/Letters/Transcript1.png';
+import Transcript2 from '../../assets/images/Letters/Transcript2.png';
+import Metrics1 from '../../assets/images/Metrics/Metrics1.png';
+import MetricsAll from '../../assets/images/Metrics/MetricsAll.png';
 
-import Stats2 from "../assets/images/Video/Stats2.png";
-import Resume1  from "../assets/images/Metrics/Resume1.png";
-import Calendar1 from '../assets/images/Calendars/Calendar1.png';
-import Calendar2 from '../assets/images/Calendars/Calendar2.png';
-import Calendar3 from '../assets/images/Calendars/Calendar3.png';
-import Calendar4 from '../assets/images/Calendars/Calendar4.png';
-import Letter1 from '../assets/images/Letters/Letter1.png';
-import Letter2 from '../assets/images/Letters/Letter2.png';
-import Letter3 from '../assets/images/Letters/Letter3.png';
-import Letter4 from '../assets/images/Letters/Letter4.png';
-import Transcript1 from '../assets/images/Letters/Transcript1.png';
-import Transcript2 from '../assets/images/Letters/Transcript2.png';
-import Metrics1 from '../assets/images/Metrics/Metrics1.png';
-import MetricsAll from '../assets/images/Metrics/MetricsAll.png';
 
 const myFunction = (id) => {
-  // Hide the default message
-  const demo7 = document.getElementById("Demo7");
-  if (demo7) {
-    demo7.classList.remove("w3-show");
-    demo7.classList.add("w3-hide"); 
-  }
-
-  // Hide all demo elements
+  // Get all elements with the "w3-show" class and remove it
   const allElements = document.querySelectorAll(".w3-show");
   allElements.forEach((element) => {
-    element.classList.remove("w3-show");
-    element.classList.add("w3-hide");
+    element.className = element.className.replace(" w3-show", "");
   });
 
-  // Show the selected demo
+  // Add the "w3-show" class to the selected element
   const x = document.getElementById(id);
   if (x) {
-    x.classList.remove("w3-hide");
-    x.classList.add("w3-show");
+    x.className += " w3-show";
   }
 };
 
+// Set "Demo6" as the default displayed item when the page loads
+window.onload = () => {
+  myFunction("Demo7");
+};
+
+  
 const PlayerDownloads = () => {
 
   const handleClose = () => { 
@@ -70,121 +66,132 @@ const PlayerDownloads = () => {
     download.href = file;
   }
 
+
+
+
   return (
-    <div className="page-container bg-white">
-      <div className=" container w3-padding-large"> 
-    <div className="row bg-dark shadow justify-content-center w3-padding-large align-items-top d-flex bg-dark rounded"
-    style={{ boxShadow: '0px 0px 5px rgba(84, 84, 84, 0.2)' }}>
- <div className="col-sm-12 col-md-4 col-lg-4 pt-2 px-0" style={{ borderRight: "2px solid #222222" }}>
-      <div className=" w3-padding-large my-2">
-       <div className="card">
-          <div className=" w3-padding-16">
-          <div className="justify-content-center text-center">
-          <div>
-          <img src={ClaySmall} alt="profile" style={{ width: "70%" }} className=" w3-image rounded-circle w3-padding-large" />
-          </div>
-          <div>
-          <h4 className=" text-dark-emphasis fw-bold"
-          style={{textShadow:'1px 1px 2px '}}>JOE BASEBALL</h4>
-       </div>
-       </div>
-        {/** Game Schedules */}   
-        
-        <div className="d-flex justify-content-center mb-2">
-       
-     <button
+    <div>
+      <div className="page-container ">
+        {/* Page Content */}
+        <InView triggerOnce={true}>
+          {({ inView, ref }) => (
+            <div
+              ref={ref}
+              className={`w3-content w3-justify w3-text-grey w3-padding-16 
+            ${inView ? "animate-fade-in" : ""}`}
+              id="downloads"
+            >
+                  <hr className="w3-opacity w3-text-white w3-padding-16 w3-margin-top" /> 
+          <h1 className="w3-text-light-grey w3-margin-bottom">Downloads</h1>
+ 
+          <div className="bg-dark d-flex row justify-content-center align-items-top shadow rounded">
+  <div className="col-sm-12 col-md-4 col-lg-4 pt-2 px-0" style={{ borderRight: "2px solid #222222" }}>
+    <div className="rounded container my-2 w3-padding-large">
+      
+      {/* Center Horizontally */}
+      <div className="w3-padding-large d-flex flex-column align-items-center">
+  
+
+<div className=" shadow border w3-padding-24 w3-margin-top">
+  {/**
+<img 
+          src={ClaySmall} 
+          alt="profile" 
+          style={{ width: "100%" }} 
+          className="w3-image rounded-circle mb-3 w3-padding-large"
+        />
+        <h5 className="w3-text-light-grey fw-bold w3-margin-left">JOE BASEBALL</h5>
+ */}
+
+<h5 className="w3-text-light-grey  w3-margin-left mb-0">DOWNLOADS MENU</h5>
+<p className=" w3-margin-left mt-1">Select a file below to view.</p>
+     
+       <hr className=" w3-margin-left text-center" style={{width:'200px'}}/>
+        {/** Game Schedules */}
+      
+        <button
                 onClick={() => myFunction("Demo1")}
-                className="w3-button w3-black  shadow w3-block mt-2 w3-left-align rounded"
-                style={{width:'70%'}}
+                className="w3-button w3-block mt-2 w3-left-align rounded"
+                style={{fontSize:'18px'}}
               >
                 <i className="fas fa-calendar-check fa-fw w3-margin-right"></i>
-                Game Schedules
+            Game Schedules 
               </button>
-              </div>
 
-   {/** Transcripts */}
-              <div className="d-flex justify-content-center my-2">
+
                <button
                  onClick={() => myFunction("Demo2")}
-                  className="w3-button w3-black  shadow w3-block w3-left-align rounded"
-                  style={{width:'70%'}}
+                  className="w3-button w3-block w3-left-align rounded"
+                  style={{fontSize:'18px'}}
                >
                  <i className="fa fa-book fa-fw w3-margin-right"></i>
                  Unofficial Transcripts
                </button>
-          </div>
-
-
+          
 {/**  References (Letters)*/}
-<div className="d-flex justify-content-center">
                <button
                  onClick={() => myFunction("Demo3")}
-                 className="w3-button w3-black  shadow w3-block w3-left-align rounded"
-                 style={{width:'70%'}}
-              >
+                 className="w3-button w3-block w3-left-align rounded"
+                 style={{fontSize:'18px'}}
+               >
                  <i className="fas fa-user fa-fw w3-margin-right"></i>
                  References
                </button>
-          </div>
+          
         
 
         {/**  Stats*/}
-        <div className="d-flex justify-content-center my-2">
                <button
                  onClick={() => myFunction("Demo4")}
-                    className="w3-button w3-black  shadow w3-block w3-left-align rounded"
-                    style={{width:'70%'}}
-              >
+                    className="w3-button w3-block w3-left-align rounded"
+                    style={{fontSize:'18px'}}
+               >
                      <i className="fas fa-chart-line fa-fw w3-margin-right"></i>
               Stats In Comparisson 
                </button>
-  </div>
+  
 
 
   {/** Performance Metrics*/}
-  <div className="d-flex justify-content-center">
                <button
                  onClick={() => myFunction("Demo5")}
-                    className="w3-button w3-black  shadow w3-block w3-left-align rounded"
-                    style={{width:'70%'}}
+                    className="w3-button w3-block w3-left-align rounded"
+                    style={{fontSize:'18px'}}
                >
                  <i className="fas fa-person-running fa-fw w3-margin-right"></i>
               Performance Metrics
                </button>
-           </div>  
+           
 
 
  {/** Resume*/}
- <div className="d-flex justify-content-center my-2">
-    <button
-      onClick={() => myFunction("Demo6")}
-      className="w3-button w3-black shadow w3-block w3-left-align rounded"
-      style={{ width: "70%" }}
-    >
-      <i className="fa fa-pencil fa-fw w3-margin-right"></i>
-      Player Resume
-    </button>
-  </div>
-               </div>
+               <button
+                 onClick={() => myFunction("Demo6")}
+                   className="w3-button w3-block w3-left-align rounded"
+                   style={{fontSize:'18px'}}
+               >
+                 <i className="fa fa-pencil fa-fw w3-margin-right"></i>
+                 Player Resume
+               </button>
                </div>
                </div>
              </div>
-           
+             </div>
                 {/* Display the selected file */}
-        <div className="col-sm-12 col-md-8 col-lg-8 align-item-center w3-padding-16 w3-dark">
+        <div className="col-sm-12 col-md-8 col-lg-8 align-item-center w3-padding-32">
             {/*Calendars*/}
      
-        <div id="Demo1" className="w3-hide w3-container w3-padding-16">
+        <div id="Demo1" className="w3-hide w3-container w3-padding-24">
         <div className="d-flex justify-content-between align-items-center w3-margin-left">
-        <h5 className="mb-0 text-start fw-bold w3-text-white">GAME SCHEDULES</h5>
-        <button className="btn w3-pale-blue w3-hover-opacity btn-sm w3-margin-right"  
+        <h4 className="mb-0 text-start fw-bold w3-text-light-blue opacity-65">GAME SCHEDULES</h4>
+        <button className="btn w3-text-light-blue w3-border-light-blue w3-hover-opacity btn-sm w3-margin-right"  
   onClick={handleClose}
-  style={{textShadow:'1px 1px 1px #000', fontSize:'11px'}}>   
+  style={{textShadow:'1px 1px 1px #000'}}>   
     <b>close X</b>
   </button>
 </div>
 <span className="py-2 w3-text-gray small fw-light w3-margin-left">Click download below the selected file to view or print.</span>
-<div className="row w3-padding-top-16">
+<div className="row w3-padding-top-24">
            <div className="col-6 text-center py-2">
                     <span className=" small">
                   <Link
@@ -265,17 +272,17 @@ const PlayerDownloads = () => {
                  </div>
                </div>
   {/* Transcripts */}
-               <div id="Demo2" className="w3-hide w3-container w3-padding-16">
+               <div id="Demo2" className="w3-hide w3-container w3-padding-24">
                <div className="d-flex justify-content-between align-items-center w3-margin-left">
-               <h5 className="mb-0 text-start fw-bold w3-text-white">TRANSCRIPTS</h5>
-               <button className="btn w3-pale-blue w3-hover-opacity btn-sm w3-margin-right"  
+               <h4 className="mb-0 text-start fw-bold w3-text-light-blue opacity-65">UNOFFICIAL TRANSCRIPTS</h4>
+               <button className="btn w3-text-light-blue w3-border-light-blue w3-hover-opacity btn-sm w3-margin-right"  
   onClick={handleClose}
-  style={{textShadow:'1px 1px 1px #000', fontSize:'11px'}}>   
+  style={{textShadow:'1px 1px 1px #000'}}>   
     <b>close X</b>
   </button>
 </div>
 <span className="py-2 w3-text-gray small fw-light w3-margin-left">Click download below the selected file to view or print.</span>
-<div className="row w3-padding-top-16">
+<div className="row w3-padding-top-24">
                 <div className="col-6 text-center py-2">
                     <Link
                       className="link-light text-decoration-none"
@@ -313,17 +320,17 @@ const PlayerDownloads = () => {
                </div>
 
      {/**  References (Letters)*/}
-     <div id="Demo3" className="w3-hide w3-container w3-padding-16">
+     <div id="Demo3" className="w3-hide w3-container w3-padding-24">
      <div className="d-flex justify-content-between align-items-center w3-margin-left">
-     <h4 className="mb-0 text-start fw-bold w3-text-white">RECOMMENDATIONS </h4>
-     <button className="btn w3-pale-blue w3-hover-opacity btn-sm" 
+     <h4 className="mb-0 text-start fw-bold w3-text-light-blue opacity-65">LETTERS OF RECOMMENDATIONS </h4>
+     <button className="btn w3-text-light-blue w3-border-light-blue w3-hover-opacity btn-sm" 
   onClick={handleClose}
-  style={{textShadow:'1px 1px 1px #000', fontSize:'11px'}}>   
+  style={{textShadow:'1px 1px 1px #000'}}>   
     <b>close X</b>
   </button>
 </div>
 <span className="py-2 w3-text-gray small fw-light w3-margin-left">Click download below the selected file to view or print.</span>
-<div className="row w3-padding-top-16">
+<div className="row w3-padding-top-24">
                <div className="col-6 text-center py-2">
                     <Link
                       className="link-light text-decoration-none"
@@ -395,18 +402,17 @@ const PlayerDownloads = () => {
                </div>
 
  {/**  Stats*/}
- <div id="Demo4" className="w3-hide w3-container w3-padding-16">
+ <div id="Demo4" className="w3-hide w3-container w3-padding-24">
  <div className="d-flex justify-content-between align-items-center w3-margin-left">
- <h5 className="mb-0 text-start fw-bold w3-text-white">STATS IN COMPARISON</h5>
- <button className="btn w3-pale-blue w3-hover-opacity btn-sm" 
+ <h5 className="mb-0 text-start fw-bold w3-text-light-blue opacity-65">STATS IN COMPARISON</h5>
+ <button className="btn w3-text-light-blue w3-border-light-blue w3-hover-opacity btn-sm" 
   onClick={handleClose}
-  style={{textShadow:'1px 1px 1px #000', fontSize:'11px'}}>   
+  style={{textShadow:'1px 1px 1px #000'}}>   
     <b>close X</b>
   </button>
 </div>
-<div className="row w3-padding-top-16">
-<span className="w3-text-gray small fw-light w3-margin-left">Click download below the selected file to view or print.</span>
-
+<span className="py-2 w3-text-gray small fw-light w3-margin-left">Click download below the selected file to view or print.</span>
+<div className="row w3-padding-top-24">
                <div className="col-12 text-center py-2">
                     <Link
                       className="link-light text-decoration-none"
@@ -427,17 +433,17 @@ const PlayerDownloads = () => {
                </div>
 
       {/** Performance Metrics*/}
-      <div id="Demo5" className="w3-hide w3-container w3-padding-16">
+      <div id="Demo5" className="w3-hide w3-container w3-padding-24">
       <div className="d-flex justify-content-between align-items-center w3-margin-left">
-      <h5 className="mb-0 text-start fw-bold w3-text-white">PERFORMANCE METRICS</h5>
-      <button className="btn w3-pale-blue w3-hover-opacity btn-sm" 
+      <h4 className="mb-0 text-start fw-bold w3-text-light-blue opacity-65">PERFORMANCE METRICS</h4>
+      <button className="btn w3-text-light-blue w3-border-light-blue w3-hover-opacity btn-sm" 
   onClick={handleClose}
-  style={{textShadow:'1px 1px 1px #000', fontSize:'11px'}}>   
+  style={{textShadow:'1px 1px 1px #000'}}>   
     <b>close X</b>
   </button>
 </div>
 <span className="py-2 w3-text-gray small fw-light w3-margin-left">Click download below the selected file to view or print.</span>
-<div className="row w3-padding-top-16">
+<div className="row w3-padding-top-24">
                <div className="col-12 text-center py-2">
                     <Link
                       className="link-light text-decoration-none"
@@ -475,17 +481,17 @@ const PlayerDownloads = () => {
                </div>
 
   {/* Resume */}
-  <div id="Demo6" className="w3-hide w3-container w3-padding-16">
+  <div id="Demo6" className="w3-hide w3-container w3-padding-24">
   <div className="d-flex justify-content-between align-items-center w3-margin-left">
-  <h5 className="mb-0 text-start fw-bold w3-text-white">PLAYER CHEATSHEET</h5>
-  <button className="btn w3-pale-blue w3-hover-opacity btn-sm" 
+  <h4 className="mb-0 text-start fw-bold w3-text-light-blue opacity-65">RESUME (Player Cheatsheet)</h4>
+  <button className="btn w3-text-light-blue w3-border-light-blue w3-hover-opacity btn-sm" 
   onClick={handleClose}
-  style={{textShadow:'1px 1px 1px #000', fontSize:'11px'}}>   
+  style={{textShadow:'1px 1px 1px #000'}}>   
     <b>close X</b>
   </button>
 </div>
 <span className="py-2 w3-text-gray small fw-light w3-margin-left">Click download below the selected file to view or print.</span>
-<div className="row w3-padding-top-16">
+<div className="row w3-padding-top-24">
 <div className="col-12 text-center py-2">
                     <Link
                       className="link-light text-decoration-none mt-2"
@@ -507,13 +513,14 @@ const PlayerDownloads = () => {
 
 
 
-                 <div id="Demo7"
-  className="w3-hide w3-container d-flex justify-content-center align-items-center"
-  style={{ height: "100vh" }}
+                 <div
+  id="Demo7"
+  className="w3-hide w3-container w3-padding-24 d-flex justify-content-center align-items-center"
+  style={{ height: "80vh" }}
 >
   <div className="text-center">
     <p className="text-decoration-none" style={{textShadow:'1px 1px 2px #000'}}>
-      No Selection Has Been Made- <br /> <i className="fas fa-hand-point-left"></i>  Choose a File to Display
+      No selection made - Choose a file to display.
     </p>
   </div>
 </div>
@@ -522,106 +529,32 @@ const PlayerDownloads = () => {
         </div>
       </div>
              </div>
-      </div>
-  );
-};
-
-export default PlayerDownloads;
-
-
-/** 
-import React from "react";
-import { InView } from "react-intersection-observer";
-import PlayerDownloads from "../components/Demo1/PlayerDownloads";
-
-const DownloadsPage = () => {
-  return (
-    <div className="">
-      <div className="page-container ">
-        <InView triggerOnce={true}>
-          {({ inView, ref }) => (
-            <div
-              ref={ref}
-              className={`
-            ${inView ? "animate-fade-in" : ""}`}
-              id="downloads-page"
-            >
-              <PlayerDownloads />
-            </div>
+           
           )}
         </InView>
+
+        {/* END PAGE CONTENT */}
+
+        <script>
+          {`
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-theme-d1";
+  } else { 
+    x.className = x.className.replace("w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+  }
+}
+
+
+  `}
+        </script>
       </div>
     </div>
   );
 };
 
-export default DownloadsPage;
-
-
-/**import { BsEnvelopePaper, BsFacebook, BsPhone, BsTwitterX } from "react-icons/bs";
-import {FaSnapchatSquare } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa"; */
-
-/**    <div className="col-sm-12 col-md-9 col-lg-9">
-             <div
-                className="w3-container w3-light-grey rounded w3-padding-32 w3-padding-small"
-                id="contact"
-                style={{ maxWidth: "700px" }}
-              >
-     <div className="w3-container w3-content" >
-                     <div className="container-fluid text-center w3-text-black">
-                          <h4 className="w3-center">
-                  Contact Me
-                  </h4>
-                          <hr className=" my-2" />
-                          <p className="w3-center fw-light small px-5">
-                    Get in touch direct- message me on social media,{" "}
-                    <Link>call</Link>, <Link>email</Link> or fill out the form
-                    to send me a message through the site.
-                  </p>
-                          </div>
-                         < br/>  
-                  <form action="/action_page.php" target="_blank">
-
-                  <div className="row">
-                    <div className="col-sm-12 col-md-6 col-lg-6">
-                    <input
-                        className="w3-input w3-border"
-                        type="text"
-                        name="Name"
-                        placeholder="Name"
-                        required
-                      />
-                    </div>
-                    <div className="col-sm-12 col-md-6 col-lg-6">
-                    <input
-                        className="w3-input w3-border"
-                        type="email"
-                        placeholder="Email"
-                        name="Email"
-                        required
-                      />
-                    </div>
-                  </div>
-               
-                  <div className="my-3">
-                      <textarea
-                        className="w3-input w3-border"
-                        type="text"
-                        name="Message"
-                        rows="4"
-                        placeholder="Message"
-                        required
-                      />
-                    </div>
-                
-                    <button
-                      type="submit"
-                      className="w3-button w3-black  shadow w3-block w3-black w3-margin-top"
-                    >
-                      Send Message
-                    </button>
-                  </form>
-                  </div>
-                  </div>
-                </div> */
+export default PlayerDownloads;

@@ -69,9 +69,10 @@ export default function FloatingActionButtonZoom() {
               id="Media"
             >
         
+        <div className="w3-padding-32">
         <div className="row g-0"
         style={{border:'2px solid #000'}}>
-                   <hr className="w3-opacity w3-text-white w3-padding-16 " />
+                   <hr className="w3-opacity w3-text-white w3-padding-16 w3-margin-top" />
                            <h1 className="w3-text-light-grey w3-margin-bottom text-start">Video Library</h1>
              
             <div className="col-sm-12 col-md-8 col-lg-8"
@@ -330,7 +331,8 @@ export default function FloatingActionButtonZoom() {
         </div>
    
     </div>
-   
+    </div>
+    
 )}
 </InView>
 

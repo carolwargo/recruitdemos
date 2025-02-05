@@ -21,7 +21,7 @@ const PlayerTestimonials = () => {
           id="testimonials">
              <hr className="w3-opacity w3-text-white w3-padding-16 w3-margin-top" />
           <h1 className="w3-text-light-grey w3-margin-bottom">Reputation</h1>
-          <div className="row w3-padding-16" style={{ margin: "0 -16px" }}>
+          <div className="row w3-padding-16" >
        
           <div className="col-sm-12 col-md-6 col-lg-6 w3-padding-large">  
             <div className="container">

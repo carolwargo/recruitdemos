@@ -1,0 +1,5 @@
+BOX SHADOW
+style={{ boxShadow: '0px 0px 5px rgba(84, 84, 84, 0.2)' }}
+
+
+

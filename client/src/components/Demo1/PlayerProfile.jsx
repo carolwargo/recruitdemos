@@ -5,7 +5,7 @@ import { RiHome6Line } from "react-icons/ri";
 import { HiAcademicCap } from "react-icons/hi";
 import { GiRotaryPhone } from "react-icons/gi";
 import { MdOutlineEmail } from "react-icons/md";
-import {  GiTiedScroll } from "react-icons/gi";
+import { GiTiedScroll } from "react-icons/gi";
 import { FaRegEye } from "react-icons/fa";
 import PlayerResume from "../../assets/PDF/PlayerResume.pdf";
 
@@ -54,7 +54,7 @@ const PlayerProfile = () => {
          
          }}
           */}
-          
+
               <div className="row d-flex justify-content-center align-items-center g-3 py-2">
                 {/* Main row with column 4 and nested columns in column 8 */}
                 <div className="col-sm-12 col-md-4 col-lg-4 w3-hide-small w3-hide-medium">
@@ -70,9 +70,10 @@ const PlayerProfile = () => {
                     </div>
 
                     <div className="col-sm-12 col-md-6 col-lg-6">
-                      <div className="py-2">
+                      {/*for large*/}
+                      <div className="w3-hide-small w3-hide-medium py-2">
                         <p
-                           className="mt-0 mb-1 py-0 text-white small"
+                          className="mt-0 mb-1 py-0 text-white small"
                           style={{ marginBottom: "4px" }}
                         >
                           <span
@@ -80,7 +81,7 @@ const PlayerProfile = () => {
                             style={{ marginRight: "4px" }}
                           >
                             <b
-                              className=" text-white-50"
+                              className="personal-icon text-white-50"
                               style={{ fontSize: "1.2rem" }}
                             >
                               <RiHome6Line />
@@ -97,7 +98,7 @@ const PlayerProfile = () => {
                         </p>
 
                         <p
-                           className="mt-0 mb-1 py-0 text-white small"
+                          className="mt-0 mb-1 py-0 text-white small"
                           style={{ marginBottom: "4px" }}
                         >
                           <span
@@ -122,9 +123,8 @@ const PlayerProfile = () => {
                           <br />
                         </p>
 
-                        
                         <p
-                           className="mt-0 mb-1 py-0 text-white small"
+                          className="mt-0 mb-1 py-0 text-white small"
                           style={{ marginBottom: "4px" }}
                         >
                           <span
@@ -136,7 +136,7 @@ const PlayerProfile = () => {
                               style={{ fontSize: "1.2rem" }}
                             >
                               {" "}
-                              < GiTiedScroll />
+                              <GiTiedScroll />
                             </b>
                           </span>{" "}
                           <span
@@ -149,9 +149,8 @@ const PlayerProfile = () => {
                           <br />
                         </p>
 
-
                         <p
-                           className="mt-0 mb-1 py-0 text-white small"
+                          className="mt-0 mb-1 py-0 text-white small"
                           style={{ marginBottom: "4px" }}
                         >
                           <span
@@ -162,10 +161,11 @@ const PlayerProfile = () => {
                               className=" text-white-50"
                               style={{ fontSize: "1.2rem" }}
                             >
-                                 <GiRotaryPhone />{" "}
+                              <GiRotaryPhone />{" "}
                             </b>
                           </span>{" "}
-                          <a href="tel:1234567890"
+                          <a
+                            href="tel:1234567890"
                             className="text-white"
                             style={{ fontSize: "1rem" }}
                           >
@@ -174,10 +174,160 @@ const PlayerProfile = () => {
                           <br />
                         </p>
 
+                        <p
+                          className="mt-0 mb-1 py-0 text-white small"
+                          style={{ marginBottom: "4px" }}
+                        >
+                          <span
+                            className="fa-fw"
+                            style={{ marginRight: "4px" }}
+                          >
+                            <b
+                              className=" text-white-50"
+                              style={{ fontSize: "1.2rem" }}
+                            >
+                              <MdOutlineEmail />{" "}
+                            </b>
+                          </span>{" "}
+                          <a
+                            href="mailto:mail@gmail.com"
+                            className="text-white"
+                            style={{ marginRight: "4px" }}
+                          >
+                            EMAIL@MAIL.COM
+                          </a>
+                          <br />
+                        </p>
 
                         <p
-                           className="mt-0 mb-1 py-0 text-white small"
+                          className="mt-0 mb-1 py-0 text-white small"
                           style={{ marginBottom: "4px" }}
+                        >
+                          <span
+                            className="fa-fw"
+                            style={{ marginRight: "4px" }}
+                          >
+                            <b
+                              className=" text-white-50"
+                              style={{ fontSize: "1.2rem" }}
+                            >
+                              <FaRegEye />{" "}
+                            </b>
+                          </span>{" "}
+                          <a
+                            href="https://www.prepbaseballreport.com/"
+                            className=" text-white"
+                            style={{ marginRight: "4px" }}
+                          >
+                            PBR PROFILE{" "}
+                          </a>
+                          <br />
+                        </p>
+                      </div>
+
+{/* for small and medium*/}
+                                 <div className=" w3-hide-large py-2">
+                        <h4
+                           className="py-1 text-white"
+                          
+                        >
+                          <span
+                            className="fa-fw"
+                            style={{ marginRight: "4px" }}
+                          >
+                            <b
+                              className=" text-white-50"
+                              style={{ fontSize: "1.6rem" }}
+                            >
+                              <RiHome6Line />
+                            </b>{" "}
+                          </span>
+                          <span
+                            className="text-white"
+                           
+                          >
+                            {" "}
+                            CATCHER
+                          </span>
+                          <br />
+                        </h4>
+
+                        <h4
+                           className="py-1 text-white"
+                         
+                        >
+                          <span
+                            className="fa-fw"
+                            style={{ marginRight: "4px" }}
+                          >
+                            <b
+                              className=" text-white-50"
+                              style={{ fontSize: "1.6rem" }}
+                            >
+                              {" "}
+                              <HiAcademicCap />
+                            </b>
+                          </span>{" "}
+                          <span
+                            className="text-white"
+                          >
+                            {" "}
+                            2024
+                          </span>
+                          <br />
+                        </h4>
+
+                        
+                        <h4
+                           className="py-1 text-white"
+                        >
+                          <span
+                            className="fa-fw"
+                            style={{ marginRight: "4px" }}
+                          >
+                            <b
+                              className="text-white-50"
+                              style={{ fontSize: "1.5rem" }}
+                            >
+                              {" "}
+                              < GiTiedScroll />
+                            </b>
+                          </span>{" "}
+                          <span
+                            className="text-white"
+                          >
+                            {" "}
+                            SAT-9000 | GPA- 5.0
+                          </span>
+                          <br />
+                        </h4>
+
+
+                        <h4
+                           className="py-1 text-white"
+                        >
+                          <span
+                            className="fa-fw"
+                            style={{ marginRight: "4px" }}
+                          >
+                            <b
+                              className=" text-white-50"
+                              style={{ fontSize: "1.6rem" }}
+                            >
+                                 <GiRotaryPhone />{" "}
+                            </b>
+                          </span>{" "}
+                          <a href="tel:1234567890"
+                            className="text-white"
+                          >
+                            (123) 456-7890
+                          </a>
+                          <br />
+                        </h4>
+
+
+                        <h4
+                           className="py-1 text-white"
                         >
     <span
                             className="fa-fw"
@@ -185,7 +335,7 @@ const PlayerProfile = () => {
                           >
                             <b
                               className=" text-white-50"
-                              style={{ fontSize: "1.2rem" }}
+                              style={{ fontSize: "1.6rem" }}
                             >
                               <MdOutlineEmail />{" "}
                             </b>
@@ -198,14 +348,13 @@ const PlayerProfile = () => {
                             EMAIL@MAIL.COM
                           </a>
                           <br />
-                        </p>
+                        </h4>
 
 
 
 
-                        <p
-                           className="mt-0 mb-1 py-0 text-white small"
-                          style={{ marginBottom: "4px" }}
+                        <h4
+                           className="py-2 text-white"
                         >
     <span
                             className="fa-fw"
@@ -213,7 +362,7 @@ const PlayerProfile = () => {
                           >
                             <b
                               className=" text-white-50"
-                              style={{ fontSize: "1.2rem" }}
+                              style={{ fontSize: "1.6rem" }}
                             >
                               < FaRegEye />{" "}
                             </b>
@@ -228,14 +377,14 @@ const PlayerProfile = () => {
                          PBR PROFILE{" "}
                           </a>
                           <br />
-                        </p>
+                        </h4>
 
                  
                       </div>
                     </div>
-
+    {/*for large*/}
                     <div className="col-sm-12 col-md-6 col-lg-6">
-                      <div className="py-2">
+                      <div className=" w3-hide-small w3-hide-medium py-2">
                         <p
                           className="mt-0 py-0 text-white"
                           style={{ marginBottom: "4px", fontSize: "1rem" }}
@@ -296,24 +445,119 @@ const PlayerProfile = () => {
                             11-01-2006, <i>ST.</i>
                           </span>
                         </p>
-                   
+
                         <div className="py-2">
-                        <p
-                          className="mt-0 py-0 text-white"
-                          style={{ marginBottom: "4px", fontSize: ".9rem" }}
-                        > <span style={{ color:'#9ad7ff'}}>NCAA STATUS:</span>
-                          {" "} Registered <i className="fas fa-check-circle" style={{ color:'#9ad7ff'}}></i> 
-                        </p>
-                        <p  
-                          className="mt-0 py-0 text-white"
-                          style={{ marginBottom: "4px", fontSize: ".9rem" }}
-                        > <span style={{ color:'#9ad7ff'}}>NCAA ID: </span>
-                          {" "} #81238765 
-                        </p>
+                          <p
+                            className="mt-0 py-0 text-white"
+                            style={{ marginBottom: "4px", fontSize: ".9rem" }}
+                          >
+                            {" "}
+                            <span style={{ color: "#9ad7ff" }}>
+                              NCAA STATUS:
+                            </span>{" "}
+                            Registered{" "}
+                            <i
+                              className="fas fa-check-circle"
+                              style={{ color: "#9ad7ff" }}
+                            ></i>
+                          </p>
+                          <p
+                            className="mt-0 py-0 text-white"
+                            style={{ marginBottom: "4px", fontSize: ".9rem" }}
+                          >
+                            {" "}
+                            <span style={{ color: "#9ad7ff" }}>
+                              NCAA ID:{" "}
+                            </span>{" "}
+                            #81238765
+                          </p>
                         </div>
                         <a id="download" download href={PlayerResume}>
                           <button className="w3-button px-5 rounded text-decoration-none small w3-white w3-padding mt-1">
                             Download Resume
+                          </button>
+                        </a>
+                      </div>
+
+{/* for small and medium*/}
+                         <div className=" w3-hide-large py-1">
+                        <h3
+                          className="py-1 text-white mt-2"
+                        >
+                          {" "}
+                          BATS:{" "}
+                          <span
+                            className=" text-white-50"
+                            style={{ marginRight: "4px" }}
+                          >
+                            {" "}
+                            R/L
+                          </span>
+                          THROWS:
+                          <span
+                            className=" text-white-50"
+                            style={{ marginRight: "4px" }}
+                          >
+                            {" "}
+                            R
+                          </span>
+                        </h3>
+
+                        <h3
+                          className="py-1 text-white"
+                        >
+                          {" "}
+                          HEIGHT:{" "}
+                          <span
+                            className=" text-white-50"
+                            style={{ marginRight: "4px" }}
+                          >
+                            {" "}
+                            6'0
+                          </span>{" "}
+                          WEIGHT:
+                          <span
+                            className=" text-white-50"
+                            style={{ marginRight: "4px" }}
+                          >
+                            {" "}
+                            335 lbs
+                          </span>
+                        </h3>
+
+                        <h3
+                          className="py-1 text-white mt-2 mb-5"
+                        >
+                          {" "}
+                          BORN:{" "}
+                          <span
+                            className=" text-white-50"
+                            style={{ marginRight: "4px" }}
+                          >
+                            {" "}
+                            11-01-2006, <i>ST.</i>
+                          </span>
+                        </h3>
+                        <div className="w3-text-white">
+                      <h1 className="w3-text-light-grey">Eligibility Status</h1>
+                      <hr className="w3-opacity" />
+                    </div>
+                        <div className="py-1 mt-4">
+                        <h3
+                          className="text-white"
+                        > <span style={{ color:'#9ad7ff'}}>NCAA STATUS:</span>
+                          {" "} Registered <i className="fas fa-check-circle" style={{ color:'#9ad7ff'}}></i> 
+                        </h3>
+                        <h3  
+                          className="py-1 text-white"
+                        > <span style={{ color:'#9ad7ff'}}>NCAA ID: </span>
+                          {" "} #81238765 
+                        </h3>
+                        </div>
+                        <a id="download" download href={PlayerResume}>
+                          <button className="w3-button w-100 px-5 rounded text-decoration-none w3-white mt-3"
+                          style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
+                            Download Cheatsheet
                           </button>
                         </a>
                       </div>
@@ -470,6 +714,7 @@ function openNav() {
 
 export default PlayerProfile;
 
+/*****************************/
 /**
                 <p className="mt-0 py-0 text-white"
                 style={{ marginBottom: "4px" }}> Bats: <span 
@@ -508,3 +753,252 @@ export default PlayerProfile;
                           </span> 
                         </p>
                          */
+
+/*****************************/
+/*{/**small screens 
+<div className=" w3-hide-large col-sm-12 col-md-6 col-lg-6">
+                      <div className="py-2">
+                        <h4
+                           className="py-1 text-white"
+                          
+                        >
+                          <span
+                            className="fa-fw"
+                            style={{ marginRight: "4px" }}
+                          >
+                            <b
+                              className=" text-white-50"
+                              style={{ fontSize: "1.6rem" }}
+                            >
+                              <RiHome6Line />
+                            </b>{" "}
+                          </span>
+                          <span
+                            className="text-white"
+                           
+                          >
+                            {" "}
+                            CATCHER
+                          </span>
+                          <br />
+                        </h4>
+
+                        <h4
+                           className="py-1 text-white"
+                         
+                        >
+                          <span
+                            className="fa-fw"
+                            style={{ marginRight: "4px" }}
+                          >
+                            <b
+                              className=" text-white-50"
+                              style={{ fontSize: "1.6rem" }}
+                            >
+                              {" "}
+                              <HiAcademicCap />
+                            </b>
+                          </span>{" "}
+                          <span
+                            className="text-white"
+                          >
+                            {" "}
+                            2024
+                          </span>
+                          <br />
+                        </h4>
+
+                        
+                        <h4
+                           className="py-1 text-white"
+                        >
+                          <span
+                            className="fa-fw"
+                            style={{ marginRight: "4px" }}
+                          >
+                            <b
+                              className="text-white-50"
+                              style={{ fontSize: "1.5rem" }}
+                            >
+                              {" "}
+                              < GiTiedScroll />
+                            </b>
+                          </span>{" "}
+                          <span
+                            className="text-white"
+                          >
+                            {" "}
+                            SAT-9000 | GPA- 5.0
+                          </span>
+                          <br />
+                        </h4>
+
+
+                        <h4
+                           className="py-1 text-white"
+                        >
+                          <span
+                            className="fa-fw"
+                            style={{ marginRight: "4px" }}
+                          >
+                            <b
+                              className=" text-white-50"
+                              style={{ fontSize: "1.6rem" }}
+                            >
+                                 <GiRotaryPhone />{" "}
+                            </b>
+                          </span>{" "}
+                          <a href="tel:1234567890"
+                            className="text-white"
+                          >
+                            (123) 456-7890
+                          </a>
+                          <br />
+                        </h4>
+
+
+                        <h4
+                           className="py-1 text-white"
+                        >
+    <span
+                            className="fa-fw"
+                            style={{ marginRight: "4px" }}
+                          >
+                            <b
+                              className=" text-white-50"
+                              style={{ fontSize: "1.6rem" }}
+                            >
+                              <MdOutlineEmail />{" "}
+                            </b>
+                          </span>{" "}
+                     
+                          <a href="mailto:mail@gmail.com"
+                            className="text-white"
+                            style={{ marginRight:'4px' }}
+                          >
+                            EMAIL@MAIL.COM
+                          </a>
+                          <br />
+                        </h4>
+
+
+
+
+                        <h4
+                           className="py-2 text-white"
+                        >
+    <span
+                            className="fa-fw"
+                            style={{ marginRight: "4px" }}
+                          >
+                            <b
+                              className=" text-white-50"
+                              style={{ fontSize: "1.6rem" }}
+                            >
+                              < FaRegEye />{" "}
+                            </b>
+                          </span>{" "}
+                     
+                        
+                          <a href="https://www.prepbaseballreport.com/"
+                            className=" text-white"
+                            style={{ marginRight: "4px" }}
+                          >
+                            
+                         PBR PROFILE{" "}
+                          </a>
+                          <br />
+                        </h4>
+
+                 
+                      </div>
+                    </div>
+                   
+                    <div className="w3-hide-large mt-5 col-sm-12 col-md-6 col-lg-6">
+                    <div className="w3-text-white">
+                      <h1 className="w3-text-light-grey">Physical Profile</h1>
+                      <hr className="w3-opacity" />
+                    </div>
+                      <div className="py-1">
+                        <h3
+                          className="py-1 text-white mt-2"
+                        >
+                          {" "}
+                          BATS:{" "}
+                          <span
+                            className=" text-white-50"
+                            style={{ marginRight: "4px" }}
+                          >
+                            {" "}
+                            R/L
+                          </span>
+                          THROWS:
+                          <span
+                            className=" text-white-50"
+                            style={{ marginRight: "4px" }}
+                          >
+                            {" "}
+                            R
+                          </span>
+                        </h3>
+
+                        <h3
+                          className="py-1 text-white"
+                        >
+                          {" "}
+                          HEIGHT:{" "}
+                          <span
+                            className=" text-white-50"
+                            style={{ marginRight: "4px" }}
+                          >
+                            {" "}
+                            6'0
+                          </span>{" "}
+                          WEIGHT:
+                          <span
+                            className=" text-white-50"
+                            style={{ marginRight: "4px" }}
+                          >
+                            {" "}
+                            335 lbs
+                          </span>
+                        </h3>
+
+                        <h3
+                          className="py-1 text-white mt-2 mb-5"
+                        >
+                          {" "}
+                          BORN:{" "}
+                          <span
+                            className=" text-white-50"
+                            style={{ marginRight: "4px" }}
+                          >
+                            {" "}
+                            11-01-2006, <i>ST.</i>
+                          </span>
+                        </h3>
+                        <div className="w3-text-white">
+                      <h1 className="w3-text-light-grey">Eligibility Status</h1>
+                      <hr className="w3-opacity" />
+                    </div>
+                        <div className="py-1 mt-4">
+                        <h3
+                          className="text-white"
+                        > <span style={{ color:'#9ad7ff'}}>NCAA STATUS:</span>
+                          {" "} Registered <i className="fas fa-check-circle" style={{ color:'#9ad7ff'}}></i> 
+                        </h3>
+                        <h3  
+                          className="py-1 text-white"
+                        > <span style={{ color:'#9ad7ff'}}>NCAA ID: </span>
+                          {" "} #81238765 
+                        </h3>
+                        </div>
+                        <a id="download" download href={PlayerResume}>
+                          <button className="w3-button w-100 px-5 rounded text-decoration-none w3-white mt-3"
+                          style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
+                            Download Cheatsheet
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+*/
