@@ -3,10 +3,10 @@ import CarouselComponent from '../components/Carousel/CarouselComponent';
 
 const CarouselPage = () => {
     return (
-        <div>
-            <div className="container">
+        <div className='bg-dark '>
+           
             <CarouselComponent />
-            </div>
+           
         </div>
     );
     }           
