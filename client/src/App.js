@@ -4,11 +4,13 @@ import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
+
 import HomePage from "./pages/HomePage";
 import DemoPage1 from "./pages/DemoPage1";
 import DemoDownloads from "./pages/DemoDownloads";
 import DemoMedia from "./pages/DemoMedia.jsx";
 import DisplaysPage from "./pages/DisplaysPage";
+import CarouselPage from "./pages/CarouselPage.jsx";
 
 import TestPage from "./pages/TestPage";  
 
@@ -37,6 +39,7 @@ function App() {
           <Route path="/faqs" element={<FaqsPage />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/test" element={<TestPage />} />
+          <Route path="/carousel" element={<CarouselPage />} />
        
        
        <Route element={<DemoLayout />}>

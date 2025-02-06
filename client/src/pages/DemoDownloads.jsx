@@ -30,7 +30,7 @@ import Transcript1 from '../assets/images/Letters/Transcript1.png';
 import Transcript2 from '../assets/images/Letters/Transcript2.png';
 import Metrics1 from '../assets/images/Metrics/Metrics1.png';
 import MetricsAll from '../assets/images/Metrics/MetricsAll.png';
-
+/** 
 const myFunction = (id) => {
   // Hide the default message
   const demo7 = document.getElementById("Demo7");
@@ -53,7 +53,15 @@ const myFunction = (id) => {
     x.classList.add("w3-show");
   }
 };
-
+*/
+const myFunction = (id) => {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") === -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+};
 const PlayerDownloads = () => {
 
   const handleClose = () => { 
@@ -90,17 +98,103 @@ const PlayerDownloads = () => {
        </div>
         {/** Game Schedules */}   
         
-        <div className="d-flex justify-content-center mb-2">
-       
+        <div className="d-flex justify-content-center my-2">   
      <button
                 onClick={() => myFunction("Demo1")}
-                className="w3-button w3-black  shadow w3-block mt-2 w3-left-align rounded"
+                className="w3-button w3-black shadow w3-block mt-2 w3-left-align rounded"
                 style={{width:'70%'}}
               >
                 <i className="fas fa-calendar-check fa-fw w3-margin-right"></i>
                 Game Schedules
               </button>
               </div>
+              <div id="Demo1" className="w3-hide w3-container w3-padding-large w3-padding-16">
+        <div className="d-flex justify-content-between align-items-center">
+        <h5 className="mb-0 text-start fw-bold ">GAME SCHEDULES</h5>
+
+</div>
+<span className="py-2 w3-text-gray small fw-light">Click download below the selected file to view or print.</span>
+<div className="row w3-padding-top-16">
+           <div className="col-6 text-center">
+                    <span className=" small">
+                  <Link
+                      className="link-light"
+                      onClick={() => handleFileSelect(Calendar1)}
+                    >
+                      <img src={Calendar1} alt="Calendar 1"  className="w-100 my-2" />
+                  
+                    </Link> 
+                   <span> <a 
+                                  id="download"
+                                  download
+                                className=" link-secondary py-2"
+                                 href={Schedule1} >
+                      <span className="text-decoration-none"> 
+                <i className="fas fa-download" style={{marginRight:'5px'}}></i>Download</span>
+                              
+                    </a></span> 
+                    </span>
+                  </div>
+
+
+                  <div className="col-6 text-center">
+                    <span className=" small">
+                  <Link
+                      className="link-light"
+                      onClick={() => handleFileSelect(Calendar2)}
+                    >
+                      <img src={Calendar2} alt="Calendar 2"  className="w-100 my-2" />
+                  
+                    </Link> 
+                   <span> <a 
+                                  id="download"
+                                  download
+                                className=" link-secondary py-2"
+                                 href={Schedule2} >
+                      <span className="text-decoration-none"> 
+                <i className="fas fa-download" style={{marginRight:'5px'}}></i>Download</span>
+                              
+                    </a></span> 
+                    </span>
+                  </div>
+
+
+                  <div className="col-6 text-center">
+                    <Link
+                      className="link-light text-decoration-none"
+                      onClick={() => handleFileSelect(Calendar3)}
+                    >
+                      <img src={Calendar3} alt="Calendar 3"  className="w-100 my-2" />
+                    </Link>
+                    <span> <a 
+                                  id="download"
+                                  download
+                                className=" link-secondary py-2"
+                                 href={Schedule3} >
+                      <span className="text-decoration-none"> 
+                      <i className="fas fa-download" style={{marginRight:'5px'}}></i>Download</span>
+                    </a></span> 
+                  </div>
+                  <div className="col-6 text-center">
+                    <Link
+                      className="link-light text-decoration-none"
+                      onClick={() => handleFileSelect(Calendar4)}
+                    >
+                      <img src={Calendar4} alt="Calendar 4" className="w-100 my-2" />
+                    </Link>
+                    <span> <a 
+                                  id="download"
+                                  download
+                                className=" link-secondary"
+                                 href={Schedule4} >
+                      <span className="text-decoration-none"> 
+                      <i className="fas fa-download" style={{marginRight:'5px'}}></i>Download</span>
+                              
+                    </a></span> 
+                  </div>
+                 </div>
+               </div>
+           
 
    {/** Transcripts */}
               <div className="d-flex justify-content-center my-2">
@@ -185,7 +279,7 @@ const PlayerDownloads = () => {
 </div>
 <span className="py-2 w3-text-gray small fw-light w3-margin-left">Click download below the selected file to view or print.</span>
 <div className="row w3-padding-top-16">
-           <div className="col-6 text-center py-2">
+           <div className="col-6 text-center">
                     <span className=" small">
                   <Link
                       className="link-light"
@@ -522,6 +616,31 @@ const PlayerDownloads = () => {
         </div>
       </div>
              </div>
+             <script>
+        {`
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-theme-d1";
+  } else { 
+    x.className = x.className.replace("w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+  }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+  `}
+      </script>
       </div>
   );
 };
