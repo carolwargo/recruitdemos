@@ -19,17 +19,9 @@ import "../styles/demo.css";
 const DemoPage1 = () => {
   return (
     <div>
-      <style>
-        {`
-        .w3-sidebar {width: 120px;background: #222;}
-        #main {margin-left: 120px}
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-        `}
-      </style>
-
       <div className="body w3-black" style={{ paddingTop: ".9rem" }}>
         {/* Icon Bar (Sidebar - hidden on small screens) */}
-        <nav className="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+        <nav className="w3-sidebar w3-bar-block w3-small w3-hide-small w3-hide-medium w3-center">
           {/* Avatar image in top left corner */}
           <img src={ClaySmall} alt="pic" style={{ width: "100%" }} />
           <a
@@ -63,12 +55,12 @@ const DemoPage1 = () => {
         </nav>
       </div>
 
-      <div className="w3-black w3-center" style={{ paddingTop: "3rem" }}>
+      <div className="w3-black w3-center" style={{ paddingTop: "4rem" }}>
         {/* Page Content */}
 
-        {/* Navbar on small screens (Hidden on medium and large screens) */}
+        {/* Navbar for small & medium screens */}
         <div
-          className=" w3-black w3-top w3-hide-large w3-hide-medium w3-padding-top-24 w3-center"
+          className=" w3-black w3-top w3-hide-large w3-padding-top-64 w3-center"
           id="myNavbar"
         >
           <div className="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">

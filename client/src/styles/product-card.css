@@ -1,0 +1,13 @@
+.card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .modal-body img {
+    max-width: 100%;
+  }
+  

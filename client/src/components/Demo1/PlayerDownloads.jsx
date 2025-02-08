@@ -84,14 +84,15 @@ const PlayerDownloads = () => {
           <h1 className="w3-text-light-grey w3-margin-bottom">Downloads</h1>
  
           <div className="bg-dark d-flex row justify-content-center align-items-top shadow rounded">
-  <div className="col-sm-12 col-md-4 col-lg-4 pt-2 px-0" style={{ borderRight: "2px solid #222222" }}>
+  <div className="col-sm-12 col-md-4 col-lg-4 pt-2 px-0" style={{ borderRight: "2px solid gray" }}>
     <div className="rounded container my-2 w3-padding-large">
       
       {/* Center Horizontally */}
       <div className="w3-padding-large d-flex flex-column align-items-center">
   
 
-<div className=" shadow border w3-padding-24 w3-margin-top">
+<div className=" shadow w3-padding-24 w3-margin-top" 
+style={{boxShadow:'0 4px 8px 0 rgba(0,0,0,0.6)', borderRadius:'5px'}}>
   {/**
 <img 
           src={ClaySmall} 

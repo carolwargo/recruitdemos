@@ -1,0 +1,10 @@
+.slider-container {
+    width: 100%;
+    max-width: 900px; /* Set a reasonable max-width */
+    margin: auto;
+  }
+  
+  .slick-list {
+    overflow: hidden; /* Prevent clipping */
+  }
+  

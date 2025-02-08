@@ -12,6 +12,7 @@ import DemoDownloads from "./pages/DemoDownloads";
 import DemoMedia from "./pages/DemoMedia.jsx";
 import DisplaysPage from "./pages/DisplaysPage";
 import CarouselPage from "./pages/CarouselPage.jsx";
+import ProductPage from "./pages/ProductPage";  
 
 import TestPage from "./pages/TestPage";  
 
@@ -26,6 +27,7 @@ import FaqsPage from './pages/FaqsPage';
 import ErrorBoundary from "./ErrorBoundary.jsx";
 import DemoLayout from "./components/Layouts/DemoLayout.jsx";
 
+import ProductLayout from "./components/Layouts/ProductLayout.jsx";
 
 
 function App() {
@@ -41,6 +43,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/test" element={<TestPage />} />
           <Route path="/carousel" element={<CarouselPage />} />
+        
        
        
        <Route element={<DemoLayout />}>
@@ -52,6 +55,14 @@ function App() {
         <Route path="/media" element={<DemoMedia />} />
         <Route path="/displays" element={<DisplaysPage />} />
        </Route>
+
+
+   
+       <Route element={<ProductLayout />}>
+       <Route path="/product" element={<ProductPage />} />
+     </Route>
+
+
         </Routes>
         </ErrorBoundary>
       </BrowserRouter>
