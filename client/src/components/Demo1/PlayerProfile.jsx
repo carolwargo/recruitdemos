@@ -65,16 +65,22 @@ const PlayerProfile = () => {
                 <div className="col-sm-12 col-md-8 col-lg-8">
                   <div className="row d-flex justify-content-center align-items-center g-2">
                     <div className="w3-text-white">
-                      <h1 className="w3-text-light-grey">Player Profile</h1>
+                      <h1 className="w3-text-light-grey">
+                        <i className="fas fa-user small w3-margin-right w3-hide-large"></i>Player Profile</h1>
                       <hr className="w3-opacity" />
                     </div>
 
+
+
                     <div className="col-sm-12 col-md-6 col-lg-6">
-                      {/*for large*/}
-                      <div className="w3-hide-small w3-hide-medium py-2">
+
+                   {/*start col-1 for large*/}
+                      <div className="w3-hide-small w3-hide-medium">
                         <p
-                          className="mt-0 mb-1 py-0 text-white small"
-                          style={{ marginBottom: "4px" }}
+                          className="my-0 py-0 text-white"
+                          style={{ marginBottom: "4px",
+                            fontSize: ".9rem" 
+                           }}
                         >
                           <span
                             className="fa-fw"
@@ -82,14 +88,13 @@ const PlayerProfile = () => {
                           >
                             <b
                               className="personal-icon text-white-50"
-                              style={{ fontSize: "1.2rem" }}
+                              style={{ fontSize: "1.1rem" }}
                             >
                               <RiHome6Line />
                             </b>{" "}
                           </span>
                           <span
                             className="text-white"
-                            style={{ fontSize: "1rem" }}
                           >
                             {" "}
                             CATCHER
@@ -97,135 +102,136 @@ const PlayerProfile = () => {
                           <br />
                         </p>
 
+
                         <p
-                          className="mt-0 mb-1 py-0 text-white small"
-                          style={{ marginBottom: "4px" }}
+                          className="my-0 py-0 text-white"
+                          style={{ marginBottom: "4px",
+                            fontSize: ".9rem" 
+                           }}
                         >
                           <span
                             className="fa-fw"
                             style={{ marginRight: "4px" }}
                           >
                             <b
-                              className=" text-white-50"
-                              style={{ fontSize: "1.2rem" }}
-                            >
-                              {" "}
-                              <HiAcademicCap />
-                            </b>
-                          </span>{" "}
-                          <span
-                            className="text-white"
-                            style={{ fontSize: "1rem" }}
-                          >
-                            {" "}
-                            2024
+                              className="personal-icon text-white-50"
+                              style={{ fontSize: "1.1rem" }}
+                            ><HiAcademicCap /></b>{" "}
                           </span>
+                          <span className="text-white">
+                            {" "} 2024</span>
                           <br />
                         </p>
 
+                    
                         <p
-                          className="mt-0 mb-1 py-0 text-white small"
-                          style={{ marginBottom: "4px" }}
+                          className="my-0 py-0 text-white"
+                          style={{ marginBottom: "4px",
+                            fontSize: ".9rem" 
+                           }}
                         >
                           <span
                             className="fa-fw"
                             style={{ marginRight: "4px" }}
                           >
                             <b
-                              className="text-white-50"
-                              style={{ fontSize: "1.2rem" }}
-                            >
-                              {" "}
-                              <GiTiedScroll />
-                            </b>
-                          </span>{" "}
-                          <span
-                            className="text-white"
-                            style={{ fontSize: "1rem" }}
-                          >
-                            {" "}
-                            SAT-9000 | GPA- 5.0
+                              className="personal-icon text-white-50"
+                              style={{ fontSize: "1.1rem" }}>
+                                <GiTiedScroll /></b>{" "}
                           </span>
+                          <span className="text-white">
+                            {" "}   SAT-9000 | GPA- 5.0</span>
                           <br />
                         </p>
-
+                   
+ 
                         <p
-                          className="mt-0 mb-1 py-0 text-white small"
-                          style={{ marginBottom: "4px" }}
+                          className="my-0 py-0 text-white"
+                          style={{ marginBottom: "4px",
+                            fontSize: ".9rem" 
+                           }}
                         >
                           <span
                             className="fa-fw"
                             style={{ marginRight: "4px" }}
                           >
                             <b
-                              className=" text-white-50"
-                              style={{ fontSize: "1.2rem" }}
-                            >
-                              <GiRotaryPhone />{" "}
-                            </b>
-                          </span>{" "}
-                          <a
-                            href="tel:1234567890"
-                            className="text-white"
-                            style={{ fontSize: "1rem" }}
-                          >
-                            (123) 456-7890
-                          </a>
+                              className="personal-icon text-white-50"
+                              style={{ fontSize: "1.1rem" }}>
+                                <GiRotaryPhone /></b>{" "}
+                          </span>
+                          <span className="text-white">
+                            {" "}    (123) 456-7890</span>
                           <br />
                         </p>
+                       
 
                         <p
-                          className="mt-0 mb-1 py-0 text-white small"
-                          style={{ marginBottom: "4px" }}
+                          className="my-0 py-0 text-white"
+                          style={{ marginBottom: "4px",
+                            fontSize: ".9rem" 
+                           }}
                         >
                           <span
                             className="fa-fw"
                             style={{ marginRight: "4px" }}
                           >
                             <b
-                              className=" text-white-50"
-                              style={{ fontSize: "1.2rem" }}
-                            >
-                              <MdOutlineEmail />{" "}
-                            </b>
-                          </span>{" "}
-                          <a
-                            href="mailto:mail@gmail.com"
-                            className="text-white"
-                            style={{ marginRight: "4px" }}
-                          >
-                            EMAIL@MAIL.COM
-                          </a>
+                              className="personal-icon text-white-50"
+                              style={{ fontSize: "1.1rem" }}>
+                                   <MdOutlineEmail /></b>{" "}
+                          </span>
+                          <span className="text-white">
+                            {" "}   EMAIL@MAIL.COM</span>
                           <br />
                         </p>
 
+                      
                         <p
-                          className="mt-0 mb-1 py-0 text-white small"
-                          style={{ marginBottom: "4px" }}
+                          className="my-0 py-0 text-white"
+                          style={{ marginBottom: "4px",
+                            fontSize: ".9rem" 
+                           }}
                         >
                           <span
                             className="fa-fw"
                             style={{ marginRight: "4px" }}
                           >
                             <b
-                              className=" text-white-50"
-                              style={{ fontSize: "1.2rem" }}
-                            >
-                              <FaRegEye />{" "}
-                            </b>
-                          </span>{" "}
-                          <a
-                            href="https://www.prepbaseballreport.com/"
-                            className=" text-white"
-                            style={{ marginRight: "4px" }}
-                          >
-                            PBR PROFILE{" "}
-                          </a>
+                              className="personal-icon text-white-50"
+                              style={{ fontSize: "1.1rem" }}>
+                                   <FaRegEye /></b>{" "}
+                          </span>
+                          <span className="text-white">
+                            {" "}  PBR PROFILE</span>
                           <br />
                         </p>
+                 
+                 
+                        <div
+                          className="py-2 text-white">
+                            <span className="text-white-50" style={{fontSize:'.8'}}>FOLLOW ME: </span>
+     <a href='/' className=" link-light w3-hover-opacity">
+     <i className="fab fa-square-x-twitter" style={{fontSize:'1.35rem', marginRight:'5px'}}></i>
+     </a>   
+   <a href='/' className=" link-light w3-hover-opacity">
+     <i className="fab fa-square-instagram" style={{fontSize:'1.35rem', marginRight:'5px'}}></i>
+     </a>
+     <a href='/' className=" link-light w3-hover-opacity">
+     <i className="fab fa-square-facebook" style={{fontSize:'1.35rem', marginRight:'5px'}}></i>
+     </a>  
+     <a href='/' className=" link-light w3-hover-opacity">
+     <i className="fab fa-square-snapchat"  style={{fontSize:'1.35rem', marginRight:'5px'}}></i>
+        </a>
+  
+
+                        </div>   
                       </div>
+{/*end col-1 for small and medium*/}
 
-{/* for small and medium*/}
+
+
+{/*start col-1 for small and medium*/}
                                  <div className=" w3-hide-large py-2">
                         <h4
                            className="py-1 text-white"
@@ -237,7 +243,7 @@ const PlayerProfile = () => {
                           >
                             <b
                               className=" text-white-50"
-                              style={{ fontSize: "1.6rem" }}
+                              style={{ fontSize: "1.4rem" }}
                             >
                               <RiHome6Line />
                             </b>{" "}
@@ -262,7 +268,7 @@ const PlayerProfile = () => {
                           >
                             <b
                               className=" text-white-50"
-                              style={{ fontSize: "1.6rem" }}
+                              style={{ fontSize: "1.4rem" }}
                             >
                               {" "}
                               <HiAcademicCap />
@@ -287,7 +293,7 @@ const PlayerProfile = () => {
                           >
                             <b
                               className="text-white-50"
-                              style={{ fontSize: "1.5rem" }}
+                              style={{ fontSize: "1.4rem" }}
                             >
                               {" "}
                               < GiTiedScroll />
@@ -312,7 +318,7 @@ const PlayerProfile = () => {
                           >
                             <b
                               className=" text-white-50"
-                              style={{ fontSize: "1.6rem" }}
+                              style={{ fontSize: "1.4rem" }}
                             >
                                  <GiRotaryPhone />{" "}
                             </b>
@@ -335,7 +341,7 @@ const PlayerProfile = () => {
                           >
                             <b
                               className=" text-white-50"
-                              style={{ fontSize: "1.6rem" }}
+                              style={{ fontSize: "1.4rem" }}
                             >
                               <MdOutlineEmail />{" "}
                             </b>
@@ -362,7 +368,7 @@ const PlayerProfile = () => {
                           >
                             <b
                               className=" text-white-50"
-                              style={{ fontSize: "1.6rem" }}
+                              style={{ fontSize: "1.4rem" }}
                             >
                               < FaRegEye />{" "}
                             </b>
@@ -378,11 +384,37 @@ const PlayerProfile = () => {
                           </a>
                           <br />
                         </h4>
-
-                 
+                        <h4
+                           className="py-1 text-white"
+                          
+                        >
+                          <span
+                            className="fa-fw"
+                            style={{ marginRight: "4px" }}
+                          >
+                            <b
+                              className=" text-white-50"
+                              style={{ fontSize: "1.4rem" }}
+                            >
+                              <RiHome6Line />
+                            </b>{" "}
+                          </span>
+                          <span
+                            className="text-white"
+                           
+                          >
+                            {" "}
+                            CATCHER
+                          </span>
+                          <br />
+                        </h4>
                       </div>
                     </div>
-    {/*for large*/}
+{/*end col-1 for small and medium*/}
+
+
+
+    {/*col 2 for large*/}
                     <div className="col-sm-12 col-md-6 col-lg-6">
                       <div className=" w3-hide-small w3-hide-medium py-2">
                         <p
@@ -477,12 +509,19 @@ const PlayerProfile = () => {
                             Download Resume
                           </button>
                         </a>
+                        <br /> 
                       </div>
 
 {/* for small and medium*/}
                          <div className=" w3-hide-large py-1">
-                        <h3
-                          className="py-1 text-white mt-2"
+                         <div className="w3-text-white mt-3 w3-hide-large">
+                      <h1 className="w3-text-light-grey">
+                        <i className="fas fa-dumbbell small w3-margin-right"></i>Player Metrics</h1>
+                      <hr className="w3-opacity mb-4" />
+                    </div>
+                    
+                        <h4
+                          className="py-1 text-white"
                         >
                           {" "}
                           BATS:{" "}
@@ -501,9 +540,9 @@ const PlayerProfile = () => {
                             {" "}
                             R
                           </span>
-                        </h3>
+                        </h4>
 
-                        <h3
+                        <h4
                           className="py-1 text-white"
                         >
                           {" "}
@@ -523,9 +562,9 @@ const PlayerProfile = () => {
                             {" "}
                             335 lbs
                           </span>
-                        </h3>
+                        </h4>
 
-                        <h3
+                        <h4
                           className="py-1 text-white mt-2 mb-5"
                         >
                           {" "}
@@ -537,26 +576,26 @@ const PlayerProfile = () => {
                             {" "}
                             11-01-2006, <i>ST.</i>
                           </span>
-                        </h3>
+                        </h4>
                         <div className="w3-text-white">
-                      <h1 className="w3-text-light-grey">Eligibility Status</h1>
+                      <h1 className="w3-text-light-grey"><i className=" fas fa-book-open w3-margin-right"></i>Eligibility Status</h1>
                       <hr className="w3-opacity" />
                     </div>
                         <div className="py-1 mt-4">
-                        <h3
+                        <h4
                           className="text-white"
                         > <span style={{ color:'#9ad7ff'}}>NCAA STATUS:</span>
                           {" "} Registered <i className="fas fa-check-circle" style={{ color:'#9ad7ff'}}></i> 
-                        </h3>
-                        <h3  
+                        </h4>
+                        <h4  
                           className="py-1 text-white"
                         > <span style={{ color:'#9ad7ff'}}>NCAA ID: </span>
                           {" "} #81238765 
-                        </h3>
+                        </h4>
                         </div>
                         <a id="download" download href={PlayerResume}>
                           <button className="w3-button w-100 px-5 rounded text-decoration-none w3-white mt-3"
-                          style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
+                          style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
                             Download Cheatsheet
                           </button>
                         </a>
@@ -569,7 +608,7 @@ const PlayerProfile = () => {
               {/**START TEAMS
                 <div className="row w3-padding-16 d-flex justify-content-center align-items-center g-3">
                 <div className="w3-text-white">
-                <h3 className="w3-text-light-grey">Team Affiliations</h3>
+                <h4 className="w3-text-light-grey">Team Affiliations</h4>
           
                 </div>
             <div className="col-sm-12 col-md-4 col-lg-4">
@@ -768,7 +807,7 @@ export default PlayerProfile;
                           >
                             <b
                               className=" text-white-50"
-                              style={{ fontSize: "1.6rem" }}
+                              style={{ fontSize: "1.4rem" }}
                             >
                               <RiHome6Line />
                             </b>{" "}
@@ -793,7 +832,7 @@ export default PlayerProfile;
                           >
                             <b
                               className=" text-white-50"
-                              style={{ fontSize: "1.6rem" }}
+                              style={{ fontSize: "1.4rem" }}
                             >
                               {" "}
                               <HiAcademicCap />
@@ -818,7 +857,7 @@ export default PlayerProfile;
                           >
                             <b
                               className="text-white-50"
-                              style={{ fontSize: "1.5rem" }}
+                              style={{ fontSize: "1.4rem" }}
                             >
                               {" "}
                               < GiTiedScroll />
@@ -843,7 +882,7 @@ export default PlayerProfile;
                           >
                             <b
                               className=" text-white-50"
-                              style={{ fontSize: "1.6rem" }}
+                              style={{ fontSize: "1.4rem" }}
                             >
                                  <GiRotaryPhone />{" "}
                             </b>
@@ -866,7 +905,7 @@ export default PlayerProfile;
                           >
                             <b
                               className=" text-white-50"
-                              style={{ fontSize: "1.6rem" }}
+                              style={{ fontSize: "1.4rem" }}
                             >
                               <MdOutlineEmail />{" "}
                             </b>
@@ -893,7 +932,7 @@ export default PlayerProfile;
                           >
                             <b
                               className=" text-white-50"
-                              style={{ fontSize: "1.6rem" }}
+                              style={{ fontSize: "1.4rem" }}
                             >
                               < FaRegEye />{" "}
                             </b>
@@ -995,7 +1034,7 @@ export default PlayerProfile;
                         </div>
                         <a id="download" download href={PlayerResume}>
                           <button className="w3-button w-100 px-5 rounded text-decoration-none w3-white mt-3"
-                          style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
+                          style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
                             Download Cheatsheet
                           </button>
                         </a>

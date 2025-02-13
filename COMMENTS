@@ -1,5 +1,22 @@
 BOX SHADOW
 style={{ boxShadow: '0px 0px 5px rgba(84, 84, 84, 0.2)' }}
 
-
-
+    
+        className="mt-0 mb-5 text-dark-emphasis text-decoration-none"
+        style={{
+          fontFamily: "Montserrat, sans-serif",
+          textShadow: "1px 1px 1px #181818",   
+          letterSpacing: "-2.5px",
+          fontSize: "2rem",
+        }}
+      >
+        con- 
+        
+        -SPAN-
+        className=" w3-text-pink"
+            style={{
+              fontFamily: "Montserrat, sans-serif",
+              textShadow: "1px 1px 1px #181818",   
+              letterSpacing: "-1.5px",
+              fontSize: "2rem",
+            }}>scribe</span>.com

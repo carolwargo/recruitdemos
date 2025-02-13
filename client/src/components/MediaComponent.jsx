@@ -12,7 +12,7 @@ import Offense from '../assets/images/Video/Offense.png';
 import Defense from '../assets/images/Video/Defense.png';
 import MLB from '../assets/images/Video/MLB.png';
 import { Link } from 'react-router-dom';
-
+import '../styles/media.css';
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -69,24 +69,28 @@ export default function FloatingActionButtonZoom() {
               id="Media"
             >
         
-        <div className="row g-0"
-        style={{border:'2px solid #000'}}>
+        <div className="row g-0 shadow-lg">
                    <hr className="w3-opacity w3-text-white w3-padding-16 " />
                            <h1 className="w3-text-light-grey w3-margin-bottom text-start">Video Library</h1>
              
             <div className="col-sm-12 col-md-8 col-lg-8"
-            style={{borderRight:'2px solid #000'}}>
+      >
       
-<video src={ClaySmall} controls className="img-fluid shadow-lg" style={{width:'100%', height:'370px'}}>
-
+<video src={ClaySmall} controls className="w-100" style={{ height:'370px'}}>
+<div className="play-icon">
+    <i className="fa fa-play"></i>
+  </div>
 </video>
               </div>
           
-            <div className="col-sm-12 col-md-4 col-lg-4">
+            <div className="col-sm-12 col-md-4 col-lg-4"
+            >
              
             <Box
          className="text-white"
-            style={{ background: 'linear-gradient(to bottom, #323334, #323334, #323334, #323334, #323334, #323334, #323334, #323334, #323334, #323334, #323334, #222222, #1b1b1b,  #000)'}}
+            style={{  
+              boxShadow: '2px 2px 2px 4px rgba(0, 0, 0, 0.6)',
+              background: 'linear-gradient(to bottom, #323334, #323334, #323334, #323334, #323334, #323334, #323334, #323334, #323334, #323334, #323334, #323334, #323334, #323334, #323334, #323334, #222222, #181818, #111111, #0000, #000,  #000 )'}}
       sx={{
         position: 'relative',
         minHeight: 200,
@@ -95,7 +99,9 @@ export default function FloatingActionButtonZoom() {
 <AppBar
   position="static"
   className="w3-text-white"
-  style={{ backgroundColor: '#1c1d1e' }}
+  style={{ backgroundColor: '#323334',
+  boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)',
+   }}
 >
   <Tabs
     value={value}
@@ -114,9 +120,30 @@ export default function FloatingActionButtonZoom() {
       },
     }}
   >
-    <Tab label="Hitting" {...a11yProps(0)} />
-    <Tab label="BullPens" {...a11yProps(1)} />
-    <Tab label="In-Game" {...a11yProps(2)} />
+    <Tab label="Hitting" {...a11yProps(0)} 
+    style={{ 
+      letterSpacing:'1px',
+      fontWeight:'bold',
+     marginLeft:'5px', 
+     marginRight:'5px' 
+     }}
+     />
+    <Tab label="BullPens" {...a11yProps(1)} 
+       style={{ 
+       letterSpacing:'1px',
+      fontWeight:'bold',
+     marginLeft:'5px', 
+     marginRight:'5px' 
+     }}
+     />
+    <Tab label="In-Game" {...a11yProps(2)} 
+       style={{ 
+       letterSpacing:'1px',
+      fontWeight:'bold',
+     marginLeft:'5px', 
+     marginRight:'5px' 
+     }}
+     />
   </Tabs>
 </AppBar>
 
@@ -126,17 +153,24 @@ export default function FloatingActionButtonZoom() {
       <TabPanel value={value} index={0} dir={theme.direction}>
       <div className="hitting-container">
   {/* Row 1 */}
-  <div className="row d-flex align-items-center mb-3">
-    <div className="col-6 col-md-6 col-lg-6">
+<div className="row d-flex justify-content-between align-items-center">
+  <div className="col-6 col-md-6 col-lg-6 position-relative">
+    <div className='image-container'>
       <img
         src={Offense}
         alt="small"
         className="img-fluid shadow w3-grayscale-max"
       />
+          <div className="image-mask"></div>
+          </div>
+            <div className="play-icon">
+          <i className="fa fa-play"></i>
+        </div>
     </div>
     <div className="col-6 col-md-6 col-lg-6 text-start">
       <Link className="link-light link-offset-2-hover small" to={"/demo1"}>
-        <p className="py-0 mb-0 text-white">CAGE WORK</p>
+            <p className="py-0 mb-0 text-white "
+      style={{ textShadow:'1px 1px 2px #fff'}}>CAGE WORK</p>
       </Link>
       <p className="small text-white-50" style={{ lineHeight: "18px" }}>
         Lorem ipsum dolor. <br />{" "}
@@ -146,24 +180,31 @@ export default function FloatingActionButtonZoom() {
   </div>
 
   <hr
-    className="d-block bg-secondary rounded my-3"
+    className="d-block bg-secondary rounded mt-2"
     style={{
       boxShadow: "1px 1px 2px 1px rgba(0, 0, 0, 0.5)",
     }}
   />
 
   {/* Row 2 */}
-  <div className="row d-flex align-items-center mb-3">
-    <div className="col-6 col-md-6 col-lg-6">
+<div className="row d-flex justify-content-between align-items-center mt-3">
+  <div className="col-6 col-md-6 col-lg-6 position-relative">
+    <div className='image-container'>
       <img
         src={Defense}
         alt="small"
         className="img-fluid shadow w3-grayscale-max"
       />
+          <div className="image-mask"></div>
+          </div>
+            <div className="play-icon">
+          <i className="fa fa-play"></i>
+        </div>
     </div>
     <div className="col-6 col-md-6 col-lg-6 text-start">
       <Link className="link-light link-offset-2-hover small" to={"/demo2"}>
-        <p className="py-0 mb-0 text-white">
+            <p className="py-0 mb-0 text-white "
+      style={{ textShadow:'1px 1px 2px #fff'}}>
           BP <span className="fw-light">(Live At-Bats)</span>
         </p>
       </Link>
@@ -175,24 +216,31 @@ export default function FloatingActionButtonZoom() {
   </div>
 
   <hr
-    className="d-block bg-secondary rounded my-3"
+    className="d-block bg-secondary rounded mt-2"
     style={{
       boxShadow: "1px 1px 2px 1px rgba(0, 0, 0, 0.5)",
     }}
   />
 
   {/* Row 3 */}
-  <div className="row d-flex align-items-center mb-3">
-    <div className="col-6 col-md-6 col-lg-6">
+<div className="row d-flex justify-content-between align-items-center">
+  <div className="col-6 col-md-6 col-lg-6 position-relative">
+    <div className='image-container'>
       <img
         src={MLB}
         alt="small"
         className="img-fluid shadow-lg w3-grayscale-max"
       />
+      <div className="image-mask"></div>
+      </div>
+        <div className="play-icon">
+    <i className="fa fa-play"></i>
+  </div>
     </div>
     <div className="col-6 col-md-6 col-lg-6 text-start">
       <Link className="link-light link-offset-2-hover small" to={"/demo3"}>
-        <p className="py-0 mb-0 text-white">LIVE (in-game)</p>
+            <p className="py-0 mb-0 text-white "
+      style={{ textShadow:'1px 1px 2px #fff'}}>LIVE (in-game)</p>
       </Link>
       <p className="small text-white-50" style={{ lineHeight: "18px" }}>
         Lorem ipsum dolor. <br />{" "}
@@ -210,52 +258,70 @@ export default function FloatingActionButtonZoom() {
       <TabPanel value={value} index={1} dir={theme.direction}>
       <div className="defense-container">
 <div className="row d-flex justify-content-between align-items-center">
-  <div className="col-6 col-md-6 col-lg-6">
+  <div className="col-6 col-md-6 col-lg-6 position-relative">
+    <div className='image-container'>
       <img src={Offense} alt="small" className=' img-fluid shadow  w3-grayscale-max' />
+      <div className="image-mask"></div>
+      </div>
+            <div className="play-icon">
+          <i className="fa fa-play"></i>
+        </div>
     </div>
     <div className="col-6 col-md-6 col-lg-6 text-start">
      <Link className=' link-light link-offset-2-hover small' to={'/demo'}>
-      <p className="py-0 mb-0 text-white ">BULLPEN</p>
+      <p className="py-0 mb-0 text-white "
+      style={{ textShadow:'1px 1px 1px '}}>BULLPEN</p>
       </Link>
        <p className="small text-white-50" style={{ lineHeight:'18px'}}>Lorem ipsum dolor.  <br/> <span className="w3-text-grey small">Jan.1,2025</span></p> 
        </div>
   </div>
  
-
   <hr
-  className="d-block bg-secondary rounded justify-content-start align-items-center my-3"
-  style={{
-    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', 
-  }}
->
-</hr>
+    className="d-block bg-secondary rounded mt-2"
+    style={{
+      boxShadow: "1px 1px 2px 1px rgba(0, 0, 0, 0.5)",
+    }}
+  />
 <div className="row d-flex justify-content-between align-items-center ">
-  <div className="col-6 col-md-6 col-lg-6">
-      <img src={Defense} alt="small" className=' img-fluid shadow  w3-grayscale-max' />
+  <div className="col-6 col-md-6 col-lg-6 position-relative">
+    <div className='image-container'>
+    <img src={Defense} alt="small" className=' img-fluid shadow  w3-grayscale-max' />
+    <div className="image-mask"></div>
+    </div>
+  <div className="play-icon">
+          <i className="fa fa-play"></i>
+        </div>
     </div>
     <div className="col-6 col-md-6 col-lg-6 text-start">
      <Link className=' link-light link-offset-2-hover small' to={'/demo'}>
-      <p className="py-0 mb-0 text-white ">BULLPEN</p>
+      <p className="py-0 mb-0 text-white "
+      style={{ textShadow:'1px 1px 1px '}}>BULLPEN</p>
       </Link>
        <p className="small text-white-50" style={{ lineHeight:'18px'}}>Lorem ipsum dolor.  <br/> <span className="w3-text-grey small">Jan.1,2025</span></p> 
        </div>
   </div>
 
+  <hr
+    className="d-block bg-secondary rounded mt-2"
+    style={{
+      boxShadow: "1px 1px 2px 1px rgba(0, 0, 0, 0.5)",
+    }}
+  />
 
- <hr
-  className="d-block bg-secondary rounded justify-content-start align-items-center my-3"
-  style={{
-    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', 
-  }}
->
-</hr>
 <div className="row d-flex justify-content-between align-items-center">
-  <div className="col-6 col-md-6 col-lg-6">
-      <img src={MLB} alt="small" className=' img-fluid shadow-lg w3-grayscale-max' />
+  <div className="col-6 col-md-6 col-lg-6 position-relative">
+    <div className='image-container'>
+    <img src={MLB} alt="small" className=' img-fluid shadow-lg w3-grayscale-max' />
+    <div className="image-mask"></div>
+    </div>
+   <div className="play-icon">
+          <i className="fa fa-play"></i>
+        </div>
     </div>
     <div className="col-6 col-md-6 col-lg-6 text-start">
      <Link className=' link-light link-offset-2-hover small' to={'/demo'}>
-      <p className="py-0 mb-0 text-white ">BULLPEN</p>
+      <p className="py-0 mb-0 text-white "
+      style={{ textShadow:'1px 1px 1px '}}>BULLPEN</p>
       </Link>
        <p className="small text-white-50" style={{ lineHeight:'18px'}}>Lorem ipsum dolor.  <br/> <span className="w3-text-grey small">Jan.1,2025</span></p> 
        </div>
@@ -269,55 +335,74 @@ export default function FloatingActionButtonZoom() {
       <TabPanel value={value} index={2} dir={theme.direction}>
       <div className="in-game-container">
   <div className="row d-flex justify-content-between align-items-center">
-  <div className="col-6 col-md-6 col-lg-6">
-      <img src={Offense} alt="small" className=' img-fluid shadow  w3-grayscale-max' />
+  <div className="col-6 col-md-6 col-lg-6 position-relative">
+    <div className='image-container'>
+    <img src={Offense} alt="small" className=' img-fluid shadow  w3-grayscale-max' />
+    <div className="image-mask"></div>
+    </div>
+    <div className="play-icon">
+          <i className="fa fa-play"></i>
+        </div>
     </div>
     <div className="col-6 col-md-6 col-lg-6 text-start">
      <Link className=' link-light link-offset-2-hover small' to={'/demo'}>
-      <p className="py-0 mb-0 text-white ">VS. OPPONENT</p>
+      <p className="py-0 mb-0 text-white "
+      style={{ textShadow:'1px 1px 1px '}}>VS. OPPONENT</p>
       </Link>
        <p className="small text-white-50" style={{ lineHeight:'18px'}}>Lorem ipsum dolor.  <br/> <span className="w3-text-grey small">Jan.1,2025</span></p> 
        </div>
   </div>
   <hr
-  className="d-block bg-secondary rounded justify-content-start align-items-center my-3"
-  style={{
-    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', 
-  }}
->
-</hr>
+    className="d-block bg-secondary rounded mt-2"
+    style={{
+      boxShadow: "1px 1px 2px 1px rgba(0, 0, 0, 0.5)",
+    }}
+  />
 
 
 
 <div className="row d-flex justify-content-between align-items-center ">
-  <div className="col-6 col-md-6 col-lg-6">
+  <div className="col-6 col-md-6 col-lg-6 position-relative">
+    <div className='image-container'>
       <img src={Defense} alt="small" className=' img-fluid shadow  w3-grayscale-max' />
+      <div className="image-mask"></div>
+      </div> 
+            <div className="play-icon">
+          <i className="fa fa-play"></i>
+        </div>
     </div>
 
 
     <div className="col-6 col-md-6 col-lg-6 text-start">
      <Link className=' link-light link-offset-2-hover small' to={'/demo'}>
-      <p className="py-0 mb-0 text-white ">@ OPPONENT</p>
+      <p className="py-0 mb-0 text-white "
+      style={{ textShadow:'1px 1px 1px '}}>@ OPPONENT</p>
       </Link>
        <p className="small text-white-50" style={{ lineHeight:'18px'}}>Lorem ipsum dolor.  <br/> <span className="w3-text-grey small">Jan.1,2025</span></p> 
        </div>
   </div>
-  <hr
-  className="d-block bg-secondary rounded justify-content-start align-items-center my-3"
-  style={{
-    boxShadow: '1px 1px 2px 1px rgba(0, 0, 0, 0.5)', // Customize as needed
-  }}
->
-</hr>
+   <hr
+    className="d-block bg-secondary rounded mt-2"
+    style={{
+      boxShadow: "1px 1px 2px 1px rgba(0, 0, 0, 0.5)",
+    }}
+  />
 
 
 <div className="row d-flex justify-content-between align-items-center">
-  <div className="col-6 col-md-6 col-lg-6">
+  <div className="col-6 col-md-6 col-lg-6 position-relative">
+    <div className='image-container'>
       <img src={MLB} alt="small" className=' img-fluid shadow-lg w3-grayscale-max' />
+      <div className="image-mask"></div>
+      </div>
+            <div className="play-icon">
+          <i className="fa fa-play"></i>
+        </div>
     </div>
     <div className="col-6 col-md-6 col-lg-6 text-start">
      <Link className=' link-light link-offset-2-hover small' to={'/demo'}>
-      <p className="py-0 mb-0 text-white ">VS. OPPONENT</p>
+      <p className="py-0 mb-0 text-white "
+      style={{ textShadow:'1px 1px 2px #fff'}}>VS. OPPONENT</p>
       </Link>
        <p className="small text-white-50" style={{ lineHeight:'18px'}}>Lorem ipsum dolor.  <br/> <span className="w3-text-grey small">Jan.1,2025</span></p> 
        </div>

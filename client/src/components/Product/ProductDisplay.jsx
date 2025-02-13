@@ -50,14 +50,7 @@ const handleFinanceImageClick = (index) => {
   return (
     <div className='email-samples' id="email-samples">
      <div className="w3-padding-large text-center ">
-    <h1 className='fw-bold  w3-text-khaki'
-    style={{fontFamily: 'Raleway, sans-serif',
-    fontWeight: '700',
-    fontSize: '2.5rem',
-    lineHeight: '1.2',
-    letterSpacing: '-1px',
-    textShadow: '1px 1px 1px black',  
-    }}>
+    <h1 className='fw-bold text-primary'>
       <i className='fw-bold'>EMAIL CAMPAIGN SAMPLES</i></h1> 
       <h4> Unified Graphics that allow you to maximize the impact of a first impression.
         <br />

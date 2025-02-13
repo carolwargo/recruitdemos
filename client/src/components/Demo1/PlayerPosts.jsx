@@ -1,4 +1,5 @@
 import React from "react";
+import { InView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import AllState from "../../assets/images/PlayerPosts/AllState.png";
 import Signing from "../../assets/images/PlayerPosts/Signing.png";
@@ -13,10 +14,18 @@ import { FaSnapchatSquare } from "react-icons/fa";
 
 const PlayerPosts = () => {
   return (
-    <div className="posts" id="posts">
 
+    <div className="page-container">
+                  {/* Performance Section */}
+                  <InView triggerOnce={true}>
+          {({ inView, ref }) => (
+            <div ref={ref} className={`w3-content w3-justify w3-text-grey w3-padding-16 
+               ${inView ? "animate-fade-in" : ""}`}
+            id="posts"
+        >
 
-        <div className="w3-padding-16">
+<div className=" container w3-padding-large">
+        <div className="w3-padding-16  w3-padding-large">
         <hr className="w3-opacity w3-text-grey w3-padding-16 w3-margin-top" />
         <h3 className="fw-bold text-white">POSTS & NEWS</h3>
         <p className="w3-margin-top">
@@ -170,7 +179,14 @@ className="w3-text-grey hover-zoom">VIEW THIS POST</a>
                         </div>
                       </div>
                       </div>
-   
+
+   </div>
+             )}
+        </InView>
+
+                      </div>
+       
+                    
   );
 };
 

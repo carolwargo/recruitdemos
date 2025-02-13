@@ -1,13 +1,13 @@
-.card {
+.product .card {
     cursor: pointer;
     transition: transform 0.3s ease;
   }
   
-  .card:hover {
+  .product .card:hover {
     transform: scale(1.05);
   }
   
-  .modal-body img {
+  .product .modal-body img {
     max-width: 100%;
   }
   

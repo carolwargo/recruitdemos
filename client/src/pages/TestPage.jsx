@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 //import { Link } from "react-router-dom";
 import ClaySmall from "../assets/images/Profiles/ClaySmall.png";
-
+import ClayCover2 from "../assets/images/Profiles/ClayCover2.png";
 
 /**col-4 image thumbnail is selected */
 //import Resume1  from "../assets/images/Metrics/Resume1.png";
@@ -112,80 +112,97 @@ const PlayerDownloads = () => {
       <div className="w3-over w3-hide-large w3-animate-opacity" onclick="w3_close()" style={{cursor: "pointer"}} id="myOverlay"></div>
 <div className="w3-main" style={{marginLeft:"250px"}}>
 
-<div id="myTop" className="w3-container w3-top w3-theme w3-large">
+<div id="myTop" className="w3-container w3-top w3-black w3-large">
   <p><i className="fa fa-bars w3-button w3-black w3-hide-large w3-xlarge" onclick="w3_open()"></i>
-  <span id="myIntro" className="w3-hide">W3.CSS: Introduction</span></p>
+  <span id="myIntro" className="w3-hide">PLAYER: Introduction</span></p>
 </div>
 
-<header className="w3-container w3-theme" style={{padding:"64px 32px"}}>
-  <h1 className="w3-xxxlarge">W3.CSS</h1>
+<header className="w3-container w3-black" style={{padding:"64px 32px"}}>
+  <h1 className="w3-xxxlarge">PLAYER</h1>
 </header>
 
 <div className="w3-container" style={{padding:"32px"}}>
 
-<h2>What is W3.CSS?</h2>
+<h2>What is PLAYER?</h2>
 
-<p>W3.CSS is a modern CSS framework with built-in responsiveness:</p>
+<p>PLAYER Lorem ipsum dolor sit amet -in:</p>
 
-<ul className="w3-leftbar w3-theme-border" style={{listStyle:"none"}}>
- <li>Smaller and faster than other CSS frameworks.</li>
- <li>Easier to learn, and easier to use than other CSS frameworks.</li>
- <li>Uses standard CSS only (No jQuery or JavaScript library).</li>
- <li>Speeds up mobile HTML apps.</li>
- <li>Provides CSS equality for all devices. PC, laptop, tablet, and mobile:</li>
+<ul className="w3-leftbar w3-black-border" style={{listStyle:"none"}}>
+ <li>Ratione voluptate ab deserunt animi praesentium quo!</li>
+ <li>Consectetur adipisicing elit. Ratione voluptate ab deserunt.</li>
+ <li>Ipsa, officiis illum maxime aut ipsam nobis a facere. </li>
+ <li>Tempore ad aperiam beatae iusto quo!</li>
+ <li>Lorem ipsum dolor sit amet consectetur elit Repellat nobis:</li>
 </ul>
 <br/>
-<img src="img_responsive.png" style={{width:"100%"}} alt="Responsive"/>
+<img src={ClayCover2} style={{width:"100%"}} alt="Responsive"/>
 
 <hr/>
-<h2>W3.CSS is Free</h2>
-<p>W3.CSS is free to use. No license is necessary.</p>
+<h2>JOE PLAYER</h2>
+<p>Player sit amet consectetur elit Repellat!</p>
 
 <hr/>
 <h2>Easy to Use</h2>
-<div className="w3-container w3-sand w3-leftbar">
-<p><i>Make it as simple as possible, but not simpler.</i><br/>
-Albert Einstein</p>
+<div className="w3-container w3-sand w3-leftbar pt-3">
+<p><i className=" small fw-light">Lorem sit amet consectetur elit Repellat nobis.</i><br/>
+JOE PLAYER</p>
 </div>
 
 <hr/>
-<h2>W3.CSS Web Site Templates</h2>
+<h2>PLAYER WEB SITE TEMPLATE:</h2>
 
 <p>We have created some responsive W3CSS templates for you to use.</p>
-<p>You are free to modify, save, share, use or do whatever you want with them:</p>
+<p>You are to modify, save, share, use or do whatever you want with them:</p>
 
 
 <div className="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 className="w3-center">Band Template</h3>
+<h3 className="w3-center">One-Page Template</h3>
 <div className="w3-content" style={{maxWidth:"800px"}}>
 <a href="tryw3css_templates_band.htm" target="_blank"  title="Band Demo">
-  <img src="img_temp_band.jpg" style={{width: '98%', margin:"20px 0"}} 
+  <img src={ClayCover2} style={{width: '98%', margin:"20px 0"}} 
   alt="Band Template"/></a><br/>
 <div className="w3-row">
   <div className="w3-col m6">
-    <a href="tryw3css_templates_band.htm" target="_blank" className="w3-button w3-padding-large w3-dark-grey" style={{width:"98.5%"}}>Demo</a>
+    <a href="tryw3css_templates_band.htm" target="_blank" className="w3-button w3-padding-large w3-dark-grey" style={{width:"98.5%"}}>View Demo</a>
   </div>
   <div className="w3-col m6">
-    <a href="w3css_templates.asp" className="w3-button w3-padding-large w3-dark-grey" style={{width:"98.5%"}}>More Templates »</a>
+    <a href="w3css_templates.asp" className="w3-button w3-padding-large w3-dark-grey" style={{width:"98.5%"}}>Learn More</a>
   </div>
 </div>
 </div>
 </div>
 
 <div className="w3-container w3-padding-16 w3-card" style={{backgroundColor: "#eee"}}>
-<h3 className="w3-center">Blog Template</h3>
+<h3 className="w3-center">Downloads Template</h3>
 <div className="w3-content" style={{maxWidth: "800px"}}>
 <img src={ClaySmall} style={{width:'98%', margin:"20px 0"}} alt="Blog Template"/><br/>
 <div className="w3-row">
   <div className="w3-col m6">
-    <a href="tryw3css_templates_blog.htm" target="_blank" className="w3-button w3-padding-large w3-dark-grey" style={{width:"98.5%"}}>Demo</a>
+    <a href="tryw3css_templates_blog.htm" target="_blank" className="w3-button w3-padding-large w3-dark-grey" style={{width:"98.5%"}}>View Demo</a>
   </div>
   <div className="w3-col m6">
-    <a href="w3css_templates.asp" className="w3-button w3-padding-large w3-dark-grey" style={{width:"98.5%"}}>More Templates »</a>
+    <a href="w3css_templates.asp" className="w3-button w3-padding-large w3-dark-grey" style={{width:"98.5%"}}>Learn More</a>
   </div>
 </div>
 </div>
 </div>
+
+
+<div className="w3-container w3-padding-16 w3-card" style={{backgroundColor: "#eee"}}>
+<h3 className="w3-center">Media Template</h3>
+<div className="w3-content" style={{maxWidth: "800px"}}>
+<img src={ClaySmall} style={{width:'98%', margin:"20px 0"}} alt="Blog Template"/><br/>
+<div className="w3-row">
+  <div className="w3-col m6">
+    <a href="tryw3css_templates_blog.htm" target="_blank" className="w3-button w3-padding-large w3-dark-grey" style={{width:"98.5%"}}>View Demo</a>
+  </div>
+  <div className="w3-col m6">
+    <a href="w3css_templates.asp" className="w3-button w3-padding-large w3-dark-grey" style={{width:"98.5%"}}>Learn More</a>
+  </div>
+</div>
+</div>
+</div>
+
 </div>
     </div>
 </div>

@@ -10,7 +10,7 @@ import PlayerFooter from "../components/Demo1/PlayerFooter";
 import PlayerPerformance from "../components/Demo1/PlayerPerformance";
 import PlayerIntro from "../components/Demo1/PlayerIntro";
 import MediaComponent from "../components/MediaComponent";
-import PlayerDownloads from "../components/Demo1/PlayerDownloads";
+//import PlayerDownloads from "../components/Demo1/PlayerDownloads";
 import ClaySmall from "../assets/images/Profiles/ClaySmall.png";
 import ClayCover3 from "../assets/images/Profiles/ClayCover3.png";
 import { RiHome6Line } from "react-icons/ri";
@@ -145,9 +145,11 @@ const DemoPage1 = () => {
             <div className="demo1-player-cards" id="demo1-player-cards">
               <PlayerCards />
             </div>
+
+            
+       
  {/* Carousel & downloads Contact Section */}
             <div className="demo1-player-downloads" id="demo1-player-downloads">
-              <PlayerDownloads />
              {/* Footer */}
             <PlayerFooter />
             </div>

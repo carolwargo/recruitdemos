@@ -14,13 +14,8 @@ export default function ProductCard({ product }) {
 
   return (
     <div className="container text-white">
-      <style>
-        {`
-          .card-title { font-size: 1.5rem; font-weight: bold; }
-          .card-snippet { font-size: 1rem; font-weight: lighter; }
-        `}
-      </style>
-
+ 
+<div className="product">
       <div className="row d-flex justify-content-center align-items-end">
         <div className="col-sm-12 col-md-6 col-lg-6 w3-padding-24 w3-margin-bottom">
           {/* Show corresponding carousel */}
@@ -50,7 +45,7 @@ export default function ProductCard({ product }) {
           </div>
         </div>
       </div>
-
+      </div>
       {/* Modal */}
       <Modal show={showModal} onHide={handleClose}>
         <Modal.Header closeButton>

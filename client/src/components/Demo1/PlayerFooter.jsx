@@ -3,6 +3,9 @@ import { InView } from 'react-intersection-observer';
 import { Link } from "react-router-dom";
 import { FaFileDownload} from "react-icons/fa";
 import PlayerResume from "../../assets/PDF/PlayerResume.pdf";
+import PlayerPerformance from "../../assets/PDF/Performance/Performance.pdf";
+import Transcripts from "../../assets/PDF/Transcripts/Transcripts.pdf";
+import Calendar from "../../assets/PDF/Schedules/Schedules.pdf";
 
 const PlayerFooter = () => {
   const [showModal, setShowModal] = useState(false);
@@ -164,8 +167,8 @@ footer .social-icons a {
     font-size: 16px;
     display: inline-block;
     line-height: 44px;
-    width: 44px;
-    height: 44px;
+    width: 32px;
+    height: 32px;
     text-align: center;
     margin-right: 8px;
     border-radius: 100%;
@@ -218,7 +221,7 @@ footer .social-icons a {
 <div className="text-center ">
     <InView triggerOnce={true}>
           {({ inView, ref }) => (
-          <div ref={ref} className={`w3-content w3-justify w3-text-grey w3-padding-16  
+          <div ref={ref} className={`w3-content w3-justify w3-text-grey w3-padding-48  
             ${inView ? "animate-fade-in" : ""}`} 
         id="player-footer">
 <footer>
@@ -226,9 +229,9 @@ footer .social-icons a {
     <div className="row">
       <div className="col-sm-12 col-md-6 px-3">
         <h6>THANK YOU FOR VIEWING </h6>
-        <p className="text-justify">  Feedback is welcome - Feel free to reach out to me directly, and connect with me on social media.
+        <p className="text-justify" style={{paddingRight:'2rem'}}>  Feedback is welcome - Feel free to reach out to me directly, and connect with me on social media.
        <br /> To communicate with a 3rd party when necessary, please contact <Link
-                className="link-light"
+                className="link-light opacity-60 small"
                 style={{ cursor: "pointer"}}
                 onClick={handleOpen}
               >
@@ -261,23 +264,35 @@ footer .social-icons a {
                   id="download"
                   download
                  href={PlayerResume} >
-        <span className="text-decoration-none">Player Cheatsheet</span>
+        <span className="text-decoration-none"
+         style={{marginLeft:'5px'}}>Resume</span>
               </a>
               </li>
               <li> < FaFileDownload/> 
         <a 
                   id="download"
                   download
-                 href={PlayerResume} >
-        <span className="text-decoration-none">Player Cheatsheet</span>
+                 href={PlayerPerformance} >
+        <span className="text-decoration-none"
+         style={{marginLeft:'5px'}}>Performance</span>
               </a>
               </li>
               <li> < FaFileDownload/> 
         <a 
                   id="download"
                   download
-                 href={PlayerResume} >
-        <span className="text-decoration-none">Player Cheatsheet</span>
+                 href={Transcripts} >
+        <span className="text-decoration-none"
+        style={{marginLeft:'5px'}}>Transcripts</span>
+              </a>
+              </li>
+              <li> < FaFileDownload/> 
+        <a 
+                  id="download"
+                  download
+                 href={Calendar} >
+        <span className="text-decoration-none"
+        style={{marginLeft:'5px'}}>Schedules</span>
               </a>
               </li>
               {/** 
@@ -290,16 +305,20 @@ footer .social-icons a {
   </div>
 </div>
 
-<div className="container mt-5">
+<div className="container w3-padding-top-48 w3-margin-top w3-margin-bottom">
+<p className="copyright-text text-center small">Copyright &copy; 2024 All Rights Reserved by
+         {""} <Link to='/' className="link-light opacity-65">CONSCRIBE.COM</Link>.
+        </p>
+     {/** 
   <div className="row">
-  <div className="col-md-8 col-sm-6 col-xs-12">
+  <div className="col-md-8 col-sm-6 col-xs-12 small">
         <p className="copyright-text">Copyright &copy; 2024 All Rights Reserved by
-         {""} <Link to='/' className=" text-white">CONSCRIBE.COM</Link>.
+         {""} <Link to='/' className="link-light opacity-65">CONSCRIBE.COM</Link>.
         </p>
       </div>
 
-      <div className="col-md-4 col-sm-6 col-xs-12">
-        <ul className="social-icons">
+      <div className="col-md-4 col-sm-6 col-xs-12 small">
+     <ul className="social-icons small">
         <li><Link to="https://www.facebook.com/" className="globe"><i className="fas fa-globe"></i></Link></li>
           <li><Link to="https://www.facebook.com/"><i className="fab fa-facebook-f"></i></Link></li>
           <li><Link to="https://twitter.com/" className="twitter"><i className="fab fa-x-twitter"></i></Link></li>
@@ -307,6 +326,7 @@ footer .social-icons a {
         </ul>
       </div>
   </div>
+   */}
 </div>
 </footer>
           {/* End Contact Section */}
@@ -323,6 +343,13 @@ footer .social-icons a {
       <h6 className=" text-dark-emphasis mb-0">Head Coach- Hilton High School</h6>
       <Link className=" text-dark-emphasis my-0">Email: joe.doe@example.com</Link>
       <Link className=" text-dark-emphasis mb-2">Phone: +1 (555) 123-4567</Link>
+  <div>     <ul className="social-icons small">
+        <li><Link to="https://www.facebook.com/" className="globe"><i className="fas fa-globe"></i></Link></li>
+          <li><Link to="https://www.facebook.com/"><i className="fab fa-facebook-f"></i></Link></li>
+          <li><Link to="https://twitter.com/" className="twitter"><i className="fab fa-x-twitter"></i></Link></li>
+          <li><Link to="https://www.instagram.com/" className="instagram"><i className="fab fa-instagram-square"></i></Link></li>
+        </ul>
+        </div>
     </div>
   </div>
 )}

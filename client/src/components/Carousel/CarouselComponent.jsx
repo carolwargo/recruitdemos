@@ -88,26 +88,50 @@ pauseOnFocus: true,    // Pauses when focused (optional)
         <div>   
           <img src={Calendar1} alt="calendar" className="w-100"
             style={{boxShadow: '1px 1px 6px rgba(0,0,0,0.75)'}}/>
+                        <p className="fw-light small mt-3 text-center text-opacity-75">Sample Letter of Recommendations</p>
+          <div className="text-center">
+          <button className="btn btn-secondary">learn more</button>
+          </div>
         </div>
       <div>   
           <img src={Calendar2} alt="calendar"  className="w-100"
             style={{boxShadow: '1px 1px 6px rgba(0,0,0,0.75)'}}/>
+                        <p className="fw-light small mt-3 text-center text-opacity-75">Sample Letter of Recommendations</p>
+          <div className="text-center">
+          <button className="btn btn-secondary">learn more</button>
+          </div>
         </div>
       <div>   
           <img src={Calendar3} alt="calendar"  className="w-100"
             style={{boxShadow: '1px 1px 6px rgba(0,0,0,0.75)'}}/>
+                        <p className="fw-light small mt-3 text-center text-opacity-75">Sample Letter of Recommendations</p>
+          <div className="text-center">
+          <button className="btn btn-secondary">learn more</button>
+          </div>
         </div>
       <div>   
           <img src={Letter1} alt="letter"  className="w-100"
             style={{boxShadow: '1px 1px 6px rgba(0,0,0,0.75)'}}/>
+            <p className="fw-light small mt-3 text-center text-opacity-75">Sample Letter of Recommendations</p>
+          <div className="text-center">
+          <button className="btn btn-secondary">learn more</button>
+          </div>
         </div>
       <div>   
           <img src={Letter2} alt="Letter"  className="w-100"
             style={{boxShadow: '1px 1px 6px rgba(0,0,0,0.75)'}}/>
+                        <p className="fw-light small mt-3 text-center text-opacity-75">Sample Letter of Recommendations</p>
+          <div className="text-center">
+          <button className="btn btn-secondary">learn more</button>
+          </div>
         </div>
       <div>   
           <img src={Resume1 } alt="resume"  className="w-100"
           style={{boxShadow: '1px 1px 6px rgba(0,0,0,0.75)'}}/>
+                      <p className="fw-light small mt-3 text-center text-opacity-75">Sample Letter of Recommendations</p>
+          <div className="text-center">
+          <button className="btn btn-secondary">learn more</button>
+          </div>
         </div>
       </Slider>
     </div>

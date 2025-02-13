@@ -1,12 +1,24 @@
-import React from 'react';
+import React from "react";
+import CarouselComponent from "../components/Carousel/CarouselComponent";
+//import { Link } from "react-router-dom";
 
 const HomePage = () => {
+  return (
+    <div className="w3-black">
+      <div className="container w3-padding-48">
+        <CarouselComponent/>
+      </div>
+ {/**       <div className="container w3-padding-48">
+        <DisplayCards/>
+      </div>
+     
+      <div className="container w3-padding-48">
+        <TableStriped />
+      </div>
+      */}
 
-    return (
-        <div>
-        <h1>Home Page</h1>
-        </div>
-    );
-    };
+    </div>
+  );
+};
 
 export default HomePage;
