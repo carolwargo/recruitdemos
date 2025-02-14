@@ -108,7 +108,7 @@ footer a:hover {
 }
 
 footer .social-icons {
-    text-align: right;
+   margin-left: 5rem;
 }
 
 footer .social-icons a {
@@ -153,17 +153,11 @@ footer .social-icons a {
     margin-bottom: 4px
 }
 
-.social-icons li.title {
-    margin-right: 15px;
-    text-transform: uppercase;
-    color: #96a2b2;
-    font-weight: 700;
-    font-size: 12px
-}
+
 
 .social-icons a {
-    background-color: #eceeef;
-    color: #818a91;
+    background-color: gray;
+    color: white;
     font-size: 16px;
     display: inline-block;
     line-height: 44px;
@@ -295,38 +289,53 @@ footer .social-icons a {
         style={{marginLeft:'5px'}}>Schedules</span>
               </a>
               </li>
-              {/** 
-          <li><a href="http://yourwebsite.com/contact/">Contact Us</a></li>
-          <li><a href="http://yourwebsite.com/contribute/">Contribute</a></li>
-          <li><a href="http://yourwebsite.com/privacy-policy/">Privacy Policy</a></li>
-       */}
         </ul>
       </div>
   </div>
 </div>
 
-<div className="container w3-padding-top-48 w3-margin-top w3-margin-bottom">
-<p className="copyright-text text-center small">Copyright &copy; 2024 All Rights Reserved by
-         {""} <Link to='/' className="link-light opacity-65">CONSCRIBE.COM</Link>.
-        </p>
-     {/** 
-  <div className="row">
+      <div className="container w3-padding-16 w3-margin-bottom">
+      <div className="row d-flex justify-content-center align-items-center ">
   <div className="col-md-8 col-sm-6 col-xs-12 small">
-        <p className="copyright-text">Copyright &copy; 2024 All Rights Reserved by
-         {""} <Link to='/' className="link-light opacity-65">CONSCRIBE.COM</Link>.
-        </p>
+  <h6>CONNECT WITH ME ON SOCIAL MEDIA: </h6>
+ 
       </div>
 
-      <div className="col-md-4 col-sm-6 col-xs-12 small">
-     <ul className="social-icons small">
+      <div className="col-md-4 col-sm-6 col-xs-12 small text-align-right"> 
+
+             <ul className="social-icons">
         <li><Link to="https://www.facebook.com/" className="globe"><i className="fas fa-globe"></i></Link></li>
           <li><Link to="https://www.facebook.com/"><i className="fab fa-facebook-f"></i></Link></li>
           <li><Link to="https://twitter.com/" className="twitter"><i className="fab fa-x-twitter"></i></Link></li>
           <li><Link to="https://www.instagram.com/" className="instagram"><i className="fab fa-instagram-square"></i></Link></li>
         </ul>
+        {/** 
+         <Link to="https://twitter.com/" className=" mx-1 my-0"
+            style={{ fontSize: "1.2rem" }}>
+            <span className="icon-hover-zoom"> 
+            <BsTwitterX /> </span></Link>
+             <Link to="https://www.instagram.com/" className=" mx-1 my-0"
+               style={{ fontSize: "1.3rem" }}>
+               <span className="icon-hover-zoom">
+              <FaSquareInstagram />
+          </span> 
+          </Link>
+          <Link to="https://www.instagram.com/" className=" mx-1 my-0"
+               style={{ fontSize: "1.3rem" }}>
+               <span className="icon-hover-zoom">
+               <FaSnapchatSquare />
+          </span> 
+          </Link>
+          */} 
+                          
+      </div>
       </div>
   </div>
-   */}
+
+<div className="container w3-padding-top-48 w3-margin-top w3-margin-bottom">
+  <p className="copyright-text text-center small">Copyright &copy; 2024 All Rights Reserved by
+         {""} <Link to='/' className="link-light opacity-65">CONSCRIBE.COM</Link>.
+        </p>
 </div>
 </footer>
           {/* End Contact Section */}

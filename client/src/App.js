@@ -3,7 +3,8 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import HomePage from "./pages/HomePage";
 import DemoPage1 from "./pages/DemoPage1";
@@ -27,11 +28,14 @@ import ProductLayout from "./components/Layouts/ProductLayout.jsx";
 function App() {
   return (
     <div className="App">
-      <HashRouter>
+      <HashRouter> 
         <ErrorBoundary>
           <Routes>
+            {/* ✅ Ensure HomePage is accessible */}
+            <Route path="/" element={<HomePage />} />
+
+            {/* ✅ Product Layout Routes */}
             <Route element={<ProductLayout />}>
-              <Route path="/" element={<HomePage />} />
               <Route path="/product" element={<ProductPage />} />
               <Route path="/tables" element={<DemoTables />} />
               <Route path="/overview" element={<DemoOverviewPage />} />
@@ -40,16 +44,20 @@ function App() {
               <Route path="/carousel" element={<CarouselPage />} />
             </Route>
 
-            <Route element={<DemoLayout />}>
-              <Route path="/demo1" element={<DemoPage1 />} />
-              <Route path="/downloads" element={<DemoDownloads />} />
-              <Route path="/demo3" element={<DemoPage3 />} />
-              <Route path="/social" element={<DemoSocialPage />} />
-              <Route path="/components" element={<DemoComponents />} />
-              <Route path="/media" element={<DemoMedia />} />
-              <Route path="/displays" element={<DisplaysPage />} />
-            </Route>
+            {/* ✅ Demo Layout Routes */}
+       {/* ✅ Demo Layout Routes */}
+<Route element={<DemoLayout />}>
+  <Route path="/demo1" element={<DemoPage1 />} />
+  <Route path="/downloads" element={<DemoDownloads />} />
+  <Route path="/demo3" element={<DemoPage3 />} />
+  <Route path="/social" element={<DemoSocialPage />} />
+  <Route path="/components" element={<DemoComponents />} />
+  <Route path="/media" element={<DemoMedia />} />
+  <Route path="/displays" element={<DisplaysPage />} />
+</Route>
 
+
+            {/* ✅ Catch-all route for 404 */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </ErrorBoundary>
@@ -63,7 +71,7 @@ function NotFound() {
     <div style={{ textAlign: "center", marginTop: "50px" }}>
       <h1>404 - Page Not Found</h1>
       <p>Oops! The page you are looking for does not exist.</p>
-      <a href="/#/" style={{ color: "#007BFF", textDecoration: "underline" }}>
+      <a href="#/" style={{ color: "#007BFF", textDecoration: "underline" }}>
         Return to Home
       </a>
     </div>
