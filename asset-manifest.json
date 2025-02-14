@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/recruit-demos/static/css/main.2a5aa26a.css",
-    "main.js": "/recruit-demos/static/js/main.be66aa4d.js",
+    "main.js": "/recruit-demos/static/js/main.10684582.js",
     "static/js/453.258b012d.chunk.js": "/recruit-demos/static/js/453.258b012d.chunk.js",
     "static/media/Performance.pdf": "/recruit-demos/static/media/Performance.0e29ac13ae42a404cefd.pdf",
     "static/media/PlayerResume.pdf": "/recruit-demos/static/media/PlayerResume.b6f47033c133c34384ea.pdf",
@@ -75,11 +75,11 @@
     "static/media/slick.ttf": "/recruit-demos/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/recruit-demos/static/media/slick.295183786cd8a1389865.woff",
     "main.2a5aa26a.css.map": "/recruit-demos/static/css/main.2a5aa26a.css.map",
-    "main.be66aa4d.js.map": "/recruit-demos/static/js/main.be66aa4d.js.map",
+    "main.10684582.js.map": "/recruit-demos/static/js/main.10684582.js.map",
     "453.258b012d.chunk.js.map": "/recruit-demos/static/js/453.258b012d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2a5aa26a.css",
-    "static/js/main.be66aa4d.js"
+    "static/js/main.10684582.js"
   ]
 }
